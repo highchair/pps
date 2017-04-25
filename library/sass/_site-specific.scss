@@ -1,0 +1,94 @@
+
+/*************
+HOMEPAGE 
+*******
+
+/*************
+ARCHIVE  
+*************/
+
+/*************
+EVENTS PAGE  
+*************/
+
+/*************
+SINGLE  
+*************/
+
+body.single, body.page {
+	main header .meta {
+		font-size: 1rem;
+		a {
+			border-bottom: none;
+		}
+	}
+	main header h1 {
+		margin-bottom: $padding/2;
+	}
+	main {
+		margin-bottom: $padding/2;
+	}
+	article {
+		> p:not(.small) {
+			font-size: 1.125rem;
+			margin-bottom: $padding/2;
+		}
+		img {
+			margin-top: $padding/2;
+			margin-bottom: $padding/2;
+		}
+	}
+	.wp-caption-text {
+		@extend .meta;
+	}
+}
+
+section.comments {
+	h2 {
+		margin-bottom: $padding;
+	}
+	h3 {
+		margin-top: $padding;
+	}
+	.comment {
+		margin-top: $padding;
+		max-width: 48rem;
+	}
+	.comment-author {
+		cite {
+			font-style: normal;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.says {
+			display: none;
+		}
+	}
+	.comment-reply-link {
+		@extend .h4;
+	}
+	.comment-meta {
+		margin-bottom: $padding/3;
+	}
+	.comment-notes, .comment-awaiting-moderation, .comment-meta a {
+		color: $gray;
+		@extend .small;
+	}
+}
+
+/*************
+SEARCH RESULTS  
+*************/
+
+body.search-no-results main {
+	p {
+		margin-top: $padding/2;
+		margin-bottom: $padding;
+	}
+	#searchform button {
+		color: $black;
+	}
+	input[type=search] {
+		width: 18rem;
+	}
+}

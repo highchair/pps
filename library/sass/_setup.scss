@@ -1,0 +1,88 @@
+
+/********************
+SETTINGS & UTILITIES
+********************/
+
+/*** COLORS ***/
+
+$black: #282828;
+$silver: #ccc7b5;
+$gray: #77746a;
+$gray-dk: #312d22;
+$white: #ffffff;
+$cream: #f7f5ef;
+$red: #e56c56;
+
+/*** OTHER UTILITIES ***/
+
+$padding: 2rem;
+$radius: 0.25em;
+$border: 1px solid rgba($gray,0.5);
+
+/*** ICONS ***/
+
+[class^="icon-"]:after, [class*=" icon-"]:after {
+  content: 'x';
+}
+
+/*** MIXINS ***/
+
+/*** Bulleted Unordered Lists ***/
+// Sass usage:
+// @include bullet-list;
+
+@mixin bullet-list {
+	margin-left: 0;
+	padding-left: 0.75em;
+	text-indent: -0.75em;
+	li:before {
+		content: '-';
+		padding-right: 0.5em;
+	}
+	li + li {
+		margin-top: 0.75em;
+	}
+}
+
+/*** Underlines for Links ***/
+// Sass usage:
+// @include underline;
+// to add a custom underline color:
+// @include underline($silver);
+
+@mixin underline($color:null) {
+  border-bottom: 1px solid;
+  color: darken($gray,10);
+  &:hover {
+    color: $black;
+  }
+  @if ($color) {
+    border-color: $color;
+  } @else {
+    border-color: $black;
+  }
+}
+
+/*** Cut Off Text That's Too Long with an Ellipsis ***/
+// usage:
+// @include truncate;
+// in cases where a height must be specified to cut off properly:
+// @include truncate(1.25em);
+
+@mixin truncate($height:null) {
+  height: $height;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/*** FOUNDATION (by Zurb) ***/
+// used just for the grid system.
+
+@import 'util/util';
+$grid-row-width: rem-calc(1366);
+@import "foundation";
+@include foundation-global-styles;
+@import "grid";
+

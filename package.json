@@ -1,0 +1,7 @@
+{
+  "name": "Providence_Preservation",
+  "version": "1.0.0",
+  "devDependencies": {
+    "foundation-sites": "6.3.0"
+  }
+}
