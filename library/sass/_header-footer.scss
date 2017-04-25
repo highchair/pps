@@ -4,15 +4,14 @@ HEADER
 *************/
 
 #header {
-	background: url('../img/banner.jpg') darken($gray,10);
-	background-position: left;
-	background-size: cover;
+	background-color: rgba($blue-lt,0.5);
+	border-bottom: 5px solid $blue;
 	padding-bottom: $padding/4;
 	> div {
 		position: relative;
 	}
 	.toggle-nav {
-		background: rgba($cream,0.8);
+		background: rgba($blue-lt,0.8);
 		font-family: sans-serif; // to get unicode symbol
 		font-size: 2.375rem;
 		line-height: 0.85;
@@ -23,15 +22,12 @@ HEADER
 		right: $padding/4;
 	}
 	h1 {
+		font-family: 'Alegreya SC', serif;
 		margin-bottom: 0;
 		text-align: center;
 	}
-	.logo {
-		color: $white;
-		img {
-			height: auto;
-			width: 200px;
-		}
+	a {
+		color: $blue;
 	}
 }
 @include breakpoint(large) {
@@ -75,7 +71,7 @@ body.nav-open {
 	width: 100%;
 	z-index: 1;
 	.toggle-nav {
-		color: $cream;
+		color: $blue-lt;
 		font-size: 1.75rem;
 		float: right;
 		opacity: 0.8;
@@ -95,11 +91,11 @@ body.nav-open {
 		float: right;
 	}
 	a {
-		background: rgba($cream, 0.75);
+		background: rgba($blue-lt, 0.75);
 		padding: 0.125em 0.75em;
 		@extend .h3;
 		&:hover {
-			background-color: rgba($cream, 1);
+			background-color: rgba($blue-lt, 1);
 		}
 	}
 	ul {
@@ -121,19 +117,13 @@ FOOTER
 *************/
 
 footer {
-	background: url('../img/texture.jpg') $gray-dk;
-	background-size: cover;
-	color: $white;
 	padding-top: $padding;
 	padding-bottom: $padding;
-	.columns {
-	  height: 17rem;
-	}
 	a {
 		color: $white;
 		border-bottom: 1px solid $gray;
 		&:hover {
-			border-color: $cream;
+			border-color: $blue-lt;
 		}
 	}
 	ul {
@@ -161,7 +151,7 @@ footer {
 }
 
 .subfooter {
-	background: $gray-dk;
+	background-color: rgba($blue-lt,0.5);
 	color: $white;
 	padding-top: $padding/2;
 	padding-bottom: $padding*1.5;

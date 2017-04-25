@@ -1,4 +1,4 @@
-<header>
+<header id="header">
   <a href="index.php">
     <h1><a class="toggle-nav" href="javascript:void(0)">&#8801;</a> Providence Preservation Society</h1>
   </a>

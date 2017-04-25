@@ -3,12 +3,12 @@
 <main>
 
     <header>
-      <h1>404: Page Not Found</h1>
+      <h1>Error 404: Page Not Found</h1>
     </header>
 
     <article>
     
-    	<p>Sorry, dude.</p>
+    	<p>We're sorry, but we could not find what you were looking for.</p>
 
     </article>
       

@@ -5,19 +5,31 @@ SETTINGS & UTILITIES
 
 /*** COLORS ***/
 
-$black: #282828;
-$silver: #ccc7b5;
-$gray: #77746a;
-$gray-dk: #312d22;
-$white: #ffffff;
-$cream: #f7f5ef;
-$red: #e56c56;
+$blue: #82a6d6;
+$blue-lt: #d1dcf2;
+
+$bronze: #8a7846;
+$mustard: #d6d397;
+
+$black: #333;
+$gray-dk: #666;
+$gray: #999;
+$gray-lt: #ddd;
+$silver: #f2f2f2;
+$white: #fff;
+
+// $blue-lt: #f7f5ef;
+// $red: #e56c56;
 
 /*** OTHER UTILITIES ***/
 
 $padding: 2rem;
 $radius: 0.25em;
 $border: 1px solid rgba($gray,0.5);
+
+/*** FONTS ***/
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:300,400,400i,900');
 
 /*** ICONS ***/
 
