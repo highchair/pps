@@ -6,57 +6,77 @@ TYPOGRAPHY
 *************/
 
 html {
-	font-size: 14px;
+	font-size: 100%;
 }
 
 body {
 	background: $white;
 	color: $black;
 	font-family: 'Alegreya Sans', sans-serif;
+	line-height: 1.5em;
 	word-break: break-word; // wrap extra-long words so they don't break layout
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	line-height: 1.25em;
 }
 h1, .h1, h2, .h2 {
 	font-weight: 300;
-	line-height: 1.025em;
-	margin-top: 0;
 }
 h3, .h3, h4, .h4, h5, .h5 {
 	font-weight: 600;
-	line-height: 1.25em;
-	margin-top: 0;
 }
-
 h1, .h1 {
-	font-size: 2.5rem;
+	font-size: 1.625rem;
 }
 h2, .h2 {
 	color: $bronze;
-	font-size: 2rem;
+	font-size: 1.438;
 }
 h3, .h3 {
 	color: $blue;
-	font-size: 1.1rem;
-}
-h4, .h4, h5, .h5, h6, .h6 {
-	font-size: 1rem;
+	font-size: 1.25rem;
 }
 h4, .h4 {
 	color: $bronze;
+	font-size: 1.125rem;
 }
 h5, .h5 {
 	color: $gray;
+	font-size: 1.063rem;
 }
 h6, .h6 {
 	color: $gray-dk;
+	font-size: 1rem;
 	font-weight: 300;
 	text-transform: uppercase;
 }
 
-p {
-	font-size: 1rem;
-	margin-bottom: 0.75em;
-	margin-top: 0;
+@include breakpoint(medium) {
+	h1, .h1 {
+		font-size: 2.563rem;
+	}
+	h2, .h2 {
+		font-size: 2.063rem;
+	}
+	h3, .h3 {
+		font-size: 1.688rem;
+	}
+	h4, .h4 {
+		font-size: 1.375rem;
+	}
+	h5, .h5 {
+		font-size: 1.25rem;
+	}
+	h6, .h6 {
+		font-size: 1.125rem;
+	}
 }
+
+small, .micro {
+	font-size: 0.813rem;
+}
+
 
 ul {
 	list-style-type: none;
@@ -71,6 +91,9 @@ ol {
 		margin-top: 0.75em;
 	}
 }
+li ul, li ol { // lists that are children of a list item
+	margin-top: 0.75em;
+}
 
 hr {
 	border-top: 1px solid $silver;
@@ -83,8 +106,8 @@ hr {
 	color: $blue-lt;
 }
 
-.single main, .page:not(.home) main {
-	ul:not(.meta):not(.comment-list) {
+main {
+	ul:not(.meta) {
 		@include bullet-list;
 	}
 	a:not(.button) {
@@ -98,11 +121,6 @@ hr {
 blockquote {
 	border-left: 4px solid $silver;
 	padding-left: $padding/2;
-}
-
-.small, small {
-	font-size: 0.75rem;
-	text-transform: uppercase;
 }
 
 .visually-hidden { /* text for screen readers */
@@ -195,7 +213,7 @@ button, input[type='submit'] {
 
 .meta {
 	color: $gray;
-	@extend .small;
+	@extend .micro;
 }
 
 article {

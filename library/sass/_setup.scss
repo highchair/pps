@@ -52,6 +52,9 @@ $border: 1px solid rgba($gray,0.5);
 	li + li {
 		margin-top: 0.75em;
 	}
+  li li:before {
+    content: '\2022';
+  }
 }
 
 /*** Underlines for Links ***/
