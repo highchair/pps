@@ -7,6 +7,7 @@ SETTINGS & UTILITIES
 
 $blue: #82a6d6;
 $blue-lt: #d1dcf2;
+$blue-xlt: #e8edf8;
 
 $bronze: #8a7846;
 $mustard: #d6d397;
@@ -26,14 +27,16 @@ $red-lt: #e5bfbf;
 
 /*** OTHER UTILITIES ***/
 
-$padding: 2rem;
+$padding: 1rem;
 $radius: 0.25em;
-$border: 1px solid rgba($gray,0.5);
+$border: 1px solid $silver;
 
 /*** FONTS ***/
 
 @import url('https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:300,400,400i,900');
 
+$serif: 'Alegreya SC';
+$sans-serif: 'Alegreya Sans';
 
 /*** MIXINS ***/
 

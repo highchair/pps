@@ -1,68 +1,96 @@
 
+
+
+.logo-text { // used in header and footer
+	font-family: $serif, serif;
+	letter-spacing: 0.325em;
+	margin: 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	text-align: center;
+	@extend .micro;
+}
+
+
 /*************
 HEADER 
 *************/
 
 #header {
-	background-color: rgba($blue-lt,0.5);
-	border-bottom: 5px solid $blue;
-	padding-bottom: $padding/4;
+	background-color: $blue-xlt;
+	&:before {
+		content: '';
+		background-image: url('../img/banner.png');
+		background-size: cover;
+		height: 140px;
+		display: block;
+	}
 	> div {
 		position: relative;
 	}
-	.toggle-nav {
-		background: rgba($blue-lt,0.8);
-		font-family: sans-serif; // to get unicode symbol
-		font-size: 2.375rem;
-		line-height: 0.85;
-		padding-left: 0.125em;
-		padding-right: 0.125em;
-		position: absolute;
-		top: $padding/2;
-		right: $padding/4;
+	nav {
+		background-color: $blue;
+		padding: 1rem;
 	}
-	h1 {
-		font-family: 'Alegreya SC', serif;
-		margin-bottom: 0;
-		text-align: center;
-	}
-	a {
+	div.primary a {
 		color: $blue;
+		font-size: 2.313rem;
+	}
+	div.secondary a, .toggle-nav {
+		color: $white;
+	}
+	div.secondary {
+		font-family: $serif, serif;
+		font-size: 1.125rem;
+		letter-spacing: 0.125em;
+		text-align: right;
+		text-transform: lowercase;
+		a + a {
+			margin-left: 0.5rem;
+		}
+	}
+	.toggle-nav {
+		float: left;
+	}
+	.icon-bars {
+		color: rgba($white,0.75);
+		vertical-align: middle;
 	}
 }
+
+
 @include breakpoint(large) {
 	#header {
-		background-position: center;
-		min-height: 10rem;
-		padding-left: $padding/2;
-		padding-top: $padding/2;
-		h1 {
+		border-bottom: 5px solid $blue;
+		.logo-text {
+			font-size: 1.375rem;
 			text-align: left;
-		}
-		.logo img {
-			width: 230px;
 		}
 		.toggle-nav {
 			font-size: 2rem;
 		}
 	}
+	nav.secondary a {
+		color: $gray-dk;
+		margin-left: 2rem;
+	}
 }
 
 /*** Overlay Nav ***/
 
-#mainNav, body.nav-closed #mainNav {
+#header div.primary, body.nav-closed #header div.primary {
 	display: none;
 }
 
 body.nav-open {
 	position: relative;
-	#mainNav {
+	#header div.primary {
 		display: block;
 	}
 }
 
-#mainNav {
-	background: rgba($white,0.95);
+#header div.primary {
+	background: $blue-xlt;
 	padding: $padding*1.5 $padding;
 	min-height: 100vh;
 	position: absolute;
@@ -70,45 +98,6 @@ body.nav-open {
 	right: 0;
 	width: 100%;
 	z-index: 1;
-	.toggle-nav {
-		color: $blue-lt;
-		font-size: 1.75rem;
-		float: right;
-		opacity: 0.8;
-		&:hover {
-			opacity: 1;
-		}
-	}
-}
-
-/*** Desktop Primary Nav ***/
-
-#header div.desktop {
-	position: absolute;
-	right: 0.5em;
-	bottom: 0;
-	.menu, .calendar {
-		float: right;
-	}
-	a {
-		background: rgba($blue-lt, 0.75);
-		padding: 0.125em 0.75em;
-		@extend .h3;
-		&:hover {
-			background-color: rgba($blue-lt, 1);
-		}
-	}
-	ul {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	li {
-		display: inline-block;
-		margin-left: 1em;
-	}
-	.calendar {
-		margin-left: 1.25em;
-	}
 }
 
 
@@ -116,44 +105,38 @@ body.nav-open {
 FOOTER 
 *************/
 
+footer, .subfooter {
+	text-align: center;
+}
+
 footer {
-	padding-top: $padding;
-	padding-bottom: $padding;
-	a {
-		color: $white;
-		border-bottom: 1px solid $gray;
-		&:hover {
-			border-color: $blue-lt;
-		}
+	padding: $padding;
+	div.contact {
+		font-family: $serif, serif;
 	}
-	ul {
-		@include bullet-list;
-	}
-	.footer-left {
-		margin-bottom: $padding/2;
-		h4 {
-			margin-bottom: 1em;
-		}
+	nav {
+		border-top: $border;
+		padding-top: $padding;
 		a {
-			display: inline-block;
-			margin-top: 1em;
+			color: $blue;
+			padding: $padding;
+		}
+		.secondary {
+			font-weight: 900;
+		}
+		.primary {
+			padding-top: $padding;
 		}
 	}
 	.social a {
-	    font-size: 1.125rem;
 	    border: 0;
-	    margin-right: 0.25em;
-	    opacity: 0.75;
-	    &:hover {
-	    	opacity: 1;
-	    }
+	    display: block;
 	}
 }
 
 .subfooter {
-	background-color: rgba($blue-lt,0.5);
-	color: $white;
+	background-color: $blue-xlt;
+	color: $blue;
 	padding-top: $padding/2;
-	padding-bottom: $padding*1.5;
-	@extend .micro;
+	padding-bottom: $padding/2;
 }
