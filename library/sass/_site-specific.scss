@@ -3,6 +3,8 @@
 HOMEPAGE 
 *************/
 
+/*** HERO ***/
+
 section.hero div.image {
 	background-size: cover;
 }
@@ -17,11 +19,53 @@ section.hero div.text {
 	}
 }
 
-@include breakpoint(medium) {
+@include breakpoint(large) {
 	section.hero div.text {
 		padding: $padding*2;
 	}
 }
+
+/*** ARTICLES ***/
+
+section.articles {
+	padding: $padding/2;
+	text-align: center;
+	h3 {
+		font-family: $serif, serif;
+		font-weight: 300;
+	}
+	article > a {
+		display: inline-block;
+		margin-top: $padding*2;
+		padding: $padding;
+		width: 100%;
+		@include box-shadow($silver 0 0 $padding);
+	}
+	.read-more {
+		position: relative;
+		.text {
+			left: 30%;
+			margin-right: $padding;
+			opacity: 0;
+			position: absolute;
+			@extend .h4;
+		}
+	}
+	.icon-chevron-circle-right {
+		font-size: 1.5rem;
+		vertical-align: baseline;
+	}
+	a:hover {
+		.read-more .text {
+			opacity: 1;
+		}
+		.icon-chevron-circle-right {
+			color: $bronze;
+			left: 40%;
+		}
+	}
+}
+
 
 /*************
 ARCHIVE  
@@ -47,6 +91,12 @@ body.single, body.page {
 	}
 	main {
 		margin-bottom: $padding/2;
+	}
+	main a:not(.button) {
+		@include underline;
+		&:hover {
+			color: $black;
+		}
 	}
 	article {
 		img {

@@ -1,7 +1,7 @@
 <article>
-	<p class="meta category">Category Name</p>
-  	<img src="<?php echo get_stylesheet_directory_uri(); ?>/library/img/img.png">
-  	<h3>Article Title</h3>
-  	<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-  	<p class="meta">Author Name</p>
+	<a href="javascript:void(0)">
+		<h3>Article Title</h3>
+		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+		<p class="read-more"><span class="text">Read More</span> <span class="icon-chevron-circle-right"></span></p>
+	</a>
 </article>

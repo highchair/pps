@@ -37,10 +37,10 @@ footer section {
 
 
 /************
-MEDIUM AND UP
+LARGE AND UP
 *************/
 
-@include breakpoint(medium) {
+@include breakpoint(large) {
 
 	main {
 		min-height: 25rem;
@@ -68,11 +68,16 @@ MEDIUM AND UP
 
 	/*** HOMEPAGE ***/
 
-	section.hero {
+	body.home section {
 		@include grid-row;
-		> div {
-			@include grid-column(6);
-		}
+	}
+
+	section.hero > div {
+		@include grid-column(6);
+	}
+
+	section.articles article {
+		@include grid-column(6);
 	}
 
 	/*** PAGES WITH SIDEBARS ***/
@@ -104,14 +109,14 @@ MEDIUM AND UP
 		}
 	}
 
-} /* end breakpoint(medium) */
+} // end breakpoint(large)
 
 
 /************
-LARGE AND UP
+XLARGE AND UP
 *************/
 
-@include breakpoint(large) {
+@include breakpoint(xlarge) {
 
 	/*** HEADER / MAIN NAV ***/
 
@@ -162,4 +167,4 @@ LARGE AND UP
 		}
 	}
 
-}
+} // end breakpoint(xlarge)
