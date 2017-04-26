@@ -10,10 +10,10 @@
 		</div>
 
 		<div class="primary giga">
-		  	<div><a href="javascript:void(0)">Advocacy</a></div>
-		  	<div><a href="javascript:void(0)">Programs &amp; Events</a></div>
-		  	<div><a href="javascript:void(0)">Resources</a></div>
-		  	<div><a href="javascript:void(0)">Support</a></div>
+		  	<a href="javascript:void(0)">Advocacy</a>
+		  	<a href="javascript:void(0)">Programs &amp; Events</a>
+		  	<a href="javascript:void(0)">Resources</a>
+		  	<a href="javascript:void(0)">Support</a>
 			<?php echo get_search_form(); ?>
 		</div>
 

@@ -62,17 +62,33 @@ HEADER
 @include breakpoint(large) {
 	#header {
 		border-bottom: 5px solid $blue;
+		nav {
+			background-color: transparent;
+		}
 		.logo-text {
+			float: left;
 			font-size: 1.375rem;
+			margin-left: $padding;
 			text-align: left;
 		}
 		.toggle-nav {
-			font-size: 2rem;
+			display: none;
 		}
 	}
-	nav.secondary a {
-		color: $gray-dk;
-		margin-left: 2rem;
+	#header div.primary {
+		display: block !important;
+		margin-top: $padding;
+		text-align: right;
+		a {
+			display: inline-block;
+			padding: $padding;
+		}
+	}
+	#header div.secondary {
+		@include clearfix;
+		a {
+			color: $gray-dk;
+		}
 	}
 }
 
@@ -86,18 +102,15 @@ body.nav-open {
 	position: relative;
 	#header div.primary {
 		display: block;
+		background: $blue-xlt;
+		padding: $padding*1.5 $padding;
+		min-height: 100vh;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		z-index: 1;
 	}
-}
-
-#header div.primary {
-	background: $blue-xlt;
-	padding: $padding*1.5 $padding;
-	min-height: 100vh;
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	z-index: 1;
 }
 
 
