@@ -25,6 +25,10 @@ jQuery(document).ready( function($) {
 		}
 	});
 
+	/*** EQUALIZE ELEMENT HEIGHTS ***/
+
+	equalize('body.home section.hero > div');
+
 	/*** FUNCTIONS **/
 
 	function openNav() {
@@ -33,6 +37,22 @@ jQuery(document).ready( function($) {
 
 	function closeNav() {
 		$('body').removeClass('nav-open').addClass('nav-closed');
+	}
+
+	function getMaxHeight(s) {
+
+		var maxHeight = 0;
+
+		// get biggest and set as tileHeight
+		$(s).each(function(){
+			if ( $(this).outerHeight() > maxHeight ) { maxHeight = $(this).outerHeight(); }
+		});
+
+		return maxHeight;
+	}
+
+	function equalize(s) {
+		$(s).outerHeight( getMaxHeight(s) );
 	}
 
 } );

@@ -2,7 +2,7 @@
 
 
 .logo-text { // used in header and footer
-	font-family: $serif, serif;
+	font-family: $small-caps, serif;
 	letter-spacing: 0.325em;
 	margin: 0;
 	padding-top: 1rem;
@@ -36,13 +36,13 @@ HEADER
 	}
 	div.primary a {
 		color: $blue;
-		font-size: 2.313rem;
+		@extend .h2;
 	}
 	div.secondary a, .toggle-nav {
 		color: $white;
 	}
 	div.secondary {
-		font-family: $serif, serif;
+		font-family: $small-caps, serif;
 		font-size: 1.125rem;
 		letter-spacing: 0.125em;
 		text-align: right;

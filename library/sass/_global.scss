@@ -52,15 +52,15 @@ h6, .h6 {
 	text-transform: uppercase;
 }
 
-// .giga {
-// 	font-size: 2.313rem;
-// }
-// .mega {
-// 	font-size: 2.063rem;
-// }
-// .kilo {
-// 	font-size: 1.813rem;
-// }
+%giga {
+	font-size: 2.313rem;
+}
+%mega {
+	font-size: 2.063rem;
+}
+%kilo {
+	font-size: 1.813rem;
+}
 
 
 @include breakpoint(medium) {
@@ -82,12 +82,26 @@ h6, .h6 {
 	h6, .h6 {
 		font-size: 1.125rem;
 	}
+	%giga {
+		font-size: 4.835rem;
+	}
+	%mega {
+		font-size: 3.938rem;
+	}
+	%kilo {
+		font-size: 3.188rem;
+	}
 }
 
 small, .micro {
 	font-size: 0.813rem;
 }
 
+.subheading {
+	font-family: $small-caps, serif;
+	font-size: 1.25rem;
+	margin: 0;
+}
 
 ul {
 	list-style-type: none;
@@ -209,6 +223,12 @@ a {
 }
 
 button, .button, input[type='submit'] {
+	background: transparent;
+	border: 1px solid;
+	font-weight: 900;
+	letter-spacing: 0.125em;
+	padding: 0.875em 1.5em 0.75em;
+	white-space: nowrap;
 	@include buttons;
   	&.primary {
   		@include buttons($blue,$blue,$blue);

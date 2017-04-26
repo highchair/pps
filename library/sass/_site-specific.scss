@@ -1,7 +1,27 @@
 
 /*************
 HOMEPAGE 
-*******
+*************/
+
+section.hero div.image {
+	background-size: cover;
+}
+section.hero div.text {
+	background: $mustard;
+	padding: $padding;
+	text-align: center;
+	h2 {
+		font-family: $serif, serif;
+		margin-top: 0;
+		@extend %kilo;
+	}
+}
+
+@include breakpoint(medium) {
+	section.hero div.text {
+		padding: $padding*2;
+	}
+}
 
 /*************
 ARCHIVE  

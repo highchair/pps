@@ -1,10 +1,10 @@
 
-/******* 
-GRID 
-*******/
+/************
+ALL SIZES 
+*************/
 
 
-/*** ALL SIZES ***/
+/*** GLOBAL ***/
 
 #nav {
 	width: 100%;
@@ -36,7 +36,9 @@ footer section {
 }
 
 
-/*** MEDIUM SIZE AND UP ***/
+/************
+MEDIUM AND UP
+*************/
 
 @include breakpoint(medium) {
 
@@ -61,6 +63,15 @@ footer section {
 		}
 		p {
 			max-width: 30rem;
+		}
+	}
+
+	/*** HOMEPAGE ***/
+
+	section.hero {
+		@include grid-row;
+		> div {
+			@include grid-column(6);
 		}
 	}
 
@@ -96,7 +107,9 @@ footer section {
 } /* end breakpoint(medium) */
 
 
-/*** LARGE SIZE AND UP ***/
+/************
+LARGE AND UP
+*************/
 
 @include breakpoint(large) {
 

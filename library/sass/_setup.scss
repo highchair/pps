@@ -33,9 +33,10 @@ $border: 1px solid $silver;
 
 /*** FONTS ***/
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans:300,400,400i,900');
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC|Alegreya+Sans:300,400,400i,900');
 
-$serif: 'Alegreya SC';
+$serif: 'Alegreya';
+$small-caps: 'Alegreya SC';
 $sans-serif: 'Alegreya Sans';
 
 /*** MIXINS ***/
@@ -83,12 +84,8 @@ $sans-serif: 'Alegreya Sans';
 /*** Buttons ***/
 
 @mixin buttons($color:null,$border:$gray-lt,$text:$gray) {
-  background: $white;
-  border: 1px solid;
   border-color: $border;
   color: $text;
-  font-weight: 900;
-  padding: 0.875em 1.5em 0.75em;
   &:hover {
     background-color: $gray-lt;
     border-color: $text;

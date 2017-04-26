@@ -9,7 +9,7 @@
 			<a href="javascript:void(0)">About</a> <a href="javascript:void(0)">News</a> <a href="javascript:void(0)">Contact</a>
 		</div>
 
-		<div class="primary giga">
+		<div class="primary">
 		  	<a href="javascript:void(0)">Advocacy</a>
 		  	<a href="javascript:void(0)">Programs &amp; Events</a>
 		  	<a href="javascript:void(0)">Resources</a>
