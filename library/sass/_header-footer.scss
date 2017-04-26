@@ -7,7 +7,6 @@
 	margin: 0;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	text-align: center;
 	@extend .micro;
 }
 
@@ -27,6 +26,9 @@ HEADER
 	}
 	> div {
 		position: relative;
+	}
+	.logo-text {
+		text-align: center;
 	}
 	nav {
 		background-color: $blue;
@@ -128,22 +130,31 @@ footer {
 		font-family: $serif, serif;
 	}
 	nav {
-		border-top: $border;
-		padding-top: $padding;
 		a {
 			color: $blue;
 			padding: $padding;
 		}
 		.secondary {
+			border-top: $border;
+			padding-top: $padding;
 			font-weight: 900;
 		}
 		.primary {
 			padding-top: $padding;
 		}
 	}
-	.social a {
-	    border: 0;
-	    display: block;
+	.social {
+		[class^="icon-"] {
+			color: $blue;
+			font-size: 2rem;
+			margin-right: $padding/2;
+			vertical-align: middle;
+		}
+		a {
+		    border: 0;
+		    display: block;
+		    padding: $padding/2;
+		}
 	}
 }
 
@@ -152,4 +163,33 @@ footer {
 	color: $blue;
 	padding-top: $padding/2;
 	padding-bottom: $padding/2;
+}
+
+@include breakpoint(large) {
+	footer {
+		text-align: left;
+		> div + div {
+			border-top: $border;
+		}
+		.address p, .phone, .email {
+			display: inline-block;
+		}
+		.address p + p:before, .email:before {
+			content: '/';
+			padding: $padding/4;
+		}
+		.social {
+			float: left;
+		}
+		nav {
+			text-align: right;
+		}
+		.primary a {
+			display: inline-block;
+			font-weight: 900;
+		}
+	}
+	footer nav .secondary {
+		border-top: none;
+	}
 }
