@@ -66,6 +66,34 @@ section.articles {
 	}
 }
 
+/*** BODY BLOCKS ***/
+
+section.block {
+	color: $gray-dk;
+	padding: $padding;
+	h2 {
+		text-align: center;
+	}
+	p.links {
+		margin-top: $padding;
+		span {
+			font-style: italic;
+		}
+		a {
+			color: $blue;
+			font-weight: 900;
+		}
+	}
+}
+
+section.primary {
+	background: $blue-lt;
+}
+
+section.secondary {
+	background: $mustard-lt;
+}
+
 
 /*************
 ARCHIVE  

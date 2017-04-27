@@ -28,6 +28,52 @@
       <?php get_template_part('partials/article'); ?>
 
     </section>
+
+    <section class="primary block">
+      <div class="wrapper">
+
+        <h2>About PPS</h2>
+
+        <div class="text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ullamcorper tortor a dolor pharetra placerat pharetra ac arcu. Aliquam at nulla vitae massa condimentum eleifend at sed ipsum. Nunc eu condimentum urna, vitae euismod elit. Nullam quis maximus nunc, quis euismod eros. Vestibulum dignissim nec erat et euismod. Sed nisi risus, aliquam at diam quis, facilisis tincidunt erat. Praesent quam dui, congue et orci quis, cursus finibus diam. Integer ac vestibulum ante. In id condimentum libero, ut vulputate tortor. In libero sapien, auctor hendrerit venenatis ut, lobortis vitae tortor. Nullam et ligula condimentum, dignissim erat ut, facilisis diam. Praesent gravida feugiat lacus, aliquam egestas ligula vehicula in. Mauris tincidunt, arcu quis rutrum varius, orci urna feugiat metus, vitae facilisis odio turpis vel sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum elementum erat vel tempor gravida.
+          </p>
+          <p>
+            Maecenas maximus felis dolor, id fringilla est lacinia a. Mauris efficitur at magna non iaculis. Vivamus in sapien tellus. Sed mollis pulvinar risus, tincidunt facilisis metus sodales at. Etiam vitae metus non magna blandit tristique. Sed laoreet elit non imperdiet pulvinar. Mauris aliquet pretium placerat. In ac imperdiet neque.
+          </p>
+          <p class="links">
+            <span>Learn more about: </span>
+            <a href="javascript:void(0)">PPS's Partners in Preservation</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="secondary block">
+      <div class="wrapper">
+
+        <h2>How You Can Help</h2>
+        <div class="text">
+          <p>
+            <strong>Vestibulum dignissim nec erat et euismod!</strong> Sed nisi risus, aliquam at diam quis, facilisis tincidunt erat. Praesent quam dui, congue et orci quis, cursus finibus diam. Integer ac vestibulum ante. In id condimentum libero, ut vulputate tortor. In libero sapien, auctor hendrerit venenatis ut, lobortis vitae tortor. Nullam et ligula condimentum, dignissim erat ut, facilisis diam. Praesent gravida feugiat lacus, aliquam egestas ligula vehicula in. Mauris tincidunt, arcu quis rutrum varius, orci urna feugiat metus, vitae facilisis odio turpis vel sem. Interdum et malesuada fames ac ante ipsum primis in faucibus. <em>Vestibulum elementum erat vel tempor gravida.</em>
+          </p>
+        </div>
+        <div class="button-group">
+          <div><a class="button primary" href="javascript:void(0)">Become a Member</a></div>
+          <div><a class="button primary" href="javascript:void(0)">Attend an Event</a></div>
+          <div><a class="button primary" href="javascript:void(0)">Volunteer Your Time</a></div>
+          <div><a class="button primary" href="javascript:void(0)">Sponsor an Event</a></div>
+          <div><a class="button primary" href="javascript:void(0)">Advocate for Preservation</a></div>
+          <div><a class="button primary" href="javascript:void(0)">Donate Today</a></div>
+          <p class="links">
+            <span>Learn more about: </span>
+            <a href="javascript:void(0)">PPS's Partners in Preservation</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
       
   </main>
 

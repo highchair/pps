@@ -13,8 +13,14 @@ body {
 	background: $white;
 	color: $black;
 	font-family: $sans-serif, sans-serif;
+	letter-spacing: 0.025em;
 	line-height: 1.5em;
 	word-break: break-word; // wrap extra-long words so they don't break layout
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: $padding;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -217,9 +223,11 @@ a {
 button, .button, input[type='submit'] {
 	background: transparent;
 	border: 1px solid;
+	display: inline-block;
 	font-weight: 900;
 	letter-spacing: 0.125em;
 	padding: 0.875em 1.5em 0.75em;
+	text-align: center;
 	white-space: nowrap;
 	@include buttons;
   	&.primary {
@@ -236,6 +244,11 @@ button, input[type='submit'] {
 
 button {
 	font-family: $sans-serif, sans-serif;
+}
+
+.button-group .button {
+	margin-top: $padding;
+	width: 100%;
 }
 
 .meta {

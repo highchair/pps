@@ -11,6 +11,7 @@ $blue-xlt: #e8edf8;
 
 $bronze: #8a7846;
 $mustard: #d6d397;
+$mustard-lt: #f1f0dc;
 
 $black: #333;
 $gray-dk: #666;
@@ -180,7 +181,7 @@ $breakpoints: (
   large: 1024px,
   xlarge: 1366px
 );
-$grid-row-width: rem-calc(1366);
+$grid-row-width: rem-calc(1350);
 
 @import "foundation";
 @include foundation-global-styles;

@@ -56,6 +56,10 @@ LARGE AND UP
 		margin-left: $padding/2;
 	}
 
+	.button-group > div {
+		@include grid-column(6);
+	}
+
 	footer section {
 		@include grid-column(3);
 		&:first-child {
@@ -78,6 +82,19 @@ LARGE AND UP
 
 	section.articles article {
 		@include grid-column(6);
+	}
+
+	body.home section.primary div.text {
+		column-count: 2;
+	}
+
+	body.home section.secondary {
+		div.text {
+			@include grid-column(4);
+		}
+		.button-group {
+			@include grid-column(8);
+		}
 	}
 
 	/*** PAGES WITH SIDEBARS ***/
@@ -130,6 +147,25 @@ XLARGE AND UP
 
 	#nav {
 		@include grid-column(5);
+	}
+
+	/*** HOMEPAGE ***/
+
+	section.block {
+		@include grid-column(6);
+	}
+
+	body.home section.primary div.text {
+		column-count: 1;
+	}
+
+	body.home section.secondary {
+		div.text {
+			@include grid-column(12);
+		}
+		.button-group {
+			@include grid-column(12);
+		}
 	}
 
 	/*** PAGES WITH SIDEBARS ***/
