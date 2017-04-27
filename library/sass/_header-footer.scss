@@ -38,6 +38,9 @@ HEADER
 		color: $blue;
 		@extend .h2;
 	}
+	.desktop-search {
+		display: none;
+	}
 	div.secondary a, .toggle-nav {
 		color: $white;
 	}
@@ -47,7 +50,7 @@ HEADER
 		letter-spacing: 0.125em;
 		text-align: right;
 		text-transform: lowercase;
-		a + a {
+		a {
 			margin-left: 0.5rem;
 		}
 	}
@@ -76,6 +79,9 @@ HEADER
 		.toggle-nav {
 			display: none;
 		}
+		.desktop-search {
+			display: inline-block;
+		}
 	}
 	#header div.primary {
 		display: block !important;
@@ -91,6 +97,26 @@ HEADER
 		a {
 			color: $gray-dk;
 		}
+	}
+	#searchform, #searchform button {
+		display: none;
+	}
+}
+
+nav.search-open {
+	.desktop-search {
+		position: relative;
+		#searchform {
+			display: inline-block;
+			position: absolute;
+			right: calc(100% + #{$padding});
+		}
+	}
+	.secondary a {
+		opacity: 0.2;
+	}
+	.secondary .desktop-search a {
+		opacity: 1;
 	}
 }
 

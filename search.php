@@ -12,7 +12,7 @@ SEARCH RESULTS PAGE
     </h1>
   </header>
 
-  <div class="left">
+  <div>
     <?php
       if (have_posts()) : while (have_posts()) : the_post();
         $class = 'archive';
@@ -21,14 +21,11 @@ SEARCH RESULTS PAGE
         get_template_part('partials/pagination');
       else: ?>
       <h2>No Results</h2>
-      <p>Sorry, no results were found! Try again?</p>
-      <?php echo get_search_form(); ?>
+      <p>We're sorry but no results were found!</p>
     <?php
       endif;
     ?>
   </div>
-
-  <?php get_sidebar(); ?>
 
 </main>
 

@@ -6,7 +6,10 @@
 
 		<div class="secondary">
 			<a class="toggle-nav" href="javascript:void(0)"><span class="icon-bars"></span> Menu</a> 
-			<a href="javascript:void(0)">About</a> <a href="javascript:void(0)">News</a> <a href="javascript:void(0)">Contact</a>
+			<a href="javascript:void(0)">About</a> 
+			<a href="javascript:void(0)">News</a> 
+			<a href="javascript:void(0)">Contact</a>
+			<div class="desktop-search"><a href="javascript:void(0)">Search</a></div>
 		</div>
 
 		<div class="primary">

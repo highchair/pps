@@ -15,6 +15,14 @@ jQuery(document).ready( function($) {
 
 	});
 
+	/*** SEARCH BAR (desktop only) ***/
+
+	$('#header .desktop-search').click( function() {
+
+		openSearch();
+
+	});
+
 	/*** KEYBOARD SHORTCUTS ***/
 
 	$(document).keydown(function(e) {
@@ -22,6 +30,7 @@ jQuery(document).ready( function($) {
 			openNav();
 		} else if ( e.keyCode == 27 ){ // esc key
 			closeNav();
+			closeSearch();
 		}
 	});
 
@@ -38,6 +47,16 @@ jQuery(document).ready( function($) {
 
 	function closeNav() {
 		$('body').removeClass('nav-open').addClass('nav-closed');
+	}
+
+	function openSearch() {
+		$('#header nav').addClass('search-open');
+		$('#searchform').prependTo('#header .desktop-search');
+		$('#searchform input').focus();
+	}
+
+	function closeSearch() {
+		$('#header nav').removeClass('search-open');
 	}
 
 	function getMaxHeight(s) {
