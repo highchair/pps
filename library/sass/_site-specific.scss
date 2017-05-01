@@ -104,34 +104,37 @@ ARCHIVE
 *************/
 
 /*************
-EVENTS PAGE  
+DEFAULT PAGE & 
+SINGLE POSTS
 *************/
 
-/*************
-SINGLE  
-*************/
+nav.breadcrumb {
+	color: $gray;
+	padding-top: $padding*2;
+	padding-bottom: $padding;
+	text-align: right;
+}
 
 body.single, body.page {
-	main header h1 {
-		margin-bottom: $padding/2;
-	}
-	main {
-		margin-bottom: $padding/2;
-	}
-	main a:not(.button) {
-		@include underline;
-		&:hover {
-			color: $black;
-		}
-	}
 	article {
+		h2 {
+			color: $black;
+			font-size: $h1;
+			margin-top: 0;
+		}
+		a:not(.button) {
+			@include underline;
+			&:hover {
+				color: $black;
+			}
+		}
 		img {
 			margin-top: $padding/2;
 			margin-bottom: $padding/2;
 		}
 	}
 	.wp-caption-text {
-		@extend .meta;
+		@extend .micro;
 	}
 }
 

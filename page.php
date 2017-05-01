@@ -1,20 +1,28 @@
 <?php get_header(); ?>
 
 <main>
+	
+	<nav class="breadcrumb">
+		<a href="javascript:void(0)">Home</a> &gt;
+		<a href="javascript:void(0)">Advocacy</a> &gt;
+		<?php the_title(); ?>
+	</nav>
 
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php get_sidebar('page'); ?>
 
-    <?php get_template_part('partials/page-header'); ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-    <article>
-    
-      <?php the_content(); ?>
+	<article>
 
-    </article>
-      
-  </main>
+		<h2><?php the_title(); ?></h2>
 
-  <?php endwhile; endif; ?>
+		<?php the_content(); ?>
+
+	</article>
+
+	<?php endwhile; endif; ?>
+
+</main>
 
 <?php get_footer(); ?>
 

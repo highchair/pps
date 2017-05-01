@@ -307,18 +307,9 @@ function ppsri_register_sidebars() {
         'after_title' => '</h2>',
     ));
     register_sidebar(array(
-        'id' => 'sidebar_events',
-        'name' => __('Events Sidebar', 'ppsri'),
-        'description' => __('The sidebar for the events page.', 'ppsri'),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-    register_sidebar(array(
         'id' => 'sidebar_page',
         'name' => __('Page Sidebar', 'ppsri'),
-        'description' => __('The sidebar for the pages using the "Two-Column Page" template.', 'ppsri'),
+        'description' => __('The sidebar for pages.', 'ppsri'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
@@ -350,24 +341,6 @@ function ppsri_register_sidebars() {
         'after_widget' => '</div>',
         'before_title' => '<h4>',
         'after_title' => '</h4>',
-    ));
-    register_sidebar(array(
-        'id' => 'home_widget-1',
-        'name' => __('Homepage Widget #1', 'ppsri'),
-        'description' => __('Customizable section on the homepage.', 'ppsri'),
-        'before_widget' => '<div>',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-    register_sidebar(array(
-        'id' => 'home_widget-2',
-        'name' => __('Homepage Widget #2', 'ppsri'),
-        'description' => __('Another customizable section on the homepage.', 'ppsri'),
-        'before_widget' => '<div>',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
     ));
 }
 
