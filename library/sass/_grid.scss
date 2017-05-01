@@ -104,6 +104,15 @@ LARGE AND UP
 
 	/*** PAGES WITH SIDEBARS ***/
 
+	body.archive {
+		div.main {
+			@include grid-column(7);
+		}
+		aside.sidebar {
+			@include grid-column(4);	
+		}
+	}
+
 	body.page {
 		aside.sidebar {
 			@include grid-column(4);

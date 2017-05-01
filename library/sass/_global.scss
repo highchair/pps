@@ -23,6 +23,12 @@ p {
 	margin-bottom: $padding;
 }
 
+main p {
+	font-size: 1.25rem;
+	font-weight: 100;
+	line-height: 1.5em;
+}
+
 /*** font sizes ***/
 $h1: 1.625rem;
 $h2: 1.438em;

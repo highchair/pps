@@ -1,7 +1,8 @@
 <article>
-	<a href="javascript:void(0)">
-		<h3>Article Title</h3>
-		<p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-		<p class="read-more"><span class="text">Read More</span> <span class="icon-chevron-circle-right"></span></p>
+	<h2><?php the_title(); ?></h2>
+	<?php the_post_thumbnail('medium'); ?>
+	<p><?php the_excerpt(); ?></p>
+	<a class="read-more" href="<?php the_permalink(); ?>">
+		<span class="text">Read More</span> <span class="icon-chevron-circle-right"></span>
 	</a>
 </article>

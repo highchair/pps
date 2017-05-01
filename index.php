@@ -22,10 +22,10 @@
 
       <h2>Recent News and Upcoming Events</h2>
 
-      <?php get_template_part('partials/article'); ?>
-      <?php get_template_part('partials/article'); ?>
-      <?php get_template_part('partials/article'); ?>
-      <?php get_template_part('partials/article'); ?>
+      <?php get_template_part('partials/article-sm'); ?>
+      <?php get_template_part('partials/article-sm'); ?>
+      <?php get_template_part('partials/article-sm'); ?>
+      <?php get_template_part('partials/article-sm'); ?>
 
     </section>
 

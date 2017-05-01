@@ -2,7 +2,7 @@
 DEFAULT / BLOG SIDEBAR
 -->
 
-<aside class="sidebar" role="complementary">
+<aside class="sidebar blog" role="complementary">
   	<div class="categories">
   		<h3>Categories</h3>
   	</div>
