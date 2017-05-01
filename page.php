@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 
 <main>
+
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	
 	<nav class="breadcrumb">
 		<a href="javascript:void(0)">Home</a> &gt;
@@ -9,8 +11,6 @@
 	</nav>
 
 	<?php get_sidebar('page'); ?>
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<article>
 

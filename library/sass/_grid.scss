@@ -3,7 +3,6 @@
 ALL SIZES 
 *************/
 
-
 /*** GLOBAL ***/
 
 #nav {
@@ -33,6 +32,12 @@ footer section {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+/*** SINGLE PAGE & DEFAULT PAGES ***/
+
+body.single main > article, body.single section.meta, body.single main > aside {
+	@include grid-column(12);
 }
 
 
@@ -108,12 +113,21 @@ LARGE AND UP
 		}
 	}
 
-	/*** SINGLE PAGE & DEFAULT PAGES ***/
+	/*** SINGLE POST PAGE ***/
 
 	body.single {
-		main header, main > article {
-			@include grid-column(11);
+		main {
+			@include grid-column(10);
 			@include grid-col-pos(center);
+		}
+		main > article, section.meta {
+			padding-left: 0;
+			padding-right: 0;
+			@include grid-column(10);
+			@include grid-col-pos(center);
+		}
+		main > aside > div {
+			@include grid-column(4);
 		}
 	}
 
@@ -157,6 +171,18 @@ XLARGE AND UP
 		.button-group {
 			@include grid-column(12);
 		}
+	}
+
+	/*** SINGLE PAGE & DEFAULT PAGES ***/
+
+	body.single main > article, body.single section.meta {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	body.single main > article, body.single section.meta {
+		@include grid-column(7);
+		@include grid-col-pos(center);
 	}
 
 } // end breakpoint(xlarge)

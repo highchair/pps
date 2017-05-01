@@ -8,7 +8,7 @@ SEARCH RESULTS PAGE
   
   <header>
     <h1>
-      <?php _e('Results for:', 'bhass'); ?></span> <?php echo esc_attr(get_search_query()); ?>
+      <?php _e('Results for:', 'ppri'); ?></span> <?php echo esc_attr(get_search_query()); ?>
     </h1>
   </header>
 

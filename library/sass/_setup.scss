@@ -61,26 +61,6 @@ $sans-serif: 'Alegreya Sans';
   }
 }
 
-/*** Underlines for Links ***/
-// Sass usage:
-// @include underline;
-// to add a custom underline color:
-// @include underline($silver);
-
-@mixin underline($color:null) {
-  border-bottom: 1px solid;
-  color: darken($gray,10);
-  &:hover {
-    color: $black;
-  }
-  @if ($color) {
-    border-color: $color;
-  } @else {
-    border-color: $black;
-    color: $black;
-  }
-}
-
 /*** Thick Borders ***/
 
 @mixin border($direction:null,$color:$blue) {
