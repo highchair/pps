@@ -81,6 +81,18 @@ $sans-serif: 'Alegreya Sans';
   }
 }
 
+/*** Thick Borders ***/
+
+@mixin border($direction:null,$color:$blue) {
+  @if ($direction == 'top') {
+    border-top: 7px solid;
+  }
+  @if ($direction == 'bottom') {
+    border-bottom: 7px solid;
+  }
+  border-color: $color;
+}
+
 /*** Buttons ***/
 
 @mixin buttons($color:null,$border:$gray-lt,$text:$gray) {

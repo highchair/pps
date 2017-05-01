@@ -28,6 +28,7 @@ HEADER
 		position: relative;
 	}
 	.logo-text {
+		color: $black;
 		text-align: center;
 	}
 	nav {
@@ -66,7 +67,7 @@ HEADER
 
 @include breakpoint(large) {
 	#header {
-		border-bottom: 5px solid $blue;
+		@include border(bottom);
 		nav {
 			background-color: transparent;
 		}
@@ -146,14 +147,20 @@ body.nav-open {
 FOOTER 
 *************/
 
-footer, .subfooter {
+#footer, .subfooter {
 	text-align: center;
 }
 
-footer {
+body:not(.home) #footer {
+	@include border(top);	
+}
+
+#footer {
 	padding: $padding;
 	div.contact {
+		background: url('../img/seal.png') no-repeat right top;
 		font-family: $serif, serif;
+		padding-top: $padding*2;
 	}
 	nav {
 		a {
@@ -168,6 +175,10 @@ footer {
 		.primary {
 			padding-top: $padding;
 		}
+	}
+	.primary a {
+		display: block;
+		@extend %kilo;
 	}
 	.social {
 		[class^="icon-"] {
@@ -188,13 +199,20 @@ footer {
 	color: $blue;
 	padding-top: $padding/2;
 	padding-bottom: $padding/2;
+	span {
+		display: block;
+	}
 }
 
 @include breakpoint(large) {
-	footer {
+	#footer {
 		text-align: left;
 		> div + div {
 			border-top: $border;
+		}
+		div.contact {
+			background-position-x: left;
+			padding-left: calc(123px + #{$padding}); // seal image + padding
 		}
 		.address p, .phone, .email {
 			display: inline-block;
@@ -211,10 +229,14 @@ footer {
 		}
 		.primary a {
 			display: inline-block;
+			font-size: 1rem;
 			font-weight: 900;
 		}
 	}
-	footer nav .secondary {
+	#footer nav .secondary {
 		border-top: none;
+	}
+	.subfooter span {
+		display: inline;
 	}
 }

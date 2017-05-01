@@ -1,4 +1,4 @@
-  <footer>
+  <footer id="footer">
 
     <div>
 
@@ -46,7 +46,10 @@
   <?php wp_footer(); ?>
 
   <div class="subfooter">
-    <p>&copy; 2017 Providence Preservation Society<br/>All rights reserved.</p>
+    <p>
+      <span>&copy; 2017 Providence Preservation Society.</span>
+      <span>All rights reserved.</span>
+    </p>
   </div>
 
   </body>
