@@ -23,39 +23,52 @@ p {
 	margin-bottom: $padding;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+/*** font sizes ***/
+$h1: 1.625rem;
+$h2: 1.438em;
+$h3: 1.25rem;
+$h4: 1.125rem;
+$h5: 1.063rem;
+$h6: 1rem;
+
+
+h1, h2, h3, h4, h5, h6 {
 	line-height: 1.25em;
 }
-h1, .h1, h2, .h2 {
+h1, h2 {
 	font-weight: 300;
 }
-h3, .h3, h4, .h4, h5, .h5 {
+h3, h4, h5 {
 	font-weight: 600;
 }
-h1, .h1 {
-	font-size: 1.625rem;
+h1 {
+	font-size: $h1;
 }
-h2, .h2 {
+h2 {
 	color: $bronze;
-	font-size: 1.438;
+	font-size: $h2;
 }
-h3, .h3 {
+h3 {
 	color: $blue;
-	font-size: 1.25rem;
+	font-size: $h3;
 }
-h4, .h4 {
+h4 {
 	color: $bronze;
-	font-size: 1.125rem;
+	font-size: $h4;
 }
-h5, .h5 {
+h5 {
 	color: $gray;
-	font-size: 1.063rem;
+	font-size: $h5;
 }
-h6, .h6 {
+h6 {
 	color: $gray-dk;
-	font-size: 1rem;
+	font-size: $h6;
 	font-weight: 300;
 	text-transform: uppercase;
+}
+
+%giga, %mega, %kilo {
+	font-weight: 100;
 }
 
 %giga {
@@ -216,8 +229,11 @@ other reusable bits of stuff
 *************/
 
 a {
-	color: $black;
+	color: $blue;
 	text-decoration: none;
+	&:hover {
+		color: $gray-dk;
+	}
 }
 
 button, .button, input[type='submit'] {
@@ -284,7 +300,6 @@ table {
 	}
 	th {
 		text-align: left;
-		@extend .h4;
 	}
 	tr {
 		border-bottom: $border;
@@ -299,7 +314,6 @@ table {
 
 dt {
 	margin-top: $padding/2;
-	@extend .h4;
 }
 dd {
 	margin-left: 0;

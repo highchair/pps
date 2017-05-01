@@ -52,7 +52,7 @@ section.articles {
 			margin-right: $padding;
 			opacity: 0;
 			position: absolute;
-			@extend .h4;
+			font-size: $h4;
 		}
 	}
 	.icon-chevron-circle-right {
@@ -157,7 +157,7 @@ section.comments {
 		}
 	}
 	.comment-reply-link {
-		@extend .h4;
+		font-size: $h4;
 	}
 	.comment-meta {
 		margin-bottom: $padding/3;
