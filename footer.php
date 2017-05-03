@@ -1,6 +1,14 @@
   <footer id="footer">
 
-    <div>
+    <section>
+
+      <div class="signup">
+        <h3>Get E-News</h3>
+        <p>Occasional Alerts and Updates from PPS</p>
+        <form>
+          <input type="email" placeholder="email@domain.com"><a class="button" href="#">Sign Up</a>
+        </form>
+      </div>
 
       <div class="contact" itemscope itemtype="http://schema.org/Organization">
         <h1 class="logo-text" itemprop="name">Providence Preservation Society</h1>
@@ -15,14 +23,14 @@
         <p class="email"><span itemprop="email">info@ppsri.org</span></p>
       </div>
 
-    </div>
+    </section>
 
-    <div>
+    <section>
 
-      <p class="social">
+      <div class="social">
         <a href="http://facebook.com/pvdpreservation"><span class="icon-facebook"></span> facebook.com/pvdpreservation</a>
         <a href="http://twitter.com/pvdpreservation"><span class="icon-twitter"></span> twitter.com/pvdpreservation</a>
-      </p>
+      </div>
 
       <nav role="navigation">
 
@@ -39,7 +47,7 @@
 
       </nav>
 
-    </div>
+    </section>
 
   </footer>
 

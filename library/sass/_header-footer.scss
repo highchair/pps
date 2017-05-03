@@ -159,10 +159,19 @@ body:not(.home) #footer {
 
 #footer {
 	padding: $padding;
+	p {
+		font-family: $serif, serif;
+	}
 	div.contact {
 		background: url('../img/seal.png') no-repeat right top;
-		font-family: $serif, serif;
 		padding-top: $padding*2;
+	}
+	div.signup {
+		h3 {
+			color: $gray;
+			font-size: $h1;
+			font-weight: 100;
+		}
 	}
 	nav {
 		a {
@@ -209,12 +218,26 @@ body:not(.home) #footer {
 @include breakpoint(large) {
 	#footer {
 		text-align: left;
-		> div + div {
+		section {
+			padding-top: $padding;
+			padding-bottom: $padding;
+		}
+		section + section {
 			border-top: $border;
 		}
+		div.signup h3, div.signup p {
+			display: inline;
+			padding-left: $padding;
+		}
+		div.signup form {
+			display: block;
+			margin-top: $padding;
+		}
+		div.signup form input {
+			width: 22rem;
+		}
 		div.contact {
-			background-position-x: left;
-			padding-left: calc(123px + #{$padding}); // seal image + padding
+			background-position-x: 18%;
 		}
 		.address p, .phone, .email {
 			display: inline-block;
@@ -240,5 +263,12 @@ body:not(.home) #footer {
 	}
 	.subfooter span {
 		display: inline;
+	}
+}
+
+@include breakpoint(xlarge) {
+	#footer div.contact {
+		background-position-x: 0;
+		padding-left: calc(123px + #{$padding}); // seal image + padding
 	}
 }

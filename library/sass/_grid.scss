@@ -21,11 +21,8 @@ hr  {
 	@include grid-row;
 }
 
-footer section {
-	@include grid-column(6);
-	&:first-child {
-		@include grid-column(12);
-	}
+#footer section {
+	@include grid-row;
 }
 
 .aligncenter {
@@ -65,13 +62,15 @@ LARGE AND UP
 		@include grid-column(6);
 	}
 
-	footer section {
-		@include grid-column(3);
-		&:first-child {
+	#footer {
+		div.signup, div.contact {
 			@include grid-column(6);
 		}
-		p {
-			max-width: 30rem;
+		div.signup {
+			float: right;
+		}
+		div.contact {
+			float: left;
 		}
 	}
 
