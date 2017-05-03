@@ -140,7 +140,7 @@ nav.breadcrumb {
 	text-align: right;
 }
 
-body.single article, body.page article {
+body.single article, body.page:not(.home) article {
 	h2 {
 		color: $black;
 		font-size: $h1;

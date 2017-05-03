@@ -112,7 +112,7 @@ LARGE AND UP
 		}
 	}
 
-	body.page {
+	body.page:not(.home) {
 		aside.sidebar {
 			@include grid-column(4);
 		}
