@@ -165,7 +165,7 @@ blockquote {
 	padding-left: $padding/2;
 }
 
-.visually-hidden { /* text for screen readers */
+.screen-reader-text { /* text for screen readers */
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -331,4 +331,20 @@ dt {
 }
 dd {
 	margin-left: 0;
+}
+
+/*** Page Navigation ***/
+
+nav.pagination {
+	font-family: $serif, serif;
+	font-size: $h1;
+	padding: $padding*2;
+	text-align: center;
+	.page-numbers.current {
+		color: $gray-lt;
+		text-decoration: line-through;
+	}
+	a.next, a.prev {
+		color: $bronze;
+	}
 }

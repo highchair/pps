@@ -47,11 +47,12 @@ ARCHIVE PAGE TEMPLATE
     </header>
     
     <?php
-    if ( have_posts() ) : while ( have_posts() ) : the_post();
-
-      get_template_part('partials/article');
-
-    endwhile; endif;
+    if ( have_posts() ) { 
+      while ( have_posts() ) { the_post();
+        get_template_part('partials/article');
+      }
+      get_template_part('partials/pagination');
+    }
     ?>
 
   </div> <!-- end .main -->
