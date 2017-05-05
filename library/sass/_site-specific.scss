@@ -163,6 +163,7 @@ body.single article, body.page:not(.home) article {
 	}
 }
 
+
 /*************
 SINGLE POST
 *************/
@@ -175,6 +176,36 @@ body.single main {
 		padding-top: $padding*2;
 		padding-bottom: $padding*2;
 		@include border(top,$gray-lt);
+	}
+}
+
+/*************
+DEFAULT PAGE
+*************/
+
+body.page {
+	nav.breadcrumb {
+		padding-bottom: $padding*2;
+	}
+	.page-title {
+		margin-top: 0;
+	}
+}
+
+.menu-pages-container {
+	padding-top: $padding*2;
+	li {
+		font-size: $h2;
+		font-weight: 100;
+		list-style: none;
+		padding-bottom: $padding;
+	}
+	.current-menu-item a:before {
+		color: $bronze;
+		content: "\f061";
+		font-weight: normal;
+		padding-right: 0.5em;
+		@extend [class^="icon-"];
 	}
 }
 

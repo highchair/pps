@@ -230,12 +230,12 @@ MENUS & NAVIGATION
 // main menu top area
 function ppsri_pages_nav() {
     wp_nav_menu(array(
-        'container' => false,
+        'items_wrap' => '%3$s',
         'menu' => __( 'Pages Menu', 'ppsri' ),
         'theme_location' => 'pages-nav',
         'depth' => 1,
     ));
-} /* end ppsri main nav */
+}
 
 
 /************* MODIFIED TITLE ********************/
