@@ -200,6 +200,9 @@ body.page {
 		list-style: none;
 		padding-bottom: $padding;
 	}
+	.current-menu-item a {
+		color: $bronze;
+	}
 	.current-menu-item a:before {
 		color: $bronze;
 		content: "\f061";

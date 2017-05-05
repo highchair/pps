@@ -35,11 +35,18 @@ HEADER
 		background-color: $blue;
 		padding: 1rem;
 	}
-	div.primary a {
-		color: $blue;
-		display: block;
-		font-size: 2.063rem;
-		font-weight: 100;
+	div.primary-nav {
+		text-align: center;
+		a {
+			color: $blue;
+			border-bottom: 12px solid transparent;
+			display: block;
+			font-size: 2.063rem;
+			font-weight: 100;
+		}
+		.current-menu-item a, a:hover {
+			color: $gray-dk;
+		}
 	}
 	.desktop-search {
 		display: none;
@@ -72,6 +79,7 @@ HEADER
 		@include border(bottom);
 		nav {
 			background-color: transparent;
+			padding-bottom: 0;
 		}
 		.logo-text {
 			float: left;
@@ -86,13 +94,21 @@ HEADER
 			display: inline-block;
 		}
 	}
-	#header div.primary {
+	#header div.primary-nav {
 		display: block !important;
-		margin-top: $padding;
 		text-align: right;
-		a {
+		ul {
+			margin-top: 0;
+			margin-bottom: -6px;
+		}
+		li {
 			display: inline-block;
+		}
+		li a {
 			padding: $padding;
+		}
+		.current-menu-item a {
+			border-color: $bronze;
 		}
 	}
 	#header div.secondary {
@@ -125,13 +141,13 @@ nav.search-open {
 
 /*** Overlay Nav ***/
 
-#header div.primary, body.nav-closed #header div.primary {
+#header div.primary-nav, body.nav-closed #header div.primary-nav {
 	display: none;
 }
 
 body.nav-open {
 	position: relative;
-	#header div.primary {
+	#header div.primary-nav {
 		display: block;
 		background: $blue-xlt;
 		padding: $padding*1.5 $padding;

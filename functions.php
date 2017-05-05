@@ -172,6 +172,7 @@ function ppsri_theme_support() {
     // registering wp3+ menus
     register_nav_menus(
         array(
+            'primary-nav' => __( 'Primary Navigation', 'ppsri' ),
             'pages-nav' => __( 'Pages Menu', 'ppsri' )
         )
     );
@@ -227,7 +228,17 @@ function ppsri_customize_register( $wp_customize ) {
 MENUS & NAVIGATION
 *********************/
 
-// main menu top area
+// main nav: primary
+function ppsri_primary_nav() {
+    wp_nav_menu(array(
+        'menu' => __( 'Primary Navigation', 'ppsri' ),
+        'container' => false,
+        'theme_location' => 'primary-nav',
+        'depth' => 1,
+    ));
+}
+
+// menu for pages
 function ppsri_pages_nav() {
     wp_nav_menu(array(
         'items_wrap' => '%3$s',

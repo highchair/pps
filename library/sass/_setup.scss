@@ -65,10 +65,10 @@ $sans-serif: 'Alegreya Sans';
 
 @mixin border($direction:null,$color:$blue) {
   @if ($direction == 'top') {
-    border-top: 7px solid;
+    border-top: 6px solid;
   }
   @if ($direction == 'bottom') {
-    border-bottom: 7px solid;
+    border-bottom: 6px solid;
   }
   border-color: $color;
 }

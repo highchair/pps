@@ -12,11 +12,8 @@
 			<div class="desktop-search"><a href="javascript:void(0)">Search</a></div>
 		</div>
 
-		<div class="primary">
-		  	<a href="javascript:void(0)">Advocacy</a>
-		  	<a href="javascript:void(0)">Programs &amp; Events</a>
-		  	<a href="javascript:void(0)">Resources</a>
-		  	<a href="javascript:void(0)">Support</a>
+		<div class="primary-nav">
+		  	<?php ppsri_primary_nav(); ?>
 			<?php echo get_search_form(); ?>
 		</div>
 
