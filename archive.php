@@ -7,8 +7,7 @@ ARCHIVE PAGE TEMPLATE
 <main>
   
   <nav class="breadcrumb">
-    <a href="javascript:void(0)">Home</a> &gt;
-    News
+    <?php bcn_display(); ?>
   </nav>
 
   <div class="main">

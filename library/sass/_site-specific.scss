@@ -135,8 +135,7 @@ SINGLE POST
 
 nav.breadcrumb {
 	color: $gray;
-	padding-top: $padding*2;
-	padding-bottom: $padding;
+	padding: $padding*2 $padding*2 $padding;
 	text-align: right;
 }
 
@@ -200,10 +199,10 @@ body.page {
 		list-style: none;
 		padding-bottom: $padding;
 	}
-	.current_page_item a {
+	.current_page_item > a {
 		color: $bronze;
 	}
-	.current_page_item a:before {
+	.current_page_item > a:before {
 		color: $bronze;
 		content: "\f061";
 		font-weight: normal;
