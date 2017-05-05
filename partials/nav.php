@@ -4,11 +4,9 @@
 	</a>
 	<nav role="navigation">
 
-		<div class="secondary">
+		<div class="secondary-nav">
 			<a class="toggle-nav" href="javascript:void(0)"><span class="icon-bars"></span> Menu</a> 
-			<a href="javascript:void(0)">About</a> 
-			<a href="javascript:void(0)">News</a> 
-			<a href="javascript:void(0)">Contact</a>
+			<?php ppsri_secondary_nav(); ?>
 			<div class="desktop-search"><a href="javascript:void(0)">Search</a></div>
 		</div>
 
