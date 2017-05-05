@@ -172,10 +172,7 @@ function ppsri_theme_support() {
     // registering wp3+ menus
     register_nav_menus(
         array(
-            'main-nav-top' => __( 'Main Menu First Section', 'ppsri' ),
-            'main-nav-categories' => __( 'Main Menu Categories', 'ppsri' ),
-            'main-nav-links' => __( 'Main Menu Second Links', 'ppsri' ),
-            'main-nav-buttons' => __( 'Main Menu Buttons', 'ppsri' ),
+            'pages-nav' => __( 'Pages Menu', 'ppsri' )
         )
     );
 
@@ -231,42 +228,11 @@ MENUS & NAVIGATION
 *********************/
 
 // main menu top area
-function ppsri_main_nav_top() {
+function ppsri_pages_nav() {
     wp_nav_menu(array(
         'container' => false,
-        'menu' => __( 'Main Menu First Area', 'ppsri' ),
-        'theme_location' => 'main-nav-top',
-        'depth' => 2,
-    ));
-} /* end ppsri main nav */
-
-// main menu categories area
-function ppsri_main_nav_categories() {
-    wp_nav_menu(array(
-        'container' => false,
-        'menu' => __( 'Main Menu Categories Area', 'ppsri' ),
-        'theme_location' => 'main-nav-categories',
-        'depth' => 2,
-    ));
-} /* end ppsri main nav */
-
-// main menu links area
-function ppsri_main_nav_links() {
-    wp_nav_menu(array(
-        'container' => false,
-        'menu' => __( 'Main Menu Links Area', 'ppsri' ),
-        'theme_location' => 'main-nav-links',
-        'depth' => 2,
-        // 'fallback_cb' => 'ppsri_main_nav_fallback'
-    ));
-}
-
-// main menu buttons area
-function ppsri_main_nav_buttons() {
-    wp_nav_menu(array(
-        'container' => false,
-        'menu' => __( 'Main Menu Buttons Area', 'ppsri' ),
-        'theme_location' => 'main-nav-buttons',
+        'menu' => __( 'Pages Menu', 'ppsri' ),
+        'theme_location' => 'pages-nav',
         'depth' => 1,
     ));
 } /* end ppsri main nav */
@@ -305,42 +271,6 @@ function ppsri_register_sidebars() {
         'after_widget' => '</div>',
         'before_title' => '<h2>',
         'after_title' => '</h2>',
-    ));
-    register_sidebar(array(
-        'id' => 'sidebar_page',
-        'name' => __('Page Sidebar', 'ppsri'),
-        'description' => __('The sidebar for pages.', 'ppsri'),
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
-    ));
-    register_sidebar(array(
-        'id' => 'footer_left',
-        'name' => __('Footer: Left', 'ppsri'),
-        'description' => __('Left section of the footer.', 'ppsri'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-       'before_title' => '<h4>',
-        'after_title' => '</h4>',
-    ));
-    register_sidebar(array(
-        'id' => 'footer_middle',
-        'name' => __('Footer: Middle', 'ppsri'),
-        'description' => __('Middle section of the footer.', 'ppsri'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-    ));
-    register_sidebar(array(
-        'id' => 'footer_right',
-        'name' => __('Footer: Right', 'ppsri'),
-        'description' => __('Right section of the footer.', 'ppsri'),
-        'before_widget' => '<div class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
     ));
 }
 
