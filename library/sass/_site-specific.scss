@@ -192,7 +192,7 @@ body.page {
 	}
 }
 
-.menu-pages-container {
+.pages-menu {
 	padding-top: $padding*2;
 	li {
 		font-size: $h2;
@@ -200,10 +200,10 @@ body.page {
 		list-style: none;
 		padding-bottom: $padding;
 	}
-	.current-menu-item a {
+	.current_page_item a {
 		color: $bronze;
 	}
-	.current-menu-item a:before {
+	.current_page_item a:before {
 		color: $bronze;
 		content: "\f061";
 		font-weight: normal;

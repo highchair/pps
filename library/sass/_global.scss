@@ -31,7 +31,7 @@ main p {
 
 /*** font sizes ***/
 $h1: 1.625rem;
-$h2: 1.438em;
+$h2: 1.438rem;
 $h3: 1.25rem;
 $h4: 1.125rem;
 $h5: 1.063rem;
@@ -156,9 +156,6 @@ hr {
 	color: $blue-lt;
 }
 
-main ul:not(.meta) {
-	@include bullet-list;
-}
 
 blockquote {
 	border-left: 4px solid $silver;
@@ -282,6 +279,9 @@ article {
 	position: relative;
 	* {
 		max-width: 100%;
+	}
+	ul:not(.meta) {
+		@include bullet-list;
 	}
 	.thumbnail {
 		background-color: $white;
