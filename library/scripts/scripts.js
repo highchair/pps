@@ -63,7 +63,7 @@ jQuery(document).ready( function($) {
 
 		var maxHeight = 0;
 
-		// get biggest and set as tileHeight
+		// get biggest
 		$(s).each(function(){
 			if ( $(this).outerHeight() > maxHeight ) { maxHeight = $(this).outerHeight(); }
 		});

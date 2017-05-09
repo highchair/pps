@@ -19,8 +19,15 @@ section.hero div.text {
 	h2 {
 		font-family: $serif, serif;
 		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 35rem;
 		@extend %kilo;
 	}
+}
+
+body.home section.articles {
+	padding-bottom: $padding*2;
 }
 
 @include breakpoint(large) {
@@ -70,13 +77,18 @@ section.articles {
 	}
 }
 
-/*** BODY BLOCKS ***/
+/*** COLOR BLOCKS ***/
 
 section.block {
 	color: $gray-dk;
 	padding: $padding;
 	h2 {
 		text-align: center;
+	}
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 45rem;
 	}
 	p.links {
 		margin-top: $padding;

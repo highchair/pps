@@ -76,16 +76,22 @@ LARGE AND UP
 
 	/*** HOMEPAGE ***/
 
-	body.home section {
-		@include grid-row;
+	body.home main {
+		max-width: 100%; // override layout to allow for full-width sections
 	}
 
-	section.hero > div {
-		@include grid-column(6);
+	section.hero {
+		@include clearfix;
+		> div {
+			@include grid-column(6);
+		}
 	}
 
-	section.articles article {
-		@include grid-column(6);
+	section.articles {
+		@include clearfix;
+		article {
+			@include grid-column(3);
+		}
 	}
 
 	body.home section.primary div.text {
@@ -103,7 +109,7 @@ LARGE AND UP
 
 	/*** PAGES ***/
 
-	body.page main {
+	body.page:not(.home) main {
 		@include grid-column(8);
 		@include grid-col-pos(center);
 	}
