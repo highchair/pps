@@ -197,16 +197,19 @@ body:not(.home) #footer {
 			color: $blue;
 			padding: $padding;
 		}
-		.secondary {
+		.secondary-nav {
 			border-top: $border;
 			padding-top: $padding;
 			font-weight: 900;
+		}
+		.secondary-nav li {
+			display: inline-block;
 		}
 		.primary {
 			padding-top: $padding;
 		}
 	}
-	.primary a {
+	.primary-nav a {
 		display: block;
 		@extend %kilo;
 	}
@@ -271,13 +274,15 @@ body:not(.home) #footer {
 		nav {
 			text-align: right;
 		}
-		.primary a {
-			display: inline-block;
+		.primary-nav a {
 			font-size: 1rem;
 			font-weight: 900;
 		}
+		.primary-nav li {
+			display: inline-block;
+		}
 	}
-	#footer nav .secondary {
+	#footer nav .secondary-nav {
 		border-top: none;
 	}
 	.subfooter span {
