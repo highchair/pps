@@ -317,11 +317,11 @@ function ppsri_list_child_pages() {
 
     if ( is_page() && $post->post_parent ) { // if this page is the parent
 
-        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+        $childpages = wp_list_pages( 'sort_column=menu_order&depth=1&title_li=&child_of=' . $post->post_parent . '&echo=0' );
     
     } else { // if it's a child
         
-        $childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
+        $childpages = wp_list_pages( 'sort_column=menu_order&depth=1&title_li=&child_of=' . $post->ID . '&echo=0' );
     
     }
     if ( $childpages ) {
