@@ -103,7 +103,7 @@ section.secondary {
 BLOG  
 *************/
 
-body.archive {
+body.blog, body.archive {
 	header {
 		p {
 			margin-bottom: 0;
@@ -117,9 +117,9 @@ body.archive {
 	}
 	article {
 		padding: $padding*2;
-		&:first-of-type {
-			@include box-shadow($silver 0 0 $padding);
-		}
+	}
+	&:not(.paged) article:first-of-type { // first page only
+		@include box-shadow($silver 0 0 $padding);
 	}
 }
 

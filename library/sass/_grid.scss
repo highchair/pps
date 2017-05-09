@@ -103,7 +103,7 @@ LARGE AND UP
 
 	/*** PAGES WITH SIDEBARS ***/
 
-	body.archive {
+	body.blog, body.archive {
 		div.main {
 			@include grid-column(7);
 		}
@@ -112,14 +112,14 @@ LARGE AND UP
 		}
 	}
 
-	body.page:not(.home) {
-		aside.sidebar {
-			@include grid-column(4);
-		}
-		article {
-			@include grid-column(8);
-		}
-	}
+	// body.page:not(.home) {
+	// 	aside.sidebar {
+	// 		@include grid-column(4);
+	// 	}
+	// 	article {
+	// 		@include grid-column(8);
+	// 	}
+	// }
 
 	/*** SINGLE POST PAGE ***/
 

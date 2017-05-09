@@ -1,20 +1,34 @@
+
+
 <?php get_header(); ?>
 
 <main>
-
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
   
-	<article>
+  <nav class="breadcrumb">
+    <?php bcn_display(); ?>
+  </nav>
 
-		<h2><?php the_title(); ?></h2>
+  <div class="main">
 
-		<?php the_content(); ?>
+    <header>
 
-	</article>
+      <h1>News</h1>
 
-	<?php endwhile; endif; ?>
+    </header>
+    
+    <?php
+    if ( have_posts() ) { 
+      while ( have_posts() ) { the_post();
+        get_template_part('partials/article');
+      }
+      get_template_part('partials/pagination');
+    }
+    ?>
+
+  </div> <!-- end .main -->
+
+  <?php get_sidebar(); ?>
 
 </main>
 
 <?php get_footer(); ?>
-
