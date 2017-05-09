@@ -1,5 +1,5 @@
 <header id="header">
-	<a href="index.php">
+	<a href="<?php echo get_home_url(); ?>">
 		<h1 class="logo-text">Providence Preservation Society</h1>
 	</a>
 	<nav role="navigation">
