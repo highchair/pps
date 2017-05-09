@@ -200,10 +200,10 @@ body.page {
 		padding-bottom: $padding;
 	}
 	.current_page_item > a {
-		color: $bronze;
+		color: $gray-dk;
 	}
 	.current_page_item > a:before {
-		color: $bronze;
+		color: $gray-dk;
 		content: "\f061";
 		font-weight: normal;
 		padding-right: 0.5em;

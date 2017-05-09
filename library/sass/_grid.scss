@@ -101,6 +101,13 @@ LARGE AND UP
 		}
 	}
 
+	/*** PAGES ***/
+
+	body.page main {
+		@include grid-column(8);
+		@include grid-col-pos(center);
+	}
+
 	/*** PAGES WITH SIDEBARS ***/
 
 	body.blog, body.archive {
@@ -112,14 +119,17 @@ LARGE AND UP
 		}
 	}
 
-	// body.page:not(.home) {
-	// 	aside.sidebar {
-	// 		@include grid-column(4);
-	// 	}
-	// 	article {
-	// 		@include grid-column(8);
-	// 	}
-	// }
+	body.page-parent, body.page-child {
+		main {
+			@include grid-column(12); // override
+		}
+		aside.sidebar {
+			@include grid-column(4);
+		}
+		article {
+			@include grid-column(8);
+		}
+	}
 
 	/*** SINGLE POST PAGE ***/
 
