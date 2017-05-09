@@ -31,7 +31,7 @@ main p {
 
 /*** font sizes ***/
 $h1: 1.625rem;
-$h2: 1.438em;
+$h2: 1.438rem;
 $h3: 1.25rem;
 $h4: 1.125rem;
 $h5: 1.063rem;
@@ -156,16 +156,13 @@ hr {
 	color: $blue-lt;
 }
 
-main ul:not(.meta) {
-	@include bullet-list;
-}
 
 blockquote {
 	border-left: 4px solid $silver;
 	padding-left: $padding/2;
 }
 
-.visually-hidden { /* text for screen readers */
+.screen-reader-text { /* text for screen readers */
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -283,6 +280,9 @@ article {
 	* {
 		max-width: 100%;
 	}
+	ul:not(.meta) {
+		@include bullet-list;
+	}
 	.thumbnail {
 		background-color: $white;
 		background-size: cover;
@@ -331,4 +331,20 @@ dt {
 }
 dd {
 	margin-left: 0;
+}
+
+/*** Page Navigation ***/
+
+nav.pagination {
+	font-family: $serif, serif;
+	font-size: $h1;
+	padding: $padding*2;
+	text-align: center;
+	.page-numbers.current {
+		color: $gray-lt;
+		text-decoration: line-through;
+	}
+	a.next, a.prev {
+		color: $bronze;
+	}
 }

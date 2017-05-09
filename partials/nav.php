@@ -1,22 +1,17 @@
 <header id="header">
-	<a href="index.php">
+	<a href="<?php echo get_home_url(); ?>">
 		<h1 class="logo-text">Providence Preservation Society</h1>
 	</a>
 	<nav role="navigation">
 
-		<div class="secondary">
+		<div class="secondary-nav">
 			<a class="toggle-nav" href="javascript:void(0)"><span class="icon-bars"></span> Menu</a> 
-			<a href="javascript:void(0)">About</a> 
-			<a href="javascript:void(0)">News</a> 
-			<a href="javascript:void(0)">Contact</a>
+			<?php ppsri_secondary_nav(); ?>
 			<div class="desktop-search"><a href="javascript:void(0)">Search</a></div>
 		</div>
 
-		<div class="primary">
-		  	<a href="javascript:void(0)">Advocacy</a>
-		  	<a href="javascript:void(0)">Programs &amp; Events</a>
-		  	<a href="javascript:void(0)">Resources</a>
-		  	<a href="javascript:void(0)">Support</a>
+		<div class="primary-nav">
+		  	<?php ppsri_primary_nav(); ?>
 			<?php echo get_search_form(); ?>
 		</div>
 

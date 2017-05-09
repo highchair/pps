@@ -101,9 +101,16 @@ LARGE AND UP
 		}
 	}
 
+	/*** PAGES ***/
+
+	body.page main {
+		@include grid-column(8);
+		@include grid-col-pos(center);
+	}
+
 	/*** PAGES WITH SIDEBARS ***/
 
-	body.archive {
+	body.blog, body.archive {
 		div.main {
 			@include grid-column(7);
 		}
@@ -112,7 +119,10 @@ LARGE AND UP
 		}
 	}
 
-	body.page {
+	body.page-parent, body.page-child {
+		main {
+			@include grid-column(12); // override
+		}
 		aside.sidebar {
 			@include grid-column(4);
 		}

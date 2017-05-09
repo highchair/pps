@@ -103,7 +103,7 @@ section.secondary {
 BLOG  
 *************/
 
-body.archive {
+body.blog, body.archive {
 	header {
 		p {
 			margin-bottom: 0;
@@ -117,9 +117,9 @@ body.archive {
 	}
 	article {
 		padding: $padding*2;
-		&:first-of-type {
-			@include box-shadow($silver 0 0 $padding);
-		}
+	}
+	&:not(.paged) article:first-of-type { // first page only
+		@include box-shadow($silver 0 0 $padding);
 	}
 }
 
@@ -135,12 +135,11 @@ SINGLE POST
 
 nav.breadcrumb {
 	color: $gray;
-	padding-top: $padding*2;
-	padding-bottom: $padding;
+	padding: $padding*2 $padding*2 $padding;
 	text-align: right;
 }
 
-body.single article, body.page article {
+body.single article, body.page:not(.home) article {
 	h2 {
 		color: $black;
 		font-size: $h1;
@@ -163,6 +162,7 @@ body.single article, body.page article {
 	}
 }
 
+
 /*************
 SINGLE POST
 *************/
@@ -175,6 +175,39 @@ body.single main {
 		padding-top: $padding*2;
 		padding-bottom: $padding*2;
 		@include border(top,$gray-lt);
+	}
+}
+
+/*************
+DEFAULT PAGE
+*************/
+
+body.page {
+	nav.breadcrumb {
+		padding-bottom: $padding*2;
+	}
+	.page-title {
+		margin-top: 0;
+	}
+}
+
+.pages-menu {
+	padding-top: $padding*2;
+	li {
+		font-size: $h2;
+		font-weight: 100;
+		list-style: none;
+		padding-bottom: $padding;
+	}
+	.current_page_item > a {
+		color: $gray-dk;
+	}
+	.current_page_item > a:before {
+		color: $gray-dk;
+		content: "\f061";
+		font-weight: normal;
+		padding-right: 0.5em;
+		@extend [class^="icon-"];
 	}
 }
 

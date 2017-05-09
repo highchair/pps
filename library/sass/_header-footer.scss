@@ -35,19 +35,26 @@ HEADER
 		background-color: $blue;
 		padding: 1rem;
 	}
-	div.primary a {
-		color: $blue;
-		display: block;
-		font-size: 2.063rem;
-		font-weight: 100;
+	div.primary-nav {
+		text-align: center;
+		a {
+			color: $blue;
+			border-bottom: 12px solid transparent;
+			display: block;
+			font-size: 2.063rem;
+			font-weight: 100;
+		}
+		.current-menu-item a, .current-page-ancestor a, a:hover {
+			color: $gray-dk;
+		}
 	}
 	.desktop-search {
 		display: none;
 	}
-	div.secondary a, .toggle-nav {
+	div.secondary-nav a, .toggle-nav {
 		color: $white;
 	}
-	div.secondary {
+	div.secondary-nav {
 		font-family: $small-caps, serif;
 		font-size: 1.125rem;
 		letter-spacing: 0.125em;
@@ -55,6 +62,9 @@ HEADER
 		text-transform: lowercase;
 		a {
 			margin-left: 0.5rem;
+		}
+		ul, li {
+			display: inline;
 		}
 	}
 	.toggle-nav {
@@ -72,6 +82,7 @@ HEADER
 		@include border(bottom);
 		nav {
 			background-color: transparent;
+			padding-bottom: 0;
 		}
 		.logo-text {
 			float: left;
@@ -86,16 +97,24 @@ HEADER
 			display: inline-block;
 		}
 	}
-	#header div.primary {
+	#header div.primary-nav {
 		display: block !important;
-		margin-top: $padding;
 		text-align: right;
-		a {
+		ul {
+			margin-top: 0;
+			margin-bottom: -6px;
+		}
+		li {
 			display: inline-block;
+		}
+		li a {
 			padding: $padding;
 		}
+		.current-menu-item a, .current-page-ancestor a {
+			border-color: $bronze;
+		}
 	}
-	#header div.secondary {
+	#header div.secondary-nav {
 		@include clearfix;
 		a {
 			color: $gray-dk;
@@ -125,13 +144,13 @@ nav.search-open {
 
 /*** Overlay Nav ***/
 
-#header div.primary, body.nav-closed #header div.primary {
+#header div.primary-nav, body.nav-closed #header div.primary-nav {
 	display: none;
 }
 
 body.nav-open {
 	position: relative;
-	#header div.primary {
+	#header div.primary-nav {
 		display: block;
 		background: $blue-xlt;
 		padding: $padding*1.5 $padding;
@@ -178,16 +197,19 @@ body:not(.home) #footer {
 			color: $blue;
 			padding: $padding;
 		}
-		.secondary {
+		.secondary-nav {
 			border-top: $border;
 			padding-top: $padding;
 			font-weight: 900;
+		}
+		.secondary-nav li {
+			display: inline-block;
 		}
 		.primary {
 			padding-top: $padding;
 		}
 	}
-	.primary a {
+	.primary-nav a {
 		display: block;
 		@extend %kilo;
 	}
@@ -252,13 +274,15 @@ body:not(.home) #footer {
 		nav {
 			text-align: right;
 		}
-		.primary a {
-			display: inline-block;
+		.primary-nav a {
 			font-size: 1rem;
 			font-weight: 900;
 		}
+		.primary-nav li {
+			display: inline-block;
+		}
 	}
-	#footer nav .secondary {
+	#footer nav .secondary-nav {
 		border-top: none;
 	}
 	.subfooter span {
