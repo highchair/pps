@@ -109,9 +109,9 @@ LARGE AND UP
 
 	/*** PAGES ***/
 
-	body.page:not(.home) main {
-		@include grid-column(8);
+	body.page:not(.home):not(.page-parent):not(.page-child) main {
 		@include grid-col-pos(center);
+		@include grid-column(8);
 	}
 
 	/*** PAGES WITH SIDEBARS ***/
@@ -126,14 +126,14 @@ LARGE AND UP
 	}
 
 	body.page-parent, body.page-child {
-		main {
-			@include grid-column(12); // override
+		div.main {
+			@include grid-column(12);
 		}
 		aside.sidebar {
-			@include grid-column(4);
+			@include grid-column(3);
 		}
 		article {
-			@include grid-column(8);
+			@include grid-column(9);
 		}
 	}
 

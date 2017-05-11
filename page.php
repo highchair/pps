@@ -8,23 +8,27 @@
 		<?php bcn_display(); ?>
 	</nav>
 
-	<?php 
-		// if the page is a child or parent, show sidebar navigation
-		$children = get_pages( array( 'child_of' => $post->ID ) );
-		if ( (is_page() && $post->post_parent) || (is_page() && count( $children ) > 0) ) {
-			get_sidebar('page'); 
-		}
-	?>
+	<div class="main">
 
-	<article>
+		<?php 
+			// if the page is a child or parent, show sidebar navigation
+			$children = get_pages( array( 'child_of' => $post->ID ) );
+			if ( (is_page() && $post->post_parent) || (is_page() && count( $children ) > 0) ) {
+				get_sidebar('page'); 
+			}
+		?>
 
-		<h1 class="page-title"><?php the_title(); ?></h1>
+		<article>
 
-		<?php the_content(); ?>
+			<h1 class="page-title"><?php the_title(); ?></h1>
 
-	</article>
+			<?php the_content(); ?>
 
-	<?php endwhile; endif; ?>
+		</article>
+
+		<?php endwhile; endif; ?>
+
+	</div>
 
 </main>
 
