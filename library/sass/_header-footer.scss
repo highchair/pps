@@ -60,11 +60,14 @@ HEADER
 		letter-spacing: 0.125em;
 		text-align: right;
 		text-transform: lowercase;
-		a {
-			margin-left: 0.5rem;
-		}
 		ul, li {
-			display: inline;
+			display: inline-block;
+		}
+		ul {
+			margin: 0;
+		}
+		li + li a {
+			padding-left: $padding/2;
 		}
 	}
 	.toggle-nav {
@@ -74,7 +77,7 @@ HEADER
 		color: rgba($white,0.75);
 		vertical-align: middle;
 	}
-}
+} // end #header
 
 
 @include breakpoint(large) {
@@ -82,7 +85,7 @@ HEADER
 		@include border(bottom);
 		nav {
 			background-color: transparent;
-			padding-bottom: 0;
+			padding: 0;
 		}
 		.logo-text {
 			float: left;
@@ -115,15 +118,23 @@ HEADER
 		}
 	}
 	#header div.secondary-nav {
+		padding-top: $padding;
 		@include clearfix;
 		a {
 			color: $gray-dk;
+			padding: $padding;
+		}
+		a:hover, .current-menu-item a {
+			@include border(top);
+		}
+		a:hover {
+			color: $blue;
 		}
 	}
 	#searchform, #searchform button {
 		display: none;
 	}
-}
+} // end breakpoint(large)
 
 nav.search-open {
 	.desktop-search {
