@@ -144,7 +144,7 @@ LARGE AND UP
 			@include grid-column(10);
 			@include grid-col-pos(center);
 		}
-		main > article, section.meta {
+		main > article, section.meta, section.pagination {
 			padding-left: 0;
 			padding-right: 0;
 			@include grid-column(10);
@@ -152,6 +152,9 @@ LARGE AND UP
 		}
 		main > aside > div {
 			@include grid-column(4);
+		}
+		section.pagination div {
+			@include grid-column(6);
 		}
 	}
 
@@ -199,12 +202,12 @@ XLARGE AND UP
 
 	/*** SINGLE PAGE & DEFAULT PAGES ***/
 
-	body.single main > article, body.single section.meta {
+	body.single main > article, body.single section.meta, body.single section.pagination {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	body.single main > article, body.single section.meta {
+	body.single main > article, body.single section.meta, body.single section.pagination {
 		@include grid-column(7);
 		@include grid-col-pos(center);
 	}

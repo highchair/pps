@@ -130,6 +130,12 @@ small, .micro {
 	font-size: 0.813rem;
 }
 
+.label {
+	font-weight: 800;
+	text-transform: uppercase;
+	@extend .micro;
+}
+
 .subheading {
 	font-family: $small-caps, serif;
 	font-size: 1.25rem;

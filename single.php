@@ -27,14 +27,30 @@ SINGLE POST / ARTICLE PAGE
     </article>
 
     <section class="meta">
+
       <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
       in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
+      
       <?php if ( has_tag() ) : ?>
         <div class="tags">
-          <span class="text">Tags: </span>
+          <span class="label">Tags: </span>
           <?php the_tags('',''); ?>
         </div>
       <?php endif; ?>
+
+    </section>
+
+    <section class="pagination">
+
+      <div class="prev">
+        <p class="label">Previous:</p>
+        <?php previous_post_link('%link'); ?>
+      </div>
+      <div class="next">
+        <p class="label">Next:</p>
+        <?php next_post_link('%link'); ?>
+      </div>
+
     </section>
 
     <?php get_sidebar(); ?>
