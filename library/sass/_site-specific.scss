@@ -158,6 +158,18 @@ body.single header {
 	text-align: center;
 }
 
+section.meta {
+	color: $gray-dk;
+	font-size: 1.25rem;
+	.category a {
+		border-bottom: 1px solid;
+		color: $gray;
+	}
+	.tags {
+		margin-top: $padding/2;
+	}
+}
+
 
 /*************
 SINGLE POST

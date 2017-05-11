@@ -27,9 +27,14 @@ SINGLE POST / ARTICLE PAGE
     </article>
 
     <section class="meta">
-      <span class="datetime"><?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
-      | <span class="category"><?php echo get_the_category_list(', '); ?></span>
-      <?php the_tags(''); ?>
+      <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
+      in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
+      <?php if (has_tag()) : ?>
+        <div class="tags">
+          Tags: 
+          <?php the_tags(''); ?>
+        </div>
+      <?php endif; ?>
     </section>
 
     <?php get_sidebar(); ?>
