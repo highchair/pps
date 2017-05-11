@@ -29,6 +29,10 @@ main p {
 	line-height: 1.5em;
 }
 
+a {
+	@include transition(all 0.125s ease-in);
+}
+
 /*** font sizes ***/
 $h1: 1.625rem;
 $h2: 1.438rem;
@@ -354,21 +358,30 @@ nav.pagination {
 
 /*** "Read More" Links ***/
 
-.read-more .text {
-	display: none;
+.read-more {
+	.text {
+		display: inline-block;
+		font-size: $h4;
+		font-weight: 800;
+		height: 1em;
+		line-height: 1em; // prevents element from adding height to container
+		overflow: hidden;
+		vertical-align: text-top;
+		width: 0;
+		@include transition(width 0.125s ease-in);
+	}
+	.icon-chevron-circle-right {
+		color: $blue;
+		font-size: 1.5rem;
+		vertical-align: baseline;
+	}
 }
-.read-more .icon-chevron-circle-right {
-	color: $blue;
-	font-size: 1.5rem;
-	vertical-align: baseline;
-}
-a:hover .read-more, a:hover .read-more .icon-chevron-circle-right {
+a:hover .read-more {
 	color: $bronze;
-}
-a:hover .read-more .text {
-	display: inline;
-	font-size: $h4;
-	font-weight: 800;
-	line-height: 1em; // prevents element from adding height to container
-	vertical-align: text-top;
+	.icon-chevron-circle-right {
+		color: $bronze;
+	}
+	.text {
+		width: 5em;
+	}
 }
