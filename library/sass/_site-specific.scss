@@ -153,6 +153,11 @@ body.single article, body.page:not(.home) article {
 	}
 }
 
+body.single header {
+	margin-bottom: $padding*2;
+	text-align: center;
+}
+
 
 /*************
 SINGLE POST
