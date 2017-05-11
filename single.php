@@ -29,10 +29,10 @@ SINGLE POST / ARTICLE PAGE
     <section class="meta">
       <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
       in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
-      <?php if (has_tag()) : ?>
+      <?php if ( has_tag() ) : ?>
         <div class="tags">
-          Tags: 
-          <?php the_tags(''); ?>
+          <span class="text">Tags: </span>
+          <?php the_tags('',''); ?>
         </div>
       <?php endif; ?>
     </section>

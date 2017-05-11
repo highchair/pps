@@ -153,23 +153,6 @@ body.single article, body.page:not(.home) article {
 	}
 }
 
-body.single header {
-	margin-bottom: $padding*2;
-	text-align: center;
-}
-
-section.meta {
-	color: $gray-dk;
-	font-size: 1.25rem;
-	.category a {
-		border-bottom: 1px solid;
-		color: $gray;
-	}
-	.tags {
-		margin-top: $padding/2;
-	}
-}
-
 
 /*************
 SINGLE POST
@@ -185,6 +168,51 @@ body.single main {
 		@include border(top,$gray-lt);
 	}
 }
+
+body.single header {
+	margin-bottom: $padding*2;
+	text-align: center;
+}
+
+section.meta {
+	color: $gray;
+	font-size: 1.25rem;
+	.category a {
+		border-bottom: 1px solid;
+		color: $gray;
+	}
+}
+
+.tags {
+	$tag-height: 1.5em;
+	margin-top: $padding;
+	.text {
+		font-weight: 800;
+		margin-right: $padding/2;
+		text-transform: uppercase;
+		@extend .micro;
+	}
+	a {
+		background: $blue-lt;
+		display: inline-block;
+		height: $tag-height;
+		line-height: $tag-height;
+		margin-right: $padding*1.5;
+		padding-left: $padding/2;
+		position: relative;
+	}
+	a:after { // creates little arrow shape
+		border-top: $tag-height/2 solid transparent;
+		border-bottom: $tag-height/2 solid transparent;
+		border-left: $tag-height/2 solid $blue-lt;
+		content: '';
+		position: absolute;
+		right: $tag-height*1.5 / 2 * -1;
+		top: 0;
+		width: $tag-height*1.5 / 2;
+	}
+}
+
 
 /*************
 DEFAULT PAGE
