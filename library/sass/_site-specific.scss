@@ -100,8 +100,11 @@ body.blog, body.archive {
 			margin-top: 0;
 		}
 	}
-	main h2 {
-		margin-top: 0;
+	main {
+		padding-bottom: $padding*2;
+		h2 {
+			margin-top: 0;
+		}
 	}
 	article {
 		padding: $padding*2;
