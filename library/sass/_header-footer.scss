@@ -202,6 +202,14 @@ body:not(.home) #footer {
 			font-size: $h1;
 			font-weight: 100;
 		}
+		input {
+			border-right: 0;
+		}
+		.button {
+			padding-top: $padding/2;
+			padding-bottom: $padding/2;
+			vertical-align: 1px; // hack to align with input
+		}
 	}
 	nav {
 		a {
@@ -267,7 +275,7 @@ body:not(.home) #footer {
 			margin-top: $padding;
 		}
 		div.signup form input {
-			width: 22rem;
+			width: 32rem;
 		}
 		div.contact {
 			background-position-x: 18%;
