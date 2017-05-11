@@ -355,10 +355,11 @@ nav.pagination {
 	display: none;
 }
 .read-more .icon-chevron-circle-right {
+	color: $blue;
 	font-size: 1.5rem;
 	vertical-align: baseline;
 }
-a:hover .read-more {
+a:hover .read-more, a:hover .read-more .icon-chevron-circle-right {
 	color: $bronze;
 }
 a:hover .read-more .text {

@@ -26,10 +26,6 @@ section.hero div.text {
 	}
 }
 
-body.home section.articles {
-	padding-bottom: $padding*2;
-}
-
 @include breakpoint(large) {
 	section.hero div.text {
 		padding: $padding*2;
@@ -39,7 +35,7 @@ body.home section.articles {
 /*** ARTICLES ***/
 
 section.articles {
-	padding: $padding/2;
+	padding: $padding/2 $padding/2 $padding*2 $padding/2;
 	text-align: center;
 	h3 {
 		font-family: $serif, serif;
@@ -51,6 +47,9 @@ section.articles {
 		padding: $padding;
 		width: 100%;
 		@include box-shadow($silver 0 0 $padding);
+	}
+	a:hover h3 {
+		color: $black;
 	}
 }
 
@@ -106,6 +105,9 @@ body.blog, body.archive {
 	}
 	article {
 		padding: $padding*2;
+		a {
+			color: $gray-dk;
+		}
 	}
 	&:not(.paged) article:first-of-type { // first page only
 		@include box-shadow($silver 0 0 $padding);
