@@ -52,29 +52,6 @@ section.articles {
 		width: 100%;
 		@include box-shadow($silver 0 0 $padding);
 	}
-	.read-more {
-		position: relative;
-		.text {
-			left: 30%;
-			margin-right: $padding;
-			opacity: 0;
-			position: absolute;
-			font-size: $h4;
-		}
-	}
-	.icon-chevron-circle-right {
-		font-size: 1.5rem;
-		vertical-align: baseline;
-	}
-	a:hover {
-		.read-more .text {
-			opacity: 1;
-		}
-		.icon-chevron-circle-right {
-			color: $bronze;
-			left: 40%;
-		}
-	}
 }
 
 /*** COLOR BLOCKS ***/

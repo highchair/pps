@@ -348,3 +348,23 @@ nav.pagination {
 		color: $bronze;
 	}
 }
+
+/*** "Read More" Links ***/
+
+.read-more .text {
+	display: none;
+}
+.read-more .icon-chevron-circle-right {
+	font-size: 1.5rem;
+	vertical-align: baseline;
+}
+a:hover .read-more {
+	color: $bronze;
+}
+a:hover .read-more .text {
+	display: inline;
+	font-size: $h4;
+	font-weight: 800;
+	line-height: 1em; // prevents element from adding height to container
+	vertical-align: text-top;
+}
