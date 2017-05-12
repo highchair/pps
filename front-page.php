@@ -12,13 +12,12 @@ Template Name: Homepage
 
     <section class="hero">
 
-      <div class="image" style="background-image:url('<?php echo get_stylesheet_directory_uri(); ?>/library/img/hero-houses.png')">
-      	<!-- <img src="<?#php echo get_stylesheet_directory_uri(); ?>/library/img/hero-houses.png"> -->
-      </div>
+      <div class="image" style="background-image:url(<?php the_field('hero_image'); ?>)"></div>
+      
     	<div class="text">
-    		<p class="subheading">Event: June 2-3, 2017</p>
-    		<h2 class="kilo">2017 Festival of Historic Houses</h2>
-    		<a class="button secondary" href="javascript:void(0)">Learn More &amp; Attend</a>
+    		<p class="subheading"><?php the_field('hero_subtitle'); ?></p>
+    		<h2 class="kilo"><?php the_field('hero_title'); ?></h2>
+    		<a class="button secondary" href="<?php the_field('hero_button_link'); ?>"><?php the_field('hero_button_text'); ?></a>
         <br/>&nbsp; <!-- hack -->
     	</div>
 
@@ -27,7 +26,7 @@ Template Name: Homepage
     <section class="articles">
 
       <h2>Recent News and Upcoming Events</h2>
-      
+
       <?php
       $loop = new WP_Query( array( 'posts_per_page'=>4 ) );
       while ($loop->have_posts()) :
