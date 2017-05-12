@@ -77,7 +77,7 @@ section.block {
 		max-width: 45rem;
 	}
 	p.links {
-		margin-top: $padding;
+		margin-top: $padding*2;
 		span {
 			font-style: italic;
 		}
@@ -141,6 +141,11 @@ nav.breadcrumb {
 }
 
 body.single article, body.page:not(.home) article {
+	main p {
+		font-size: 1.25rem;
+		font-weight: 100;
+		line-height: 1.5em;
+	}
 	a:not(.button) {
 		background: lighten($blue-xlt,2);
 		border-bottom: 2px solid $blue;

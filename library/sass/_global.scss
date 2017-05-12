@@ -27,12 +27,6 @@ body:not(.home) main {
 	padding: $padding $padding $padding*2;
 }
 
-main p {
-	font-size: 1.25rem;
-	font-weight: 100;
-	line-height: 1.5em;
-}
-
 a {
 	@include transition(all 0.125s ease-in);
 }
@@ -234,6 +228,12 @@ label {
 /*************
 MEDIA
 *************/
+
+img {
+	display: block; // override weird Foundation stuff
+	vertical-align: initial; // override weird Foundation stuff
+	margin-bottom: $padding;
+}
 
 iframe {
 	width: 100%;

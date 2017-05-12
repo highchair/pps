@@ -36,6 +36,10 @@ hr  {
 	margin-right: auto;
 }
 
+section.block {
+	@include clearfix;
+}
+
 
 /************
 LARGE AND UP
@@ -57,8 +61,15 @@ LARGE AND UP
 		margin-left: $padding/2;
 	}
 
-	.button-group > div {
-		@include grid-column(6);
+	.button-group {
+		@include clearfix;
+		> div { // slightly different padding/gutter structure here
+			float: left;
+			width: 48%;
+			&:nth-child(even) {
+				float: right;
+			}
+		}
 	}
 
 	#footer {
@@ -101,7 +112,7 @@ LARGE AND UP
 		div.text {
 			@include grid-column(4);
 		}
-		.button-group {
+		div.buttons {
 			@include grid-column(8);
 		}
 	}
@@ -197,7 +208,7 @@ XLARGE AND UP
 		div.text {
 			@include grid-column(12);
 		}
-		.button-group {
+		div.buttons {
 			@include grid-column(12);
 		}
 	}
