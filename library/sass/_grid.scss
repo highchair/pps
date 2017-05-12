@@ -3,6 +3,11 @@
 ALL SIZES 
 *************/
 
+@mixin collapse {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
 /*** GLOBAL ***/
 
 #nav {
@@ -29,12 +34,6 @@ hr  {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-}
-
-/*** SINGLE PAGE & DEFAULT PAGES ***/
-
-body.single main > article, body.single section.meta, body.single main > aside {
-	@include grid-column(12);
 }
 
 
@@ -145,16 +144,19 @@ LARGE AND UP
 			@include grid-col-pos(center);
 		}
 		main > article, section.meta, section.pagination {
-			padding-left: 0;
-			padding-right: 0;
 			@include grid-column(10);
 			@include grid-col-pos(center);
+			@include collapse;
 		}
 		main > aside > div {
 			@include grid-column(4);
 		}
-		section.pagination div {
+		section.pagination {
+			@include clearfix;
+		}
+		section.pagination > div {
 			@include grid-column(6);
+			@include collapse;
 		}
 	}
 
@@ -201,11 +203,6 @@ XLARGE AND UP
 	}
 
 	/*** SINGLE PAGE & DEFAULT PAGES ***/
-
-	body.single main > article, body.single section.meta, body.single section.pagination {
-		padding-left: 0;
-		padding-right: 0;
-	}
 
 	body.single main > article, body.single section.meta, body.single section.pagination {
 		@include grid-column(7);
