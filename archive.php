@@ -28,7 +28,9 @@ ARCHIVE PAGE TEMPLATE
       <h1>
 
         <?php 
-          if (is_category()) { 
+          if (is_post_type_archive('events')) {
+            echo 'Upcoming Events';
+          } elseif (is_category()) { 
             single_cat_title();
           } elseif (is_tag()) {
             single_tag_title();

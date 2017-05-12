@@ -26,19 +26,21 @@ SINGLE POST / ARTICLE PAGE
 
     </article>
 
-    <section class="meta">
+    <?php if (is_singular('post')) : ?>
+      <section class="meta">
 
-      <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
-      in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
-      
-      <?php if ( has_tag() ) : ?>
-        <div class="tags">
-          <span class="label">Tags: </span>
-          <?php the_tags('',''); ?>
-        </div>
-      <?php endif; ?>
+        <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppri'), get_the_time('M d, Y')); ?></span>
+        in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
+        
+        <?php if ( has_tag() ) : ?>
+          <div class="tags">
+            <span class="label">Tags: </span>
+            <?php the_tags('',''); ?>
+          </div>
+        <?php endif; ?>
 
-    </section>
+      </section>
+    <?php endif; ?>
 
     <section class="pagination">
 
