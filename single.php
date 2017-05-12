@@ -45,12 +45,21 @@ SINGLE POST / ARTICLE PAGE
     <section class="pagination">
 
       <div class="prev">
-        <p class="label">Previous:</p>
-        <?php previous_post_link('%link'); ?>
+        <?php if (get_adjacent_post(false, '', true)): ?>
+
+          <p class="label">Previous:</p>
+          <?php previous_post_link('%link'); ?>
+
+        <?php endif; ?>
       </div>
+
       <div class="next">
-        <p class="label">Next:</p>
-        <?php next_post_link('%link'); ?>
+        <?php if (get_adjacent_post(false, '', false)): ?>
+
+          <p class="label">Next:</p>
+          <?php next_post_link('%link'); ?>
+          
+        <?php endif; ?>
       </div>
 
     </section>
