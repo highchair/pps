@@ -37,6 +37,7 @@ jQuery(document).ready( function($) {
 	/*** EQUALIZE ELEMENT HEIGHTS ***/
 
 	equalize('body.home section.hero > div');
+	equalize('body.home section.articles article a');
 	equalize('body.home section.block');
 
 	/*** FUNCTIONS **/

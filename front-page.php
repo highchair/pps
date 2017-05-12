@@ -27,11 +27,14 @@ Template Name: Homepage
     <section class="articles">
 
       <h2>Recent News and Upcoming Events</h2>
-
-      <?php get_template_part('partials/article-sm'); ?>
-      <?php get_template_part('partials/article-sm'); ?>
-      <?php get_template_part('partials/article-sm'); ?>
-      <?php get_template_part('partials/article-sm'); ?>
+      
+      <?php
+      $loop = new WP_Query( array( 'posts_per_page'=>4 ) );
+      while ($loop->have_posts()) :
+        $loop->the_post();
+        get_template_part('partials/article-sm');
+      endwhile; wp_reset_postdata();
+      ?>
 
     </section>
 
