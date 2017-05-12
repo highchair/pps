@@ -45,8 +45,18 @@ section.articles {
 		display: inline-block;
 		margin-top: $padding*2;
 		padding: $padding;
+		position: relative;
 		width: 100%;
 		@include box-shadow($silver 0 0 $padding);
+	}
+	.excerpt {
+		margin-bottom: $padding*4;
+	}
+	.read-more {
+		bottom: 0;
+		left: 0;
+		position: absolute;
+		width: 100%;
 	}
 	a:hover h3 {
 		color: $black;
