@@ -27,8 +27,6 @@ add_action('wp_enqueue_scripts', 'ppsri_scripts_and_styles', 999);
 
 // launching this stuff after theme setup
 add_action('after_setup_theme','ppsri_theme_support');
-// add stuff to the wordpress Customizer
-add_action( 'customize_register', 'ppsri_customize_register' );
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'ppsri_register_sidebars' );
 // adding the search form
@@ -39,13 +37,6 @@ add_filter('the_content', 'ppsri_filter_ptags_on_images');
 add_filter('the_content', 'ppsri_filter_ptags_on_blockquotes');
 // cleaning up excerpt
 add_filter('excerpt_more', 'ppsri_excerpt_more');
-// shorter excerpt
-add_filter( 'excerpt_length', 'ppsri_lengthen_excerpt', 999 );
-// add class to excerpt paragraph
-add_filter( "the_excerpt", "add_excerpt_class" );
-add_filter( "tribe_events_get_the_excerpt", "add_event_excerpt_class" );
-//remove recurring info on events in list
-add_action( 'tribe_before_get_template_part', 'ppsri_remove_rec_tooltip' );
 // modify output of WordPress Popular Posts plugin
 add_filter( 'wpp_custom_html', 'ppsri_popular_posts_html', 10, 2 );
 
@@ -82,50 +73,6 @@ function ppsri_filter_ptags_on_blockquotes($content){
 function ppsri_excerpt_more($more) {
     global $post;
     return '...';
-}
-
-// Shorten excerpt length
-function ppsri_lengthen_excerpt( $length ) {
-    return 22;
-}
-
-// Add a class to excerpt paragraph
-function add_excerpt_class( $excerpt ) {
-    $excerpt = str_replace( "<p", "<p class=\"excerpt\"", $excerpt );
-    return $excerpt;
-}
-function add_event_excerpt_class( $excerpt ) {
-    $excerpt = str_replace( "<p", "<p class=\"excerpt\"", $excerpt );
-    return $excerpt;
-}
-
-// Disable Recurring Info on Events List
-function ppsri_remove_rec_tooltip( $template ) {
-    Tribe__Events__Pro__Main::instance()->disable_recurring_info_tooltip();
-}
-
-// Get name of first category in categories array
-function category_name() {
-        
-    $category = get_the_category();
-    $event_id = get_the_ID();
-    $event_cats = wp_get_object_terms( $event_id, array( 'tribe_events_cat' ) );
-     
-    if ( empty( $event_cats ) ) { // not an event
-        $name = $category[0]->cat_name;
-    } else {
-        $name = $event_cats[0]->name;
-    }
-
-    return '<span class="category">' . $name . '</span>';
-
-}
-
-function short_title() {
-
-    $title = get_the_title();
-    return wp_trim_words( $title, 14, '...' );
-
 }
 
 
@@ -180,50 +127,9 @@ function ppsri_theme_support() {
 
     // featured images
     add_theme_support( 'post-thumbnails' ); 
-
     add_image_size( 'grid-thumb', 560, 300, array( 'center', 'center') );
     
 } /* end ppsri theme support */
-
-/*********************
-CUSTOMIZER
-*********************/
-
-function ppsri_customize_register( $wp_customize ) {
-
-
-    // add customizable logo
-
-    $wp_customize->add_setting( 'ppsri_logo', array(
-        'sanitize_callback' => 'esc_url_raw',
-    ) );
-    
-    $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'ppsri_logo', array(
-        'label'    => __( 'Logo', 'ppsri' ),
-        'section'  => 'title_tagline',
-        'priority' => 1,
-        'settings' => 'ppsri_logo',
-    ) ) );
-
-
-    // add customizable subfooter text
-
-    $wp_customize->add_setting( 'sub_footer' );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-            'sub_footer',
-            array(
-                'label'          => __( 'Sub-footer Text', 'ppsri' ),
-                'section'        => 'title_tagline',
-                'settings'       => 'sub_footer',
-                'type'           => 'text'
-            )
-        )
-    );
-
-}
 
 /*********************
 MENUS & NAVIGATION
@@ -288,7 +194,7 @@ function ppsri_register_sidebars() {
     register_sidebar(array(
         'id' => 'sidebar',
         'name' => __('Sidebar', 'ppsri'),
-        'description' => __('The sidebar for the archive/category pages.', 'ppsri'),
+        'description' => __('The sidebar for the blog and archive pages.', 'ppsri'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2>',
