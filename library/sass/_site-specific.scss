@@ -131,11 +131,6 @@ nav.breadcrumb {
 }
 
 body.single article, body.page:not(.home) article {
-	h2 {
-		color: $black;
-		font-size: $h1;
-		margin-top: 0;
-	}
 	a:not(.button) {
 		background: lighten($blue-xlt,2);
 		border-bottom: 2px solid $blue;
