@@ -36,9 +36,17 @@ jQuery(document).ready( function($) {
 
 	/*** EQUALIZE ELEMENT HEIGHTS ***/
 
-	equalize('body.home section.hero > div');
-	equalize('body.home section.articles article a');
-	equalize('body.home section.block');
+    $(window).resize(function(){
+        if (Modernizr.mq('(min-width: 1024px)')) {
+            equalize('body.home section.hero > div');
+            equalize('body.home section.articles article a');
+            equalize('body.home section.block');
+        } else {
+			unEqualize('body.home section.hero > div');
+			unEqualize('body.home section.articles article a');
+			unEqualize('body.home section.block');
+        }
+    }).resize();   // Cause an initial widow.resize to occur
 
 	/*** FUNCTIONS **/
 
@@ -74,6 +82,10 @@ jQuery(document).ready( function($) {
 
 	function equalize(s) {
 		$(s).outerHeight( getMaxHeight(s) );
+	}
+
+	function unEqualize(s) {
+		$(s).outerHeight( 'auto' );
 	}
 
 } );

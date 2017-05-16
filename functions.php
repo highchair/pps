@@ -90,10 +90,15 @@ function ppsri_scripts_and_styles() {
     // theme scripts file
     wp_register_script( 'ppsri-js', get_stylesheet_directory_uri() . '/library/scripts/scripts.js', array( 'jquery' ), '', true );
 
+    // modernizr media queries
+    wp_register_script( 'modernizr-mq', get_stylesheet_directory_uri() . '/library/scripts/modernizr-mq.js', array( 'jquery' ), '', true );
+
     // enqueue styles and scripts
     wp_enqueue_style( 'ppsri-stylesheet' );
 
     wp_enqueue_script( 'ppsri-js' );
+
+    wp_enqueue_script( 'modernizr-mq' );
 
     // create site url variable to be used in js
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
