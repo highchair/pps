@@ -131,7 +131,7 @@ LARGE AND UP
 		aside.sidebar {
 			@include grid-column(3);
 		}
-		article {
+		div.main > article {
 			@include grid-column(9);
 		}
 	}
