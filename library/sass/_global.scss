@@ -390,3 +390,14 @@ a:hover .read-more {
 		width: 5em;
 	}
 }
+
+/*** Header and Footer Logo Text ***/
+
+.logo-text {
+	color: $black;
+	font-family: $small-caps, serif;
+	letter-spacing: 0.325em;
+	margin: 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}

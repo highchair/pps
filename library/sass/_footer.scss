@@ -1,0 +1,176 @@
+
+/*************
+FOOTER 
+*************/
+
+#footer, .subfooter {
+	text-align: center;
+}
+
+body:not(.home) #footer {
+	@include border(top);	
+}
+
+#footer {
+	padding: $padding;
+	p {
+		font-family: $serif, serif;
+	}
+	.logo-text {
+		font-size: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 16rem;
+	}
+	div.contact {
+		background: url('../img/seal.png') no-repeat right $padding*2;
+		color: $gray-dk;
+		padding-top: $padding*4;
+	}
+	.address {
+		margin-bottom: $padding;
+	}
+	.address p, .phone {
+		margin-bottom: 0;
+	}
+	div.signup {
+		h3 {
+			color: $gray;
+			font-size: $h1;
+			font-weight: 100;
+			margin-bottom: 0;
+		}
+		input {
+			border-right: 0;
+		}
+		.button {
+			padding-top: $padding/2;
+			padding-bottom: $padding/2;
+			vertical-align: 1px; // hack to align with input
+		}
+	}
+	nav {
+		a {
+			color: $blue;
+			padding: $padding;
+		}
+		a:hover {
+			color: $gray-dk;
+		}
+		.secondary-nav {
+			border-top: $border;
+			margin-top: $padding;
+			padding-top: $padding;
+			font-weight: 900;
+		}
+		.secondary-nav li {
+			display: inline-block;
+		}
+		.primary {
+			padding-top: $padding;
+		}
+	}
+	.primary-nav a {
+		display: block;
+		@extend %kilo;
+	}
+	.social {
+		[class^="icon-"] {
+			font-size: 2rem;
+			margin-right: $padding/2;
+			vertical-align: middle;
+		}
+		a {
+		    border: 0;
+		    display: block;
+		    padding: $padding/2;
+		}
+	}
+}
+
+.subfooter {
+	background-color: $blue-xlt;
+	color: $blue;
+	padding-top: $padding/2;
+	padding-bottom: $padding/2;
+	span {
+		display: block;
+	}
+}
+
+@include breakpoint(large) {
+	#footer {
+		text-align: left;
+		.logo-text {
+			max-width: none;
+			margin-left: none;
+		}
+		section {
+			padding-bottom: $padding;
+		}
+		section + section {
+			border-top: 1px solid $gray-lt;
+		}
+		div.signup {
+			padding-top: $padding*2.5;
+		}
+		div.signup h3, div.signup p {
+			display: inline;
+			padding-left: $padding;
+		}
+		div.signup form {
+			display: block;
+			margin-top: $padding;
+		}
+		div.signup form input {
+			width: 20rem;
+		}
+		div.contact {
+			background-position: 18% top;
+			padding-top: $padding*2;
+		}
+		.address p, .phone, .email {
+			display: inline-block;
+		}
+		.address p + p:before, .email:before {
+			content: '/';
+			padding: $padding/4;
+		}
+		.social {
+			float: left;
+			padding-top: $padding*1.5;
+		}
+		.social a {
+			padding: $padding/4 0 0;
+		}
+		nav {
+			text-align: right;
+		}
+		nav ul {
+			margin: 0;
+		}
+		.primary-nav a {
+			font-size: 1rem;
+			font-weight: 900;
+		}
+		.primary-nav li {
+			display: inline-block;
+		}
+	}
+	#footer nav .secondary-nav {
+		border-top: none;
+	}
+	.subfooter span {
+		display: inline;
+	}
+}
+
+@include breakpoint(xlarge) {
+	#footer div.contact {
+		background-position-x: 0;
+		padding-left: calc(123px + #{$padding}); // seal image + padding
+	}
+	#footer div.signup form input {
+		width: 32rem;
+	}
+}
