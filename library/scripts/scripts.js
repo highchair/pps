@@ -37,14 +37,25 @@ jQuery(document).ready( function($) {
 	/*** EQUALIZE ELEMENT HEIGHTS ***/
 
     $(window).resize(function(){
+
         if (Modernizr.mq('(min-width: 1024px)')) {
-            equalize('body.home section.hero > div');
-            equalize('body.home section.articles article a');
-            equalize('body.home section.block');
-        } else {
+
+			// reset in case it's already been equalized
 			unEqualize('body.home section.hero > div');
 			unEqualize('body.home section.articles article a');
 			unEqualize('body.home section.block');
+
+			// equalize
+            equalize('body.home section.hero > div');
+            equalize('body.home section.articles article a');
+            equalize('body.home section.block');
+
+        } else {
+
+			unEqualize('body.home section.hero > div');
+			unEqualize('body.home section.articles article a');
+			unEqualize('body.home section.block');
+			
         }
     }).resize();   // Cause an initial widow.resize to occur
 
