@@ -18,7 +18,6 @@ Template Name: Homepage
     		<p class="subheading"><?php the_field('hero_subtitle'); ?></p>
     		<h2 class="kilo"><?php the_field('hero_title'); ?></h2>
     		<a class="button secondary" href="<?php the_field('hero_button_link'); ?>"><?php the_field('hero_button_text'); ?></a>
-        <br/>&nbsp; <!-- hack -->
     	</div>
 
     </section>
