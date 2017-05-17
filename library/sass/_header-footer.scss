@@ -2,12 +2,12 @@
 
 
 .logo-text { // used in header and footer
+	color: $black;
 	font-family: $small-caps, serif;
 	letter-spacing: 0.325em;
 	margin: 0;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
-	@extend .micro;
 }
 
 
@@ -30,6 +30,7 @@ HEADER
 	.logo-text {
 		color: $black;
 		text-align: center;
+		@extend .micro;
 	}
 	nav {
 		background-color: $blue;
@@ -197,15 +198,29 @@ body:not(.home) #footer {
 	p {
 		font-family: $serif, serif;
 	}
+	.logo-text {
+		font-size: 1rem;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 16rem;
+	}
 	div.contact {
-		background: url('../img/seal.png') no-repeat right top;
-		padding-top: $padding*2;
+		background: url('../img/seal.png') no-repeat right $padding*2;
+		color: $gray-dk;
+		padding-top: $padding*4;
+	}
+	.address {
+		margin-bottom: $padding;
+	}
+	.address p, .phone {
+		margin-bottom: 0;
 	}
 	div.signup {
 		h3 {
 			color: $gray;
 			font-size: $h1;
 			font-weight: 100;
+			margin-bottom: 0;
 		}
 		input {
 			border-right: 0;
@@ -226,6 +241,7 @@ body:not(.home) #footer {
 		}
 		.secondary-nav {
 			border-top: $border;
+			margin-top: $padding;
 			padding-top: $padding;
 			font-weight: 900;
 		}
@@ -267,12 +283,18 @@ body:not(.home) #footer {
 @include breakpoint(large) {
 	#footer {
 		text-align: left;
+		.logo-text {
+			max-width: none;
+			margin-left: none;
+		}
 		section {
-			padding-top: $padding;
 			padding-bottom: $padding;
 		}
 		section + section {
-			border-top: $border;
+			border-top: 1px solid $gray-lt;
+		}
+		div.signup {
+			padding-top: $padding*2.5;
 		}
 		div.signup h3, div.signup p {
 			display: inline;
@@ -283,10 +305,11 @@ body:not(.home) #footer {
 			margin-top: $padding;
 		}
 		div.signup form input {
-			width: 32rem;
+			width: 20rem;
 		}
 		div.contact {
-			background-position-x: 18%;
+			background-position: 18% top;
+			padding-top: $padding*2;
 		}
 		.address p, .phone, .email {
 			display: inline-block;
@@ -297,9 +320,16 @@ body:not(.home) #footer {
 		}
 		.social {
 			float: left;
+			padding-top: $padding*1.5;
+		}
+		.social a {
+			padding: $padding/4 0 0;
 		}
 		nav {
 			text-align: right;
+		}
+		nav ul {
+			margin: 0;
 		}
 		.primary-nav a {
 			font-size: 1rem;
@@ -321,5 +351,8 @@ body:not(.home) #footer {
 	#footer div.contact {
 		background-position-x: 0;
 		padding-left: calc(123px + #{$padding}); // seal image + padding
+	}
+	#footer div.signup form input {
+		width: 32rem;
 	}
 }
