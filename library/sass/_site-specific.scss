@@ -36,17 +36,29 @@ section.hero div.text {
 section.articles {
 	padding: $padding/2 $padding/2 $padding*2 $padding/2;
 	text-align: center;
+	h2 {
+		color: $gray-dk;
+		margin: $padding*2 auto 0 auto;
+		max-width: 10rem;
+	}
 	h3 {
 		font-family: $serif, serif;
 		font-weight: 300;
+		@include transition(color 0.125s ease-in);
 	}
 	article > a {
 		display: inline-block;
 		margin-top: $padding*2;
-		padding: $padding;
+		padding: $padding $padding $padding*3;
 		position: relative;
 		width: 100%;
 		@include box-shadow($silver 0 0 $padding);
+		&:hover {
+			@include box-shadow($gray-lt 0 0 $padding);
+		}
+	}
+	p {
+		color: $gray-dk;
 	}
 	.excerpt {
 		margin-bottom: $padding*4;
@@ -59,6 +71,12 @@ section.articles {
 	}
 	a:hover h3 {
 		color: $black;
+	}
+}
+
+@include breakpoint(large) {
+	section.articles h2 {
+		max-width: none;
 	}
 }
 

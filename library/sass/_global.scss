@@ -371,7 +371,7 @@ nav.pagination {
 		height: 1em;
 		line-height: 1em; // prevents element from adding height to container
 		overflow: hidden;
-		vertical-align: text-top;
+		vertical-align: baseline;
 		width: 0;
 		@include transition(width 0.125s ease-in);
 	}

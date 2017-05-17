@@ -219,6 +219,23 @@ function ppsri_wpsearch($form) {
     return $form;
 }
 
+/************* SHORT VERSION OF EXCERPT *****************/
+
+function short_excerpt($new_length = 20, $new_more = '...') {
+  add_filter('excerpt_length', function () use ($new_length) {
+    return $new_length;
+  }, 999);
+  add_filter('excerpt_more', function () use ($new_more) {
+    return $new_more;
+  });
+  $output = get_the_excerpt();
+  $output = apply_filters('wptexturize', $output);
+  $output = apply_filters('convert_chars', $output);
+  $output = '<p>' . $output . '</p>';
+  echo $output;
+}
+
+
 /************* LIST CHILD PAGES *****************/
 
 // List Children of Current Page
