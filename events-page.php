@@ -26,40 +26,33 @@ $featured_id = $featured_event->ID;
 
       <?php // featured event
 
-        if( $featured_event ): 
+        if( $featured_event ) { 
 
           $post = $featured_event;
           setup_postdata( $post );
-          
+
           include('partials/article.php');
 
           wp_reset_postdata();
 
-        endif; 
+        }
 
       ?>
 
       <?php // loop through the rest of the events
-        $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-        $loop = new WP_Query( array('post_type' => 'events', 'paged' => $paged, 'post__not_in' => array($featured_id) ) );
+
+        $loop = new WP_Query( array('post_type' => 'events', 'posts_per_page' => -1, 'post__not_in' => array($featured_id) ) );
+        
+        if ( $loop->have_posts() ) { 
+          while ( $loop->have_posts() ) { 
+            $loop->the_post();
+
+            get_template_part('partials/article');
+
+          }
+        }
+
       ?>
-
-      <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <?php get_template_part('partials/article'); ?>
-      <?php endwhile; ?>
-
-        <?php if ($loop->max_num_pages > 1) { ?>
-          <nav class="prev-next-posts">
-            <div class="prev-posts-link">
-              <?php echo get_next_posts_link( 'Older Events', $loop->max_num_pages ); ?>
-            </div>
-            <div class="next-posts-link">
-              <?php echo get_previous_posts_link( 'Newer Events' ); ?>
-            </div>
-          </nav>
-        <?php } ?>
-
-      <?php endif; ?>
 
     </article>
 
