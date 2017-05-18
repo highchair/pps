@@ -114,7 +114,7 @@ section.secondary {
 BLOG  
 *************/
 
-body.blog, body.archive {
+body.blog, body.archive, body.page-template-events-page {
 	header {
 		p {
 			margin-bottom: 0;
@@ -287,8 +287,13 @@ body.page {
 EVENTS PAGE
 *************/
 
-body.page-template-events-page article h2 {
-	margin-bottom: 0;
+body.page-template-events-page {
+	h2 {
+		margin-bottom: 0;
+	}
+	div.main > article {
+		@include box-shadow(none !important);
+	}
 }
 
 p.event-date {
