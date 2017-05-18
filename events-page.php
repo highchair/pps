@@ -2,6 +2,10 @@
 /*
 Template Name: Events
 */
+
+$featured_event = get_field('featured_event');
+$featured_id = $featured_event->ID;
+
 ?>
 
 <?php get_header(); ?>
@@ -20,9 +24,24 @@ Template Name: Events
 
       <h1>Upcoming Events</h1>
 
-      <?php
+      <?php // featured event
+
+        if( $featured_event ): 
+
+          $post = $featured_event;
+          setup_postdata( $post ); 
+
+          get_template_part('partials/article');
+
+          wp_reset_postdata();
+
+        endif; 
+
+      ?>
+
+      <?php // loop through the rest of the events
         $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-        $loop = new WP_Query( array('post_type' => 'events', 'paged' => $paged) );
+        $loop = new WP_Query( array('post_type' => 'events', 'paged' => $paged, 'post__not_in' => array($featured_id) ) );
       ?>
 
       <?php if ( $loop->have_posts() ) : while ( $loop->have_posts() ) : $loop->the_post(); ?>
