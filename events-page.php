@@ -29,9 +29,9 @@ $featured_id = $featured_event->ID;
         if( $featured_event ): 
 
           $post = $featured_event;
-          setup_postdata( $post ); 
-
-          get_template_part('partials/article');
+          setup_postdata( $post );
+          
+          include('partials/article.php');
 
           wp_reset_postdata();
 

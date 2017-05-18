@@ -1,4 +1,4 @@
-<article>
+<article<?php if ( $post->ID == $featured_id ) : ?> class="featured"<?php endif; ?>>
 	<a href="<?php the_permalink(); ?>">
 		<h2><?php the_title(); ?></h2>
 		<?php if ( get_field('event_date') ) : ?>
