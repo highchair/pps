@@ -142,6 +142,36 @@ aside.blog h3 {
 	font-size: $h4;
 }
 
+.widget_categories ul {
+	display: table;
+	width: 100%;
+}
+.widget_categories .cat-item {
+	display: table-row;
+	font-size: $h3;
+	a, .count {
+		display: table-cell;
+		padding-bottom: 0.5em;
+	}
+	a {
+		text-align: left;
+		position: relative;
+		&:after {
+			content: '..................................................';
+			letter-spacing: 0.125em;
+	        position: absolute;
+	        right: -1.5em;
+	        vertical-align: bottom;
+	        z-index: -1;
+		}
+	}
+	.count {
+		background-color: $white;
+		color: $blue;
+		text-align: right;
+	}
+}
+
 /*************
 DEFAULT PAGE & 
 SINGLE POST

@@ -31,14 +31,14 @@ add_action('after_setup_theme','ppsri_theme_support');
 add_action( 'widgets_init', 'ppsri_register_sidebars' );
 // adding the search form
 add_filter( 'get_search_form', 'ppsri_wpsearch' );
+// modify output of categories widget
+add_filter('wp_list_categories', 'ppsri_cat_count');
 
 // cleaning up random code around images & blockquotes
 add_filter('the_content', 'ppsri_filter_ptags_on_images');
 add_filter('the_content', 'ppsri_filter_ptags_on_blockquotes');
 // cleaning up excerpt
 add_filter('excerpt_more', 'ppsri_excerpt_more');
-// modify output of WordPress Popular Posts plugin
-add_filter( 'wpp_custom_html', 'ppsri_popular_posts_html', 10, 2 );
 
 
 
@@ -222,6 +222,17 @@ function short_excerpt($new_length = 20, $new_more = '...') {
   $output = apply_filters('convert_chars', $output);
   $output = '<p>' . $output . '</p>';
   echo $output;
+}
+
+/************* MODIFY CATEGORIES WIDGET OUTPUT *****************/
+
+function ppsri_cat_count($links) {
+
+    // wrap the count
+    $links = str_replace('</a> (', '</a> <span class="count">', $links);
+    $links = str_replace(')', '</span>', $links);
+
+    return $links;
 }
 
 
