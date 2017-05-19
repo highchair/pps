@@ -151,11 +151,11 @@ LARGE AND UP
 
 	body.single {
 		main {
-			@include grid-column(10);
+			@include grid-column(9);
 			@include grid-col-pos(center);
 		}
 		main > article, section.meta, section.pagination {
-			@include grid-column(10);
+			@include grid-column(8);
 			@include grid-col-pos(center);
 			@include collapse;
 		}

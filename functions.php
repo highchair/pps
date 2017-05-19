@@ -191,8 +191,8 @@ function ppsri_register_sidebars() {
         'description' => __('The sidebar for the blog and archive pages.', 'ppsri'),
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
-        'before_title' => '<h2>',
-        'after_title' => '</h2>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
     ));
 }
 
