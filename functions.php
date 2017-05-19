@@ -132,7 +132,7 @@ function ppsri_theme_support() {
 
     // featured images
     add_theme_support( 'post-thumbnails' ); 
-    add_image_size( 'grid-thumb', 560, 300, array( 'center', 'center') );
+    add_image_size( 'grid-thumb', 680, 295, array( 'center', 'center') );
     
 } /* end ppsri theme support */
 
