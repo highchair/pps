@@ -125,8 +125,7 @@ function ppsri_theme_support() {
     register_nav_menus(
         array(
             'primary-nav' => __( 'Primary Navigation', 'ppsri' ),
-            'secondary-nav' => __( 'Secondary Navigation', 'ppsri' ),
-            'pages-nav' => __( 'Pages Menu', 'ppsri' )
+            'secondary-nav' => __( 'Secondary Navigation', 'ppsri' )
         )
     );
 
@@ -156,16 +155,6 @@ function ppsri_secondary_nav() {
         'menu' => __( 'Secondary Navigation', 'ppsri' ),
         'container' => false,
         'theme_location' => 'secondary-nav',
-        'depth' => 1,
-    ));
-}
-
-// menu for pages
-function ppsri_pages_nav() {
-    wp_nav_menu(array(
-        'items_wrap' => '%3$s',
-        'menu' => __( 'Pages Menu', 'ppsri' ),
-        'theme_location' => 'pages-nav',
         'depth' => 1,
     ));
 }
