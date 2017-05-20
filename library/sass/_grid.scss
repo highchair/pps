@@ -126,7 +126,7 @@ LARGE AND UP
 
 	/*** PAGES WITH SIDEBARS ***/
 
-	body.blog, body.archive {
+	body.blog, body.archive, body.search-results {
 		div.main {
 			@include grid-column(7);
 		}

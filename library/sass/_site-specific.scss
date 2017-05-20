@@ -111,10 +111,12 @@ section.secondary {
 
 
 /*************
-BLOG  
+BLOG & 
+SEARCH RESULTS
 *************/
 
-body.blog, body.archive, body.page-template-events-page {
+body.blog, body.archive, body.page-template-events-page, 
+body.search-results, body.search-no-results {
 	header {
 		p {
 			margin-bottom: 0;
@@ -170,6 +172,14 @@ aside.blog h3 {
 		color: $blue;
 		text-align: right;
 	}
+}
+
+body.search-results header, body.search-no-results header {
+	margin-top: $padding*2;
+}
+
+body.search-no-results div.main {
+	text-align: center;
 }
 
 /*************
@@ -337,22 +347,4 @@ body.page-template-events-page {
 
 p.event-date {
 	font-family: "Alegreya SC", serif;
-}
-
-
-/*************
-SEARCH RESULTS  
-*************/
-
-body.search-no-results main {
-	p {
-		margin-top: $padding/2;
-		margin-bottom: $padding;
-	}
-	#searchform button {
-		color: $black;
-	}
-	input[type=search] {
-		width: 18rem;
-	}
 }
