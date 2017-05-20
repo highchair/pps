@@ -125,25 +125,42 @@ HEADER
 			padding: $padding;
 		}
 	}
-	#searchform, #searchform button {
+	#searchform button {
 		display: none;
 	}
 } // end breakpoint(large)
 
-nav.search-open {
-	.desktop-search {
-		position: relative;
-		#searchform {
-			display: inline-block;
-			position: absolute;
-			right: calc(100% + #{$padding});
+
+/*** Search Form ***/
+
+nav .desktop-search {
+	position: relative;
+	#searchform {
+		display: inline-block;
+		overflow: hidden;
+		width: 0;
+		opacity: 0;
+		@include transition(all 0.25s ease-in);
+		position: absolute;
+		right: calc(100% + #{$padding});
+		top: -$padding/2;
+		input {
+			width: 100%;
 		}
 	}
-	.secondary a {
-		opacity: 0.2;
-	}
-	.secondary .desktop-search a {
+}
+
+div.secondary-nav ul {
+	@include transition(opacity 0.125s ease-in);
+}
+
+nav.search-open {
+	#searchform {
 		opacity: 1;
+		width: 280px;
+	}
+	div.secondary-nav ul {
+		opacity: 0.2;
 	}
 }
 
