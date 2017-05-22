@@ -373,6 +373,7 @@ nav.pagination {
 /*** "Read More" Links ***/
 
 .read-more {
+	margin-bottom: 0;
 	.text {
 		display: inline-block;
 		font-size: $h4;
@@ -397,6 +398,21 @@ a:hover .read-more {
 	}
 	.text {
 		width: 5em;
+	}
+}
+
+/*** Breadcrumb Navigation ***/
+
+nav.breadcrumb {
+	color: $gray;
+	padding: $padding 0;
+	text-align: right;
+}
+
+@include breakpoint(large) {
+	nav.breadcrumb {
+		padding-left: $padding;
+		padding-right: $padding;
 	}
 }
 
