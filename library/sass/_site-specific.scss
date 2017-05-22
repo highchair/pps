@@ -199,7 +199,7 @@ body.single article, body.page:not(.home) article {
 		font-weight: 100;
 		line-height: 1.5em;
 	}
-	a:not(.button) {
+	a:not(.button):not(.ngg-fancybox) {
 		background: lighten($blue-xlt,2);
 		border-bottom: 2px solid $blue;
 		color: $gray-dk;

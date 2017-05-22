@@ -40,6 +40,12 @@ section.block {
 	@include clearfix;
 }
 
+/*** NEXTGEN IMAGE GALLERY ***/
+
+div.ngg-gallery-thumbnail-box {
+	@include grid-column(4);
+}
+
 
 /************
 LARGE AND UP
@@ -218,6 +224,19 @@ XLARGE AND UP
 	body.single main > article, body.single section.meta, body.single section.pagination {
 		@include grid-column(7);
 		@include grid-col-pos(center);
+	}
+
+	/*** PAGES WITH SIDEBARS ***/
+
+	body.page-parent, body.page-child div.main > article {
+		@include grid-column(7);
+		@include grid-col-pos(-2);
+	}
+
+	/*** NEXTGEN IMAGE GALLERY ***/
+	div.ngg-galleryoverview {
+		max-width: none;
+		width: 138%;
 	}
 
 } // end breakpoint(xlarge)

@@ -403,3 +403,17 @@ a:hover .read-more {
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 }
+
+/*** NextGen Image Gallery ***/
+
+div.ngg-galleryoverview {
+	margin-bottom: $padding;
+}
+
+div.ngg-gallery-thumbnail {
+	border: 0;
+	margin: 0;
+	a, img {
+		margin: 0 !important;
+	}
+}
