@@ -19,10 +19,15 @@ body {
 }
 
 p {
-	font-size: 1.125rem;
-	line-height: 1.85rem;
 	margin-top: 0;
 	margin-bottom: $padding;
+}
+
+@include breakpoint(large) {
+	p {
+		font-size: 1.125rem;
+		line-height: 1.85rem;
+	}
 }
 
 body:not(.home) main {
@@ -269,7 +274,7 @@ button, .button, input[type='submit'] {
   		@include buttons($blue,$blue,$blue);
   	}
   	&.secondary {
-  		@include buttons($bronze,$black,$black);
+  		@include buttons($bronze,$bronze,$bronze);
   	}
 }
 

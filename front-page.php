@@ -40,11 +40,19 @@ Template Name: Homepage
 
       <?php the_field('primary_block'); ?>
 
+      <div class="expand">
+        <a class="button primary" href="javascript:void(0)">Show More</a>
+      </div>
+
     </section>
 
     <section class="secondary block">
 
       <?php the_field('secondary_block'); ?>
+
+      <div class="expand">
+        <a class="button secondary" href="javascript:void(0)">Show More</a>
+      </div>
 
     </section>
       

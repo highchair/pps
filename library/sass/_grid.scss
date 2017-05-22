@@ -36,6 +36,16 @@ hr  {
 	margin-right: auto;
 }
 
+.alignleft {
+	float: left;
+	margin-right: $padding/2;
+}
+
+.alignright {
+	float: right;
+	margin-left: $padding/2;
+}
+
 section.block {
 	@include clearfix;
 }
@@ -55,16 +65,6 @@ LARGE AND UP
 
 	main {
 		min-height: 25rem;
-	}
-
-	.alignleft {
-		float: left;
-		margin-right: $padding/2;
-	}
-
-	.alignright {
-		float: right;
-		margin-left: $padding/2;
 	}
 
 	.button-group {

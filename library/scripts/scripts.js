@@ -68,6 +68,13 @@ jQuery(document).ready( function($) {
         }
     }).resize();   // Cause an initial widow.resize to occur
 
+    /*** EXPAND BLOCKS ***/
+
+    $('div.expand .button').click( function() {
+		$(this).closest('section.block').addClass('expanded');
+    });
+
+
 	/*** FUNCTIONS **/
 
 	function openNav() {

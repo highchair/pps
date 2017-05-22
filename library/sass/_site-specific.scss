@@ -99,14 +99,79 @@ section.block {
 			font-weight: 900;
 		}
 	}
+	.alignright, .alignleft {
+		max-width: 55%;
+	}
+}
+
+section.block {
+	max-height: 28rem;
+	overflow: hidden;
+	position: relative;
+	.expand {
+		height: 5rem;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding-bottom: $padding;
+		text-align: center;
+		z-index: 1;
+		&:before {
+			content: '';
+			display: block;
+			height: 5rem;
+			width: 100%;
+			position: absolute;
+			top: -5rem;
+			left: 0;
+		}
+	}
+	&.expanded {
+		max-height: none;
+		div.expand {
+			display: none;
+		}
+	}
 }
 
 section.primary {
 	background: $blue-lt;
+	div.expand {
+		background: $blue-lt;
+		&:before {
+			@include background(linear-gradient(rgba($blue-lt, 0), $blue-lt));
+		}
+	}
 }
 
 section.secondary {
 	background: $mustard-lt;
+	div.expand {
+		background: $mustard-lt;
+		&:before {
+			@include background(linear-gradient(rgba($mustard-lt, 0), $mustard-lt));
+		}
+	}
+}
+
+@include breakpoint(medium) {
+
+	section.block {
+		max-height: none;
+		div.expand {
+			display: none;
+		}
+	}
+
+}
+
+@include breakpoint(large) {
+
+	section.block .alignright, section.block .alignleft {
+		max-width: 100%;
+	}
+
 }
 
 
