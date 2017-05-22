@@ -34,10 +34,6 @@ body:not(.home) main {
 	padding: $padding $padding $padding*2;
 }
 
-a {
-	@include transition(all 0.125s ease-in);
-}
-
 /*** font sizes ***/
 $h1: 1.625rem;
 $h2: 1.438rem;
@@ -255,6 +251,7 @@ other reusable bits of stuff
 a {
 	color: $blue;
 	text-decoration: none;
+	@include transition(all 0.125s ease-in);
 	&:hover {
 		color: $gray-dk;
 	}
@@ -271,15 +268,16 @@ button, .button, input[type='submit'] {
 	white-space: nowrap;
 	@include buttons;
   	&.primary {
-  		@include buttons($blue,$blue,$blue);
+  		@include buttons($blue);
   	}
   	&.secondary {
-  		@include buttons($bronze,$bronze,$bronze);
+  		@include buttons($bronze);
   	}
 }
 
 button, input[type='submit'] {
 	cursor: pointer;
+	@include transition(all 0.125s ease-in);
 }
 
 button {

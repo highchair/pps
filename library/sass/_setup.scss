@@ -76,19 +76,54 @@ $sans-serif: 'Alegreya Sans';
 /*** Buttons ***/
 
 @mixin buttons($color:null,$border:$gray-lt,$text:$gray) {
+
+  // default
   border-color: $border;
   color: $text;
   &:hover {
     background-color: $gray-lt;
     border-color: $text;
     color: $black;
-    @if ($color) {
+  }
+
+  // color specified
+  @if ($color) {
+    border-color: $color;
+    color: $color;
+    &:hover {
       background-color: $color;
       border-color: $color;
       color: $white;
     }
   }
+
 }
+
+// @mixin buttons($color:null,$border:$gray-lt,$text:$gray) {
+
+//   @if ($color) {
+
+//     border-color: $color;
+//     color: $color;
+//     &:hover {
+//       background-color: $color;
+//       border-color: $color;
+//       color: $white;
+//     }
+
+//   } else {
+
+//     border-color: $border;
+//     color: $text;
+//     &:hover {
+//       background-color: $gray-lt;
+//       border-color: $text;
+//       color: $black;
+//     }
+    
+//   }
+
+// }
 
 /*** Cut Off Text That's Too Long with an Ellipsis ***/
 // usage:
