@@ -202,7 +202,7 @@ function ppsri_register_sidebars() {
 // Search Form
 function ppsri_wpsearch($form) {
     $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-    <input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="Search..." />
+    <input type="search" value="' . get_search_query() . '" name="s" id="s" />
     <button type="submit" class="primary">Search</button>
     </form>';
     return $form;

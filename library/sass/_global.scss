@@ -278,6 +278,10 @@ button, .button, input[type='submit'] {
 button, input[type='submit'] {
 	cursor: pointer;
 	@include transition(all 0.125s ease-in);
+	&:focus {
+		border-color: $black;
+		outline: none;
+	}
 }
 
 button {
