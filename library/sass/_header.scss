@@ -171,16 +171,37 @@ nav.search-open {
 }
 
 body.nav-open {
-	position: relative;
+	#header nav {
+		position: relative;
+	}
 	#header div.primary-nav {
 		display: block;
 		background: $blue-xlt;
 		padding: $padding*1.5 $padding;
 		min-height: 100vh;
 		position: absolute;
-		top: 0;
+		top: $padding*3;
 		right: 0;
+		left: 0;
 		width: 100%;
 		z-index: 1;
+		.toggle-nav {
+			background: $blue-xlt;
+			border-top: 3px solid $blue;
+			font-family: $small-caps, serif;
+			font-size: 1rem;
+			letter-spacing: 0.125em;
+			padding: $padding/2 $padding;
+			position: absolute;
+			top: -$padding*3;
+			left: 0;
+			text-transform: lowercase;
+		}
+	}
+}
+
+@include breakpoint(large) {
+	#header div.primary-nav .toggle-nav {
+		display: none;
 	}
 }
