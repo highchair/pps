@@ -228,7 +228,7 @@ XLARGE AND UP
 
 	/*** PAGES WITH SIDEBARS ***/
 
-	body.page-parent, body.page-child div.main > article {
+	body.page-parent div.main > article, body.page-child div.main > article {
 		@include grid-column(7);
 		@include grid-col-pos(-2);
 	}
