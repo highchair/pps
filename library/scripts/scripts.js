@@ -77,6 +77,7 @@ jQuery(document).ready( function($) {
 
 	function openNav() {
 		$('body').removeClass('nav-closed').addClass('nav-open');
+		$('html, body').animate({ scrollTop: $("#header nav").offset().top }, 500);
 	}
 
 	function closeNav() {

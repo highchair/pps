@@ -172,6 +172,7 @@ nav.search-open {
 }
 
 body.nav-open {
+	overflow-y: hidden; // no scrolling
 	#header nav {
 		position: relative;
 	}
