@@ -191,6 +191,7 @@ FORMS
 input, textarea {
 	background-color: $silver;
 	border: 1px solid $gray-lt;
+	border-radius: 0;
 	max-width: 100%;
 	padding: 0.25em;
 	&:focus {
@@ -212,6 +213,10 @@ input, textarea {
 input {
 	font-family: $sans-serif, sans-serif;
 	padding: 0.75em 1em 0.625em;
+}
+
+input[type='search'] {
+	-webkit-appearance: none;
 }
 
 label {
