@@ -12,7 +12,7 @@
 
     <header>
 
-      <h1>News</h1>
+      <h1 class="page-title">News</h1>
 
     </header>
     
