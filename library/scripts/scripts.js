@@ -35,9 +35,7 @@ jQuery(document).ready( function($) {
 	/*** KEYBOARD SHORTCUTS ***/
 
 	$(document).keydown(function(e) {
-		if ( e.keyCode == 77 ){ // m
-			openNav();
-		} else if ( e.keyCode == 27 ){ // esc key
+		if ( e.keyCode == 27 ){ // esc key
 			closeNav();
 			closeSearch();
 		}
