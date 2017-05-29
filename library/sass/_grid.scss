@@ -50,6 +50,10 @@ section.block {
 	@include clearfix;
 }
 
+body.page-child aside.sidebar {
+	display: none;
+}
+
 /*** NEXTGEN IMAGE GALLERY ***/
 
 div.ngg-gallery-thumbnail-box {
@@ -146,6 +150,7 @@ LARGE AND UP
 			@include grid-column(12);
 		}
 		aside.sidebar {
+			display: block;
 			@include grid-column(3);
 		}
 		div.main > article {
