@@ -224,17 +224,21 @@ aside.blog h3 {
 
 .widget_categories ul {
 	display: table;
+	max-width: 26rem; // looks weird if it's wider
 	width: 100%;
 }
 .widget_categories .cat-item {
+	color: $blue;
 	display: table-row;
 	font-size: $h3;
-	a, .count {
+	position: relative;
+	.name, .count {
 		display: table-cell;
 		padding-bottom: 0.5em;
 	}
-	a {
+	.name {
 		text-align: left;
+		overflow: hidden;
 		position: relative;
 		&:after {
 			content: '..................................................';
@@ -247,8 +251,11 @@ aside.blog h3 {
 	}
 	.count {
 		background-color: $white;
-		color: $blue;
 		text-align: right;
+	}
+	a {
+		background: $white;
+		padding-right: 1em;
 	}
 }
 

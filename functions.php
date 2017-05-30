@@ -228,8 +228,9 @@ function short_excerpt($new_length = 20, $new_more = '...') {
 
 function ppsri_cat_count($links) {
 
-    // wrap the count
-    $links = str_replace('</a> (', '</a> <span class="count">', $links);
+    // wrap the anchor with a span, remove the parentheses, and wrap the count with a span
+    $links = str_replace('<a', '<span class="name"><a', $links);
+    $links = str_replace('</a> (', '</a></span> <span class="count">', $links);
     $links = str_replace(')', '</span>', $links);
 
     return $links;
