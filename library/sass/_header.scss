@@ -22,7 +22,7 @@ HEADER
 	}
 	nav {
 		background-color: $blue;
-		padding: $padding*.75 $padding;
+		padding: $padding*.75 $padding/2;
 	}
 	div.primary-nav {
 		text-align: center;
@@ -32,6 +32,7 @@ HEADER
 			display: block;
 			font-size: 2.063rem;
 			font-weight: 100;
+			padding: 0.375em;
 		}
 		.current-menu-item a, .current-page-ancestor a, a:hover {
 			color: $gray-dk;
@@ -171,16 +172,67 @@ nav.search-open {
 }
 
 body.nav-open {
-	position: relative;
+	overflow-y: hidden; // no scrolling
+	#header nav {
+		position: relative;
+	}
 	#header div.primary-nav {
 		display: block;
 		background: $blue-xlt;
-		padding: $padding*1.5 $padding;
+		padding: $padding*1.5 $padding/2;
 		min-height: 100vh;
 		position: absolute;
-		top: 0;
+		top: $padding*3;
 		right: 0;
+		left: 0;
 		width: 100%;
 		z-index: 1;
+		.toggle-nav {
+			background: $blue-xlt;
+			border-top: 3px solid $blue;
+			font-family: $small-caps, serif;
+			font-size: 1rem;
+			letter-spacing: 0.125em;
+			padding: $padding/2 $padding;
+			position: absolute;
+			top: -$padding*3;
+			left: 0;
+			text-transform: lowercase;
+		}
+	}
+}
+#header div.primary-nav .toggle-nav {
+	background: $blue-xlt;
+	border-top: 3px solid $blue;
+	font-family: $small-caps, serif;
+	font-size: 1rem;
+	letter-spacing: 0.125em;
+	padding: $padding/2 $padding;
+	position: absolute;
+	top: -$padding*3;
+	left: 0;
+	text-transform: lowercase;
+}
+#searchform {
+	input {
+		background: $white;
+		border-color: $blue;
+		border-right: 0;
+		margin-top: -1px; margin-bottom: -1px; // hack to get it to align with input
+	}
+	button {
+		background: $white;
+		margin-left: -3px; // hack to get it to align with input
+		padding-left: $padding;
+		padding-right: $padding;
+		&:hover {
+			color: $blue;
+		}
+	}
+}
+
+@include breakpoint(large) {
+	#header div.primary-nav .toggle-nav {
+		display: none;
 	}
 }

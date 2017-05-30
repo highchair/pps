@@ -22,7 +22,7 @@ $featured_id = $featured_event->ID;
 
     <article>
 
-      <h1>Upcoming Events</h1>
+      <h1 class="page-title">Upcoming Events</h1>
 
       <?php // featured event
 

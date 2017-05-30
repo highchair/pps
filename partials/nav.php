@@ -11,6 +11,7 @@
 		</div>
 
 		<div class="primary-nav">
+			<a class="toggle-nav" href="javascript:void(0)"><span class="icon-close"></span> Exit</a>
 		  	<?php ppsri_primary_nav(); ?>
 			<?php echo get_search_form(); ?>
 		</div>

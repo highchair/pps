@@ -193,14 +193,27 @@ body.search-results, body.search-no-results {
 	main h2 {
 		margin-top: 0;
 	}
-	article {
-		padding: $padding*2;
-		a {
-			color: $gray-dk;
-		}
+	article a {
+		color: $gray-dk;
 	}
 	&:not(.paged) article:first-of-type { // first page only
 		@include box-shadow($silver 0 0 $padding);
+	}
+}
+
+body.blog, body.archive, body.page-template-events-page article, 
+body.search-results, body.search-no-results {
+	article {
+		padding: $padding;
+	}
+}
+
+@include breakpoint(large) {
+	body.blog, body.archive, body.page-template-events-page, 
+	body.search-results, body.search-no-results {
+		article {
+			padding: $padding*2;
+		}
 	}
 }
 
@@ -252,11 +265,11 @@ DEFAULT PAGE &
 SINGLE POST
 *************/
 
-nav.breadcrumb {
-	color: $gray;
-	padding: $padding $padding*2 $padding;
-	text-align: right;
-}
+// nav.breadcrumb {
+// 	color: $gray;
+// 	padding: $padding$padding;
+// 	text-align: right;
+// }
 
 body.single article, body.page:not(.home) article {
 	main p {
