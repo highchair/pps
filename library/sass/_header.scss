@@ -48,7 +48,7 @@ HEADER
 		font-family: $small-caps, serif;
 		letter-spacing: 0.125em;
 		text-align: right;
-		text-transform: lowercase;
+		text-transform: lowercase; // make smallcaps just look uppercase
 		ul, li {
 			display: inline-block;
 		}
