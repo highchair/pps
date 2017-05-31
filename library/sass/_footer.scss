@@ -99,12 +99,11 @@ body:not(.home) #footer {
 	}
 }
 
-@include breakpoint(large) {
+@include breakpoint(medium) {
 	#footer {
-		text-align: left;
 		.logo-text {
 			max-width: none;
-			margin-left: none;
+			margin-left: 0;
 		}
 		section {
 			padding-bottom: $padding;
@@ -159,6 +158,12 @@ body:not(.home) #footer {
 	}
 	.subfooter span {
 		display: inline;
+	}
+}
+
+@include breakpoint(large) {
+	#footer {
+		text-align: left;
 	}
 }
 
