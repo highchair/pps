@@ -62,15 +62,10 @@ div.ngg-gallery-thumbnail-box {
 
 
 /************
-LARGE AND UP
+MEDIUM AND UP
 *************/
 
-@include breakpoint(large) {
-
-	main {
-		min-height: 25rem;
-	}
-
+@include breakpoint(medium) {
 	.button-group {
 		@include clearfix;
 		> div { // slightly different padding/gutter structure here
@@ -80,6 +75,17 @@ LARGE AND UP
 				float: right;
 			}
 		}
+	}
+}
+
+/************
+LARGE AND UP
+*************/
+
+@include breakpoint(large) {
+
+	main {
+		min-height: 25rem;
 	}
 
 	#footer {

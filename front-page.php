@@ -50,6 +50,20 @@ Template Name: Homepage
 
       <?php the_field('secondary_block'); ?>
 
+      <?php if ( have_rows('button_group') ) : ?>
+
+        <div class="buttons"><div class="button-group">
+
+          <?php while ( have_rows('button_group') ) : the_row(); ?>
+          <div>
+            <a href="<?php echo get_sub_field('link'); ?>" class="button primary"><?php echo get_sub_field('text'); ?></a>
+          </div>
+          <?php endwhile; ?>
+
+        </div></div>
+
+      <?php endif; ?>
+
       <div class="expand">
         <a class="button secondary" href="javascript:void(0)">Show More</a>
       </div>
