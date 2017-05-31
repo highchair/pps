@@ -52,18 +52,20 @@ body:not(.home) #footer {
 	nav {
 		a {
 			color: $blue;
+			font-weight: 900;
 			padding: $padding;
 		}
 		a:hover {
 			color: $gray-dk;
 		}
-		.secondary-nav {
+		.secondary-nav, .primary-nav {
 			border-top: $border;
+		}
+		.secondary-nav {
 			margin-top: $padding;
 			padding-top: $padding;
-			font-weight: 900;
 		}
-		.secondary-nav li {
+		li {
 			display: inline-block;
 		}
 		.primary {
@@ -72,7 +74,6 @@ body:not(.home) #footer {
 	}
 	.primary-nav a {
 		display: block;
-		@extend %kilo;
 	}
 	.social {
 		[class^="icon-"] {
@@ -149,16 +150,12 @@ body:not(.home) #footer {
 		nav ul {
 			margin: 0;
 		}
-		.primary-nav a {
-			font-size: 1rem;
-			font-weight: 900;
+		nav .secondary-nav, nav .primary-nav {
+			border-top: none;
 		}
-		.primary-nav li {
-			display: inline-block;
+		nav .primary-nav {
+			padding-top: 0;
 		}
-	}
-	#footer nav .secondary-nav {
-		border-top: none;
 	}
 	.subfooter span {
 		display: inline;
