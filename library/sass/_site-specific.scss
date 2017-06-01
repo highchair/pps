@@ -53,9 +53,36 @@ aside.blog h3 {
 	font-size: $h4;
 }
 
+body.blog, body.archive, body.page-template-events-page {
+	aside.blog {
+		border-top: $border;
+		padding-top: $padding;
+		margin-top: $padding;
+	}
+}
+
+div.widget {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 26rem; // looks weird if it's wider
+}
+
+@include breakpoint(large) {
+	body.blog, body.archive, body.page-template-events-page {
+		aside.blog {
+			border-top: none;
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+	div.widget {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 .widget_categories ul {
 	display: table;
-	max-width: 26rem; // looks weird if it's wider
 	width: 100%;
 }
 .widget_categories .cat-item {
@@ -102,12 +129,6 @@ body.search-no-results div.main {
 DEFAULT PAGE & 
 SINGLE POST
 *************/
-
-// nav.breadcrumb {
-// 	color: $gray;
-// 	padding: $padding$padding;
-// 	text-align: right;
-// }
 
 body.single article, body.page:not(.home) article {
 	main p {
