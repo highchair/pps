@@ -378,7 +378,12 @@ nav.pagination {
 /*** "Read More" Links ***/
 
 .read-more {
+	bottom: $padding/2;
+	left: 0;
 	margin-bottom: 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 	.text {
 		display: inline-block;
 		font-size: $h4;

@@ -26,6 +26,10 @@ body.search-results, body.search-no-results {
 	}
 	article a {
 		color: $gray-dk;
+		display: block;
+		padding-bottom: $padding*2;
+		position: relative;
+		width: 100%;
 	}
 	&:not(.paged) article:first-of-type { // first page only
 		@include box-shadow($silver 0 0 $padding);
@@ -36,6 +40,14 @@ body.blog, body.archive, body.page-template-events-page article,
 body.search-results, body.search-no-results {
 	article {
 		padding: $padding;
+	}
+}
+
+@include breakpoint(medium) {
+	body.blog, body.archive, body.page-template-events-page, body.search-results {
+		.read-more {
+			text-align: left;
+		}
 	}
 }
 
@@ -130,7 +142,7 @@ DEFAULT PAGE &
 SINGLE POST
 *************/
 
-body.single article, body.page:not(.home) article {
+body.single article, body.page:not(.home):not(.page-template-events-page) article {
 	main p {
 		font-size: 1.25rem;
 		font-weight: 100;
