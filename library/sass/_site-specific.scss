@@ -270,6 +270,27 @@ body.page {
 }
 
 /*************
+PARENT & CHILD 
+PAGES
+*************/
+
+body.page-parent, body.page-child {
+	aside.sidebar {
+		border-top: $border;
+		margin-top: $padding;
+	}
+}
+
+@include breakpoint(large) {
+	body.page-parent, body.page-child {
+		aside.sidebar {
+			border-top: none;
+			margin-top: 0;
+		}
+	}
+}
+
+/*************
 EVENTS PAGE
 *************/
 

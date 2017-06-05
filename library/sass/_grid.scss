@@ -50,10 +50,6 @@ section.block {
 	@include clearfix;
 }
 
-body.page-child aside.sidebar {
-	display: none;
-}
-
 /*** NEXTGEN IMAGE GALLERY ***/
 
 div.ngg-gallery-thumbnail-box {
@@ -155,11 +151,13 @@ LARGE AND UP
 		div.main {
 			@include grid-column(12);
 		}
-		aside.sidebar {
+		div.main aside.sidebar {
 			display: block;
+			float: left !important; // sorry for !important. i'm blaming it on Foundation
 			@include grid-column(3);
 		}
 		div.main > article {
+			float: right !important;
 			@include grid-column(9);
 		}
 	}
