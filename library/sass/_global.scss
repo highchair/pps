@@ -386,14 +386,14 @@ nav.pagination {
 		height: 1em;
 		line-height: 1em; // prevents element from adding height to container
 		overflow: hidden;
-		vertical-align: baseline;
+		vertical-align: middle;
 		width: 0;
-		@include transition(width 0.125s ease-in);
+		@include transition(width 0.125s ease);
 	}
 	.icon-chevron-circle-right {
 		color: $blue;
 		font-size: 1.5rem;
-		vertical-align: baseline;
+		vertical-align: middle;
 	}
 }
 a:hover .read-more {
