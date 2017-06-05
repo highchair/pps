@@ -41,12 +41,14 @@ body:not(.home) #footer {
 			margin-bottom: 0;
 		}
 		input {
-			border-right: 0;
+			max-width: 20rem;
+			width: 100%;
 		}
 		.button {
+			display: table;
+			margin: $padding/2 auto 0;
 			padding-top: $padding/2;
 			padding-bottom: $padding/2;
-			vertical-align: 1px; // hack to align with input
 		}
 	}
 	nav {
@@ -122,8 +124,11 @@ body:not(.home) #footer {
 			display: block;
 			margin-top: $padding;
 		}
-		div.signup form input {
-			width: 20rem;
+		div.signup .button {
+			display: inline-block;
+			margin-top: 0;
+			margin-left: -1px; // overlap with input
+			vertical-align: 1px; // hack to align with input
 		}
 		div.contact {
 			background-position: 18% top;
