@@ -40,15 +40,15 @@ body:not(.home) #footer {
 			font-weight: 100;
 			margin-bottom: 0;
 		}
-		input {
+		input[type='email'] {
 			max-width: 20rem;
 			width: 100%;
 		}
-		.button {
+		input[type='submit'] {
 			display: table;
 			margin: $padding/2 auto 0;
-			padding-top: $padding/2;
-			padding-bottom: $padding/2;
+			padding-top: $padding*.75;
+			padding-bottom: $padding*.75;
 		}
 	}
 	nav {
@@ -124,10 +124,10 @@ body:not(.home) #footer {
 			display: block;
 			margin-top: $padding;
 		}
-		div.signup .button {
+		div.signup input[type='submit'] {
 			display: inline-block;
 			margin-top: 0;
-			margin-left: -1px; // overlap with input
+			margin-left: -4px; // overlap with input
 			vertical-align: 1px; // hack to align with input
 		}
 		div.contact {
@@ -177,7 +177,7 @@ body:not(.home) #footer {
 		background-position-x: 0;
 		padding-left: calc(123px + #{$padding}); // seal image + padding
 	}
-	#footer div.signup form input {
+	#footer div.signup form input[type='email'] {
 		width: 32rem;
 	}
 }

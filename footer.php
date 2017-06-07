@@ -5,8 +5,11 @@
       <div class="signup">
         <h3>Get E-News</h3>
         <p>Occasional Alerts and Updates from PPS</p>
-        <form>
-          <input type="email" placeholder="email@domain.com"><a class="button" href="#">Sign Up</a>
+        <form name="ccoptin" action="http://visitor.constantcontact.com/d.jsp" target="_blank" method="post">
+          <input type="hidden" name="m" value="1102165220207">
+          <input type="hidden" name="p" value="oi">
+          <input type="email" name="ea" size="20" placeholder="email@domain.com">
+          <input type="submit" name="go" value="Sign Up">
         </form>
       </div>
 
