@@ -16,14 +16,9 @@
       <div class="contact" itemscope itemtype="http://schema.org/Organization">
         <h1 class="logo-text" itemprop="name">Providence Preservation Society</h1>
         <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        <p><span itemprop="streetAddress">24 Meeting Street</span></p>
-          <p>
-            <span itemprop="addressLocality">Providence </span>,
-            <span itemprop="addressRegion">RI</span> (<a href="javascript:void(0)" itemprop="maps">Map</a>)
-          </p>
+          <?php dynamic_sidebar('address'); ?>
         </div>
-        <p class="phone">ph: <span itemprop="telephone">(401) 831-7440</span></p>
-        <p class="email"><span itemprop="email">info@ppsri.org</span></p>
+        <?php dynamic_sidebar('contact-info'); ?>
       </div>
 
     </section>
@@ -31,8 +26,7 @@
     <section>
 
       <div class="social">
-        <a href="http://facebook.com/pvdpreservation"><span class="icon-facebook"></span> facebook.com/pvdpreservation</a>
-        <a href="http://twitter.com/pvdpreservation"><span class="icon-twitter"></span> twitter.com/pvdpreservation</a>
+        <?php dynamic_sidebar('social'); ?>
       </div>
 
       <nav role="navigation">

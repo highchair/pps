@@ -194,6 +194,27 @@ function ppsri_register_sidebars() {
         'before_title' => '<h3>',
         'after_title' => '</h3>',
     ));
+    register_sidebar(array(
+        'id' => 'address',
+        'name' => __('Address', 'ppsri'),
+        'description' => __('The address in the footer', 'ppsri'),
+        'before_widget' => '',
+        'after_widget' => '',
+    ));
+    register_sidebar(array(
+        'id' => 'contact-info',
+        'name' => __('Contact Info', 'ppsri'),
+        'description' => __('The contact info in the footer', 'ppsri'),
+        'before_widget' => '',
+        'after_widget' => '',
+    ));
+    register_sidebar(array(
+        'id' => 'social',
+        'name' => __('Social Links', 'ppsri'),
+        'description' => __('The social media links in the footer', 'ppsri'),
+        'before_widget' => '',
+        'after_widget' => '',
+    ));
 }
 
 
