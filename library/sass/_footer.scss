@@ -40,30 +40,34 @@ body:not(.home) #footer {
 			font-weight: 100;
 			margin-bottom: 0;
 		}
-		input {
-			border-right: 0;
+		input[type='email'] {
+			max-width: 20rem;
+			width: 100%;
 		}
-		.button {
-			padding-top: $padding/2;
-			padding-bottom: $padding/2;
-			vertical-align: 1px; // hack to align with input
+		input[type='submit'] {
+			display: table;
+			margin: $padding/2 auto 0;
+			padding-top: $padding*.75;
+			padding-bottom: $padding*.75;
 		}
 	}
 	nav {
 		a {
 			color: $blue;
+			font-weight: 900;
 			padding: $padding;
 		}
 		a:hover {
 			color: $gray-dk;
 		}
-		.secondary-nav {
+		.secondary-nav, .primary-nav {
 			border-top: $border;
+		}
+		.secondary-nav {
 			margin-top: $padding;
 			padding-top: $padding;
-			font-weight: 900;
 		}
-		.secondary-nav li {
+		li {
 			display: inline-block;
 		}
 		.primary {
@@ -72,7 +76,6 @@ body:not(.home) #footer {
 	}
 	.primary-nav a {
 		display: block;
-		@extend %kilo;
 	}
 	.social {
 		[class^="icon-"] {
@@ -98,12 +101,11 @@ body:not(.home) #footer {
 	}
 }
 
-@include breakpoint(large) {
+@include breakpoint(medium) {
 	#footer {
-		text-align: left;
 		.logo-text {
 			max-width: none;
-			margin-left: none;
+			margin-left: 0;
 		}
 		section {
 			padding-bottom: $padding;
@@ -122,8 +124,11 @@ body:not(.home) #footer {
 			display: block;
 			margin-top: $padding;
 		}
-		div.signup form input {
-			width: 20rem;
+		div.signup input[type='submit'] {
+			display: inline-block;
+			margin-top: 0;
+			margin-left: -4px; // overlap with input
+			vertical-align: 1px; // hack to align with input
 		}
 		div.contact {
 			background-position: 18% top;
@@ -149,19 +154,21 @@ body:not(.home) #footer {
 		nav ul {
 			margin: 0;
 		}
-		.primary-nav a {
-			font-size: 1rem;
-			font-weight: 900;
+		nav .secondary-nav, nav .primary-nav {
+			border-top: none;
 		}
-		.primary-nav li {
-			display: inline-block;
+		nav .primary-nav {
+			padding-top: 0;
 		}
-	}
-	#footer nav .secondary-nav {
-		border-top: none;
 	}
 	.subfooter span {
 		display: inline;
+	}
+}
+
+@include breakpoint(large) {
+	#footer {
+		text-align: left;
 	}
 }
 
@@ -170,7 +177,7 @@ body:not(.home) #footer {
 		background-position-x: 0;
 		padding-left: calc(123px + #{$padding}); // seal image + padding
 	}
-	#footer div.signup form input {
+	#footer div.signup form input[type='email'] {
 		width: 32rem;
 	}
 }

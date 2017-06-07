@@ -27,7 +27,7 @@ Template Name: Homepage
       <h2>Recent News and Upcoming Events</h2>
 
       <?php
-      $loop = new WP_Query( array( 'posts_per_page'=>4 ) );
+      $loop = new WP_Query( array( 'posts_per_page'=>4, 'post_type'=>array('post','events') ) );
       while ($loop->have_posts()) :
         $loop->the_post();
         get_template_part('partials/article-sm');

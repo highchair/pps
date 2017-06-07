@@ -26,6 +26,10 @@ body.search-results, body.search-no-results {
 	}
 	article a {
 		color: $gray-dk;
+		display: block;
+		padding-bottom: $padding*2;
+		position: relative;
+		width: 100%;
 	}
 	&:not(.paged) article:first-of-type { // first page only
 		@include box-shadow($silver 0 0 $padding);
@@ -36,6 +40,14 @@ body.blog, body.archive, body.page-template-events-page article,
 body.search-results, body.search-no-results {
 	article {
 		padding: $padding;
+	}
+}
+
+@include breakpoint(medium) {
+	body.blog, body.archive, body.page-template-events-page, body.search-results {
+		.read-more {
+			text-align: left;
+		}
 	}
 }
 
@@ -53,9 +65,36 @@ aside.blog h3 {
 	font-size: $h4;
 }
 
+body.blog, body.archive, body.page-template-events-page {
+	aside.blog {
+		border-top: $border;
+		padding-top: $padding;
+		margin-top: $padding;
+	}
+}
+
+div.widget {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 26rem; // looks weird if it's wider
+}
+
+@include breakpoint(large) {
+	body.blog, body.archive, body.page-template-events-page {
+		aside.blog {
+			border-top: none;
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+	div.widget {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
 .widget_categories ul {
 	display: table;
-	max-width: 26rem; // looks weird if it's wider
 	width: 100%;
 }
 .widget_categories .cat-item {
@@ -103,13 +142,7 @@ DEFAULT PAGE &
 SINGLE POST
 *************/
 
-// nav.breadcrumb {
-// 	color: $gray;
-// 	padding: $padding$padding;
-// 	text-align: right;
-// }
-
-body.single article, body.page:not(.home) article {
+body.single article, body.page:not(.home):not(.page-template-events-page) article {
 	main p {
 		font-size: 1.25rem;
 		font-weight: 100;
@@ -245,6 +278,27 @@ body.page {
 		font-weight: normal;
 		padding-right: 0.5em;
 		@extend [class^="icon-"];
+	}
+}
+
+/*************
+PARENT & CHILD 
+PAGES
+*************/
+
+body.page-parent, body.page-child {
+	aside.sidebar {
+		border-top: $border;
+		margin-top: $padding;
+	}
+}
+
+@include breakpoint(large) {
+	body.page-parent, body.page-child {
+		aside.sidebar {
+			border-top: none;
+			margin-top: 0;
+		}
 	}
 }
 
