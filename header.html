@@ -30,7 +30,7 @@
     right: 0;
     bottom: 0;
     height: 1em;
-    background-color: #dfeaf7;
+    background-color: #82a6d6;
   }
   .pps-head--logo,
   .pps-head--empire,
@@ -53,7 +53,7 @@
     right: 72.22%;
   }
   .pps-head--transom {
-    background: top center no-repeat url('library/header/transom_lg.png') transparent;
+    background: top center no-repeat url('library/header/transom_sm.png') transparent;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -71,6 +71,12 @@
     top: 0;
     /* Min: 144px, Max 624px */
     left: 40.25%;
+  }
+  
+  @media (min-width: 760px) {
+    .pps-head--transom {
+      background-image: url('library/header/transom_lg.png');
+    }
   }
   
   @media (min-width: 360px) and (max-width: 1199px) {
@@ -110,10 +116,30 @@
   
 </style>
 <div class="pps-head" role="banner">
-  <div class="pps-head--logo"><img src="library/header/pps_logo_lg.png"></div>
-  <div class="pps-head--empire"><img src="library/header/empire_lg.png"></div>
+  <div class="pps-head--logo">
+    <img srcset="
+        library/header/pps_logo_sm.png 192w,
+        library/header/pps_logo_lg.png 362w"
+      src="library/header/pps_logo_lg.png">
+  </div>
+  <div class="pps-head--empire">
+    <img srcset="
+        library/header/empire_sm.png 314w,
+        library/header/empire_lg.png 588w"
+      src="library/header/empire_lg.png">
+  </div>
   <div class="pps-head--transom"></div>
-  <div class="pps-head--armory"><img src="library/header/armory_lg.png"></div>
+  <div class="pps-head--armory">
+    <img srcset="
+        library/header/armory_sm.png 188w,
+        library/header/armory_lg.png 352w"
+      src="library/header/armory_lg.png">
+  </div>
   <div class="pps-head--bar"></div>
-  <div class="pps-head--indy"><img src="library/header/indytrust_lg.png"></div>
+  <div class="pps-head--indy">
+    <img srcset="
+        library/header/indytrust_sm.png 222w,
+        library/header/indytrust_lg.png 416w"
+      src="library/header/indytrust_lg.png">
+  </div>
 </div>
