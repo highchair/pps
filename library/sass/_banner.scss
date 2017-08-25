@@ -1,0 +1,135 @@
+// Fancy PPS header with calc() measurements
+// by J. Hogue
+
+.pps-head {
+  background-color: $white;
+
+  img {
+    max-width: none;
+    max-height: 100%;
+    width: auto;
+  }
+  
+  &,
+  &--transom {
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 74px;
+  }
+
+  &--logo img,
+  &--empire img,
+  &--armory img,
+  &--indy img {
+    height: 74px;
+  }
+
+  &--bar {
+    position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    height: 1em;
+    background-color: $blue;
+  }
+
+  &--logo,
+  &--empire,
+  &--transom,
+  &--armory,
+  &--indy {
+    @include transition(all 1s ease);
+  }
+
+  &--logo {
+    position: absolute;
+      top: 0;
+      /* Min: 200px, Max 600px */
+      right: 55.55%;
+  }
+
+  &--empire {
+    text-align: right;
+    position: absolute;
+      top: 0;
+      /* Min: 260px, Max 732px; */
+      right: 72.22%;
+  }
+
+  &--transom {
+    background: top center no-repeat url('../header/transom_sm.png') transparent;
+    background-size: cover;
+    position: absolute;
+      top: 0;
+      /* Min: 185px, Max 740px; */
+      left: 51%;
+      right: 3%;
+  }
+
+  &--armory {
+    position: absolute;
+      top: 0;
+      right: 0;
+  }
+
+  &--indy {
+    position: absolute;
+      top: 0;
+      /* Min: 144px, Max 624px */
+      left: 40.25%;
+  }
+
+  @media (min-width: 760px) {
+    .pps-head--transom {
+      background-image: url('../header/transom_lg.png');
+    }
+  }
+  
+  @media (min-width: 360px) and (max-width: 1199px) {
+    /* calc(MINpx + (MAX - MIN) * ((100vw - MIN-VIEWpx)/(MAX-VIEW - MIN-VIEW))); */
+
+    &,
+    &--transom { padding-bottom: calc(74px + (166) * ((100vw - 360px)/840)); }
+
+    &--logo img,
+    &--empire img,
+    &--armory img,
+    &--indy img { height: calc(74px + (166) * ((100vw - 360px)/840)); }
+
+    &--bar { height: calc(16px + (24) * ((100vw - 360px)/840)); }
+  
+    &--logo { right: calc(200px + (600 - 200) * ((100vw - 360px)/840)); }
+
+    &--empire { right: calc(260px + (732 - 260) * ((100vw - 360px)/840)); }
+
+    &--transom { left: calc(185px + (740 - 185) * ((100vw - 360px)/840)); right: 4%; }
+
+    &--indy { left: calc(144px + (624 - 144) * ((100vw - 360px)/840)); }
+  }
+  
+  @media (min-width: 1200px) {
+    &,
+    &--transom { padding-bottom: 240px; }
+
+    &--logo img,
+    &--empire img,
+    &--armory img,
+    &--indy img { height: 240px; }
+
+    &--bar { height: 2.5em; }
+
+    &--logo { left: 26%; right: auto; }
+
+    &--empire { left: 0; right: auto; }
+
+    &--transom { left: 62%; right: 6%; }
+
+    &--indy { left: 52%; right: 0; }
+  }
+  
+   @media (min-width: 1599px) {
+    &--logo { left: 24%; }
+
+    &--transom { left: 60%; }
+  }
+}
