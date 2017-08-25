@@ -6,6 +6,7 @@ PROVIDENCE PRESERVATION SOCIETY Theme Styles
 
 @import 'setup'; // utilities, variables, mixins, grid system, etc.
 @import 'global'; // typography, media, reusable components, etc.
+@import 'banner'; // fancy header banner at the very top
 @import 'header'; // header, main nav
 @import 'footer'; // footer
 @import 'site-specific'; // anything for specific pages

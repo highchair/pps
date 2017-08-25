@@ -5,13 +5,6 @@ HEADER
 
 #header {
 	background-color: $blue-xlt;
-	&:before {
-		content: '';
-		background-image: url('../img/banner.png');
-		background-size: cover;
-		height: 90px;
-		display: block;
-	}
 	> div {
 		position: relative;
 	}
@@ -123,7 +116,7 @@ HEADER
 			color: $blue;
 		}
 		li a, .desktop-search a {
-			padding: $padding;
+			padding: .75rem $padding;
 		}
 	}
 	#searchform button {
