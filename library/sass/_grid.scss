@@ -22,7 +22,7 @@ hr  {
 	width: 100%;
 }
 
-#header > div, main {
+main {
 	@include grid-row;
 }
 
