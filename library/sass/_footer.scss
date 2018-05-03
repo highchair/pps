@@ -37,7 +37,7 @@ body:not(.home) #footer {
 		h3 {
 			color: $gray;
 			font-size: $h1;
-			font-weight: 100;
+			font-weight: $font-weight-light;
 			margin-bottom: 0;
 		}
 		input[type='email'] {
@@ -54,7 +54,7 @@ body:not(.home) #footer {
 	nav {
 		a {
 			color: $blue;
-			font-weight: 900;
+			font-weight: $font-weight-bold;
 			padding: $padding;
 		}
 		a:hover {

@@ -47,10 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.25em;
 }
 h1, h2 {
-	font-weight: 300;
+	font-weight: $font-weight-light;
 }
 h3, h4, h5 {
-	font-weight: 600;
+	font-weight: $font-weight-bold;
 }
 h1 {
 	font-size: $h1;
@@ -74,12 +74,12 @@ h5 {
 h6 {
 	color: $gray-dk;
 	font-size: $h6;
-	font-weight: 300;
+	font-weight: $font-weight-normal;
 	text-transform: uppercase;
 }
 
 %giga, %mega, %kilo {
-	font-weight: 100;
+	font-weight: $font-weight-light;
 }
 
 %giga {
@@ -128,7 +128,7 @@ small, .micro {
 }
 
 .label {
-	font-weight: 800;
+	font-weight: $font-weight-bold;
 	text-transform: uppercase;
 	@extend .micro;
 }
@@ -222,7 +222,7 @@ input[type='search'] {
 label {
 	color: $bronze;
 	display: block;
-	font-weight: 900;
+	font-weight: $font-weight-bold;
 	text-transform: uppercase;
 }
 
@@ -266,7 +266,7 @@ button, .button, input[type='submit'] {
 	background: transparent;
 	border: 1px solid;
 	display: inline-block;
-	font-weight: 900;
+	font-weight: $font-weight-bold;
 	letter-spacing: 0.125em;
 	padding: 0.875em 1.5em 0.75em;
 	text-align: center;
@@ -321,7 +321,7 @@ aside nav a {
 	color: $blue;
 	display: block;
 	font-size: $h2;
-	font-weight: 100;
+	font-weight: $font-weight-light;
 	padding: $padding/2;
 }
 
@@ -387,7 +387,7 @@ nav.pagination {
 	.text {
 		display: inline-block;
 		font-size: $h4;
-		font-weight: 800;
+		font-weight: $font-weight-bold;
 		height: 1em;
 		line-height: 1em; // prevents element from adding height to container
 		overflow: hidden;
@@ -416,7 +416,7 @@ a:hover .read-more {
 nav.breadcrumb {
 	color: $gray;
 	padding: $padding 0;
-	text-align: right;
+	text-align: left;
 }
 
 @include breakpoint(large) {

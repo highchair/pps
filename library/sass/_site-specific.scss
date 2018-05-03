@@ -145,7 +145,7 @@ SINGLE POST
 body.single article, body.page:not(.home):not(.page-template-events-page) article {
 	main p {
 		font-size: 1.25rem;
-		font-weight: 100;
+		font-weight: $font-weight-light;
 		line-height: 1.5em;
 	}
 	a:not(.button):not(.ngg-fancybox) {
@@ -265,7 +265,7 @@ body.page {
 	padding-top: $padding*2;
 	li {
 		font-size: $h2;
-		font-weight: 100;
+		font-weight: $font-weight-light;
 		list-style: none;
 		padding-bottom: $padding;
 	}
@@ -278,6 +278,10 @@ body.page {
 		font-weight: normal;
 		padding-right: 0.5em;
 		@extend [class^="icon-"];
+	}
+	.children li {
+  	font-size: $h4;
+		font-weight: $font-weight-normal;
 	}
 }
 
