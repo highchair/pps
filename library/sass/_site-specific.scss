@@ -279,6 +279,10 @@ body.page {
 		padding-right: 0.5em;
 		@extend [class^="icon-"];
 	}
+	.children li {
+  	font-size: $h4;
+		font-weight: $font-weight-normal;
+	}
 }
 
 /*************
