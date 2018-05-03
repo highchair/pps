@@ -39,7 +39,7 @@ section.articles {
 	}
 	h3 {
 		font-family: $serif, serif;
-		font-weight: 300;
+		font-weight: $font-weight-normal;
 		@include transition(color 0.125s ease-in);
 	}
 	article > a {
@@ -90,7 +90,7 @@ section.block {
 		}
 		a {
 			color: $blue;
-			font-weight: 900;
+			font-weight: $font-weight-bold;
 		}
 	}
 	.alignright, .alignleft {
