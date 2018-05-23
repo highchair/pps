@@ -392,8 +392,10 @@ nav.pagination {
 		line-height: 1em; // prevents element from adding height to container
 		overflow: hidden;
 		vertical-align: middle;
-		width: 0;
-		@include transition(width 0.125s ease);
+		white-space: nowrap;
+		max-width: 0;
+		opacity: 0;
+		@include transition(max-width opacity 500ms ease);
 	}
 	.icon-chevron-circle-right {
 		color: $blue;
@@ -407,7 +409,9 @@ a:hover .read-more {
 		color: $bronze;
 	}
 	.text {
-		width: 5em;
+		max-width: 5em;
+		opacity: 1;
+		@include transition(max-width opacity 500ms ease);
 	}
 }
 

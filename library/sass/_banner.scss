@@ -30,7 +30,7 @@
       right: 0;
       bottom: 0;
     height: 1em;
-    background-color: $blue;
+    background-color: $blue-lt;
   }
 
   &--logo,
@@ -84,7 +84,13 @@
       background-image: url('../header/transom_lg.png');
     }
   }
-  
+
+  @include breakpoint(large) {
+    &--bar {
+      background-color: $blue;
+    }
+  }
+
   @media (min-width: 360px) and (max-width: 1199px) {
     /* calc(MINpx + (MAX - MIN) * ((100vw - MIN-VIEWpx)/(MAX-VIEW - MIN-VIEW))); */
 
