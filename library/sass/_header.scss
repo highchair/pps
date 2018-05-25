@@ -12,10 +12,7 @@ HEADER
 		color: $black;
 		text-align: center;
 		@extend .micro;
-	}
-	nav {
-		background-color: $blue;
-		padding: $padding*.75 $padding/2;
+		font-size: .75rem;
 	}
 	div.primary-nav {
 		text-align: center;
@@ -62,16 +59,22 @@ HEADER
 	}
 } // end #header
 
+#mainnav {
+	background-color: $blue;
+	padding: $padding*.75 $padding/2;
+}
+
+@media (min-width: 30em ) { // 480px
+
+  #header .logo-text {
+		font-size: initial;
+	}
+}
 
 @include breakpoint(large) {
 	#header {
-		@include border(bottom);
 		&:before {
 			height: 140px;
-		}
-		nav {
-			background-color: transparent;
-			padding: 0;
 		}
 		.logo-text {
 			float: left;
@@ -86,6 +89,12 @@ HEADER
 			display: inline-block;
 		}
 	}
+
+	#mainnav {
+  	@include border(bottom);
+  	background-color: $blue-xlt;
+	}
+
 	#header div.primary-nav {
 		display: block !important;
 		text-align: right;
@@ -226,4 +235,17 @@ body.nav-open {
 	#header div.primary-nav .toggle-nav {
 		display: none;
 	}
+}
+
+// Adhesive header
+#mainnav {
+
+  &.stuck {
+    //box-shadow: 0 .25rem .25rem rgba(#000, .15);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
 }

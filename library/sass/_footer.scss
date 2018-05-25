@@ -78,15 +78,15 @@ body:not(.home) #footer {
 		display: block;
 	}
 	.social {
-		[class^="icon-"] {
-			font-size: 2rem;
+		.fa {
+			font-size: 1.75rem;
 			margin-right: $padding/2;
-			vertical-align: middle;
+			vertical-align: text-bottom;
 		}
 		a {
-		    border: 0;
-		    display: block;
-		    padding: $padding/2;
+	    border: 0;
+	    display: block;
+	    padding: $padding/2;
 		}
 	}
 }

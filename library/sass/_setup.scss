@@ -156,23 +156,65 @@ $font-weight-bold: 900;
 .icon-close:before {
   content: "\f00d";
 }
+.icon-chevron-left:before {
+  content: "\f053";
+}
 .icon-chevron-right:before {
   content: "\f054";
+}
+.icon-arrow-left:before {
+  content: "\f060";
 }
 .icon-arrow-right:before {
   content: "\f061";
 }
-.icon-twitter:before {
+.icon-arrow-up:before {
+  content: "\f062";
+}
+.icon-arrow-down:before {
+  content: "\f063";
+}
+.icon-chevron-up:before {
+  content: "\f077";
+}
+.icon-chevron-down:before {
+  content: "\f078";
+}
+.icon-twitter-square:before {
   content: "\f081";
 }
 .icon-facebook:before {
   content: "\f082";
 }
+.icon-linkedin:before {
+  content: "\f08c";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
 .icon-bars:before {
   content: "\f0c9";
 }
+.icon-pinterest:before {
+  content: "\f0d3";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-chevron-circle-left:before {
+  content: "\f137";
+}
 .icon-chevron-circle-right:before {
   content: "\f138";
+}
+.icon-chevron-circle-up:before {
+  content: "\f139";
+}
+.icon-chevron-circle-down:before {
+  content: "\f13a";
+}
+.icon-instagram:before {
+  content: "\f16d";
 }
 
 
