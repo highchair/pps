@@ -49,7 +49,8 @@ section.articles {
 		position: relative;
 		width: 100%;
 		@include box-shadow($silver 0 0 $padding);
-		&:hover {
+		&:hover,
+		&:focus {
 			@include box-shadow($gray-lt 0 0 $padding);
 		}
 	}
@@ -59,7 +60,8 @@ section.articles {
 	.excerpt {
 		margin-bottom: $padding*4;
 	}
-	a:hover h3 {
+	a:hover h3,
+	a:focus h3 {
 		color: $black;
 	}
 }
@@ -92,9 +94,21 @@ section.block {
 			color: $blue;
 			font-weight: $font-weight-bold;
 		}
+		a:hover,
+		a:focus {
+  		color: $black;
+		}
 	}
 	.alignright, .alignleft {
 		max-width: 55%;
+	}
+
+	@include breakpoint(medium) {
+  	padding: $padding ($padding * 2);
+	}
+
+  @include breakpoint(large) {
+  	padding: $padding ($padding * 3) ($padding * 2);
 	}
 }
 
