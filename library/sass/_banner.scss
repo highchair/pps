@@ -30,7 +30,7 @@
       right: 0;
       bottom: 0;
     height: 1em;
-    background-color: $blue-lt;
+    background-color: $blue-border;
   }
 
   &--logo,
@@ -87,7 +87,7 @@
 
   @include breakpoint(large) {
     &--bar {
-      background-color: $blue;
+      background-color: $blue-lt;
     }
   }
 

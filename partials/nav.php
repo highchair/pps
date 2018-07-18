@@ -1,4 +1,6 @@
 <header id="header">
+
+<?php if ( is_front_page() ) { ?>
 	<div class="pps-head" role="banner">
     <div class="pps-head--logo">
       <img srcset="
@@ -27,6 +29,8 @@
         src="<?php echo get_stylesheet_directory_uri(); ?>/library/header/indytrust_lg.png">
     </div>
   </div>
+<?php } ?>
+
   <div id="mainnav">
   	<a href="<?php echo get_home_url(); ?>">
   		<h1 class="logo-text">Providence Preservation Society</h1>
