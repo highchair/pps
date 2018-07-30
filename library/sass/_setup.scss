@@ -5,7 +5,8 @@ SETTINGS & UTILITIES
 
 /*** COLORS ***/
 
-$blue: #82a6d6;
+$blue: #4881cb; // was too light at #82a6d6, HSL 214,51,67 = #5489cf 214,56,54 
+$blue-border: #82a6d6;
 $blue-lt: #d1dcf2;
 $blue-xlt: #e8edf8;
 
@@ -68,13 +69,8 @@ $font-weight-bold: 900;
 
 /*** Thick Borders ***/
 
-@mixin border($direction:null,$color:$blue) {
-  @if ($direction == 'top') {
-    border-top: 6px solid;
-  }
-  @if ($direction == 'bottom') {
-    border-bottom: 6px solid;
-  }
+@mixin border($direction:top !default,$color:$blue-border) {
+  border-#{$direction}: 5px solid;
   border-color: $color;
 }
 

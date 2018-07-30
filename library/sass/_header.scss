@@ -9,7 +9,7 @@ HEADER
 		position: relative;
 	}
 	.logo-text {
-		color: $black;
+		color: $blue-xlt;
 		text-align: center;
 		@extend .micro;
 		font-size: .75rem;
@@ -18,7 +18,7 @@ HEADER
 		text-align: center;
 		a {
 			color: $blue;
-			border-bottom: 12px solid transparent;
+			border-bottom: 10px solid transparent;
 			display: block;
 			font-size: 2.063rem;
 			font-weight: $font-weight-light;
@@ -61,7 +61,7 @@ HEADER
 
 #mainnav {
 	background-color: $blue;
-	padding: $padding*.75 $padding/2;
+	padding: $padding*.75 $padding;
 }
 
 @media (min-width: 30em ) { // 480px
@@ -77,8 +77,9 @@ HEADER
 			height: 140px;
 		}
 		.logo-text {
+			color: $black;
 			float: left;
-			font-size: 1.375rem;
+			font-size: 1.25rem;
 			margin-left: $padding;
 			text-align: left;
 		}
@@ -93,6 +94,7 @@ HEADER
 	#mainnav {
   	@include border(bottom);
   	background-color: $blue-xlt;
+  	padding: 0;
 	}
 
 	#header div.primary-nav {
@@ -100,7 +102,7 @@ HEADER
 		text-align: right;
 		ul {
 			margin-top: 0;
-			margin-bottom: -6px;
+			margin-bottom: -4px;
 		}
 		li {
 			display: inline-block;
@@ -184,10 +186,9 @@ body.nav-open {
 		padding: $padding*1.5 $padding/2;
 		min-height: 100vh;
 		position: absolute;
-		top: $padding*3;
-		right: 0;
-		left: 0;
-		width: 100%;
+		top: 2.25rem;
+		right: 1 $padding;
+		left: -1 $padding;
 		z-index: 1;
 		.toggle-nav {
 			background: $blue-xlt;
