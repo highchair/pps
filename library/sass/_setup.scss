@@ -69,7 +69,7 @@ $font-weight-bold: 900;
 
 /*** Thick Borders ***/
 
-@mixin border($direction:top !default,$color:$blue-border) {
+@mixin border($direction:top,$color:$blue-border) {
   border-#{$direction}: 5px solid;
   border-color: $color;
 }
