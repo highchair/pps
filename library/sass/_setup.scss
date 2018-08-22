@@ -229,5 +229,5 @@ $grid-row-width: rem-calc(1350);
 
 @import "../../node_modules/foundation-sites/scss/foundation";
 @include foundation-global-styles;
-@import "../../node_modules/foundation-sites/scss/grid/grid";
+@import "grid";
 
