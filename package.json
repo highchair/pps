@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "foundation-sites": "6.3.0"
+  },
+  "dependencies": {
+    "compass-mixins": "^0.12.10"
   }
 }
