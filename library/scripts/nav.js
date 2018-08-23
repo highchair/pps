@@ -34,11 +34,5 @@ jQuery(document).ready( function($) {
 	function closeNav() {
 		$('body').removeClass('nav-open').addClass('nav-closed');
 	}
-
-
-  /*** WAYPOINTS ***/
-  var sticky = new Waypoint.Sticky({
-    element: $('#mainnav')[0]
-  });
   
 } );

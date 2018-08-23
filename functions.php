@@ -86,19 +86,25 @@ function ppsri_scripts_and_styles() {
     // main stylesheet
     wp_register_style( 'ppsri-stylesheet', get_stylesheet_directory_uri() . '/library/stylesheets/screen.css', array(), filemtime( plugin_dir_path( __FILE__ ) .  '/library/stylesheets/screen.css' ), 'all' );
 
-    // theme scripts file
-    wp_register_script( 'ppsri-js', get_stylesheet_directory_uri() . '/library/scripts/scripts.js', array( 'jquery' ), '', true );
+    // theme scripts files
+    wp_register_script( 'ppsri-nav-js', get_stylesheet_directory_uri() . '/library/scripts/nav.js', array( 'jquery' ), '', true );
+    wp_register_script( 'ppsri-searchbar-js', get_stylesheet_directory_uri() . '/library/scripts/searchbar.js', array( 'jquery' ), '', true );
+    wp_register_script( 'ppsri-equalize-and-expand-js', get_stylesheet_directory_uri() . '/library/scripts/equalize-and-expand.js', array( 'jquery' ), '', true );
+    wp_register_script( 'ppsri-waypoints-js', get_stylesheet_directory_uri() . '/library/scripts/waypoints.js', array( 'jquery' ), '', true );
 
     // modernizr media queries
-    wp_register_script( 'modernizr-mq', get_stylesheet_directory_uri() . '/library/scripts/modernizr-mq.js', array( 'jquery' ), '', false );
+    wp_register_script( 'modernizr-mq', get_stylesheet_directory_uri() . '/library/scripts/vendor/modernizr-mq.min.js', array( 'jquery' ), '', false );
 
     // waypoints for sticky elements
-    wp_register_script( 'waypoints', get_stylesheet_directory_uri() . '/library/scripts/waypoints.js', array( 'jquery' ), '', true );
+    wp_register_script( 'waypoints', get_stylesheet_directory_uri() . '/library/scripts/vendor/waypoints.min.js', array( 'jquery' ), '', true );
 
     // enqueue styles and scripts
     wp_enqueue_style( 'ppsri-stylesheet' );
 
-    wp_enqueue_script( 'ppsri-js' );
+    wp_enqueue_script( 'ppsri-nav-js' );
+    wp_enqueue_script( 'ppsri-searchbar-js' );
+    wp_enqueue_script( 'ppsri-equalize-and-expand-js' );
+    wp_enqueue_script( 'ppsri-waypoints-js' );
 
     wp_enqueue_script( 'modernizr-mq' );
 
