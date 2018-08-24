@@ -31,9 +31,11 @@
 
       <nav role="navigation">
 
-        <div class="secondary-nav">
-          <?php ppsri_secondary_nav(); ?>
-        </div>
+        <?php if (has_nav_menu('secondary-nav')) : ?>
+          <div class="secondary-nav">
+            <?php ppsri_secondary_nav(); ?>
+          </div>
+        <?php endif; ?>
 
         <div class="primary-nav">
             <?php ppsri_primary_nav(); ?>

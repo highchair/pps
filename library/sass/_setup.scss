@@ -69,7 +69,7 @@ $font-weight-bold: 900;
 
 /*** Thick Borders ***/
 
-@mixin border($direction:top !default,$color:$blue-border) {
+@mixin border($direction:top,$color:$blue-border) {
   border-#{$direction}: 5px solid;
   border-color: $color;
 }
@@ -217,7 +217,7 @@ $font-weight-bold: 900;
 /*** FOUNDATION (by Zurb) ***/
 // used just for the grid system.
 
-@import 'util/util';
+@import '../../node_modules/foundation-sites/scss/util/util';
 
 $breakpoints: (
   small: 0,
@@ -227,7 +227,7 @@ $breakpoints: (
 );
 $grid-row-width: rem-calc(1350);
 
-@import "foundation";
+@import "../../node_modules/foundation-sites/scss/foundation";
 @include foundation-global-styles;
 @import "grid";
 
