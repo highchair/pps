@@ -28,7 +28,7 @@ Used on single.php.
 		// if comments are closed and there are comments
 		if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'ppri' ); ?></p>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'ppsri' ); ?></p>
 	<?php endif; ?>
 
 	<?php
