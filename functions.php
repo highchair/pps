@@ -232,12 +232,14 @@ function ppsri_register_sidebars() {
 /************* SEARCH FORM LAYOUT *****************/
 
 // Search Form
-function ppsri_wpsearch($form) {
-  $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-  <input type="search" value="' . get_search_query() . '" name="s" id="s" />
-  <button type="submit" class="primary">Search</button>
-  </form>';
-  return $form;
+if ( !function_exists('ppsri_wpsearch') ) {
+  function ppsri_wpsearch($form) {
+    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+    <input type="search" value="' . get_search_query() . '" name="s" id="s" />
+    <button type="submit" class="primary">Search</button>
+    </form>';
+    return $form;
+  }
 }
 
 /************* SHORT VERSION OF EXCERPT *****************/
