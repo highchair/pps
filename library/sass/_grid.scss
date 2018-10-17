@@ -109,10 +109,13 @@ LARGE AND UP
 		}
 	}
 
-	section.articles {
-		@include clearfix;
+	section.articles .items {
+		display: flex;
+		justify-content: center;
 		article {
-			@include grid-column(3);
+			margin-left: $padding/2;
+			margin-right: $padding/2;
+			max-width: 40rem;
 		}
 	}
 

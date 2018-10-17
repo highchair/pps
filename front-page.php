@@ -26,13 +26,23 @@ Template Name: Homepage
 
       <h2>Recent News and Upcoming Events</h2>
 
-      <?php
-      $loop = new WP_Query( array( 'posts_per_page'=>4, 'post_type'=>array('post','events') ) );
-      while ($loop->have_posts()) :
-        $loop->the_post();
-        get_template_part('partials/article-sm');
-      endwhile; wp_reset_postdata();
-      ?>
+      <div class="items">
+
+        <?php
+
+        $featured = get_field('featured_content');
+
+        if ( $featured ) {
+          foreach ( $featured as $post):
+            setup_postdata($post);
+            get_template_part('partials/article-sm');
+          endforeach;
+          wp_reset_postdata();
+        }
+
+        ?>
+
+      </div>
 
     </section>
 
