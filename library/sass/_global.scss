@@ -300,9 +300,6 @@ button {
 
 article {
 	position: relative;
-	* {
-		max-width: 100%;
-	}
 	ul:not(.meta) {
 		@include bullet-list;
 	}
