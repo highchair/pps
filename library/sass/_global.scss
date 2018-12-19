@@ -420,13 +420,6 @@ nav.breadcrumb {
 	text-align: left;
 }
 
-@include breakpoint(large) {
-	nav.breadcrumb {
-		padding-left: $padding;
-		padding-right: $padding;
-	}
-}
-
 /*** Header and Footer Logo Text ***/
 
 .logo-text {

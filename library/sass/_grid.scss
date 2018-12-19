@@ -144,6 +144,7 @@ LARGE AND UP
 	body.blog, body.archive, body.search-results {
 		div.main {
 			@include grid-column(7);
+			padding-left: 0 !important;
 		}
 		aside.sidebar {
 			@include grid-column(4);	
