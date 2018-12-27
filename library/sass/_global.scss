@@ -300,9 +300,6 @@ button {
 
 article {
 	position: relative;
-	* {
-		max-width: 100%;
-	}
 	ul:not(.meta) {
 		@include bullet-list;
 	}
@@ -421,13 +418,6 @@ nav.breadcrumb {
 	color: $gray;
 	padding: $padding 0;
 	text-align: left;
-}
-
-@include breakpoint(large) {
-	nav.breadcrumb {
-		padding-left: $padding;
-		padding-right: $padding;
-	}
 }
 
 /*** Header and Footer Logo Text ***/

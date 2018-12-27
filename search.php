@@ -10,7 +10,7 @@ SEARCH RESULTS PAGE
   
     <header>
       <p>
-        <?php _e('Results for:', 'ppri'); ?>
+        <?php _e('Results for:', 'ppsri'); ?>
       </p>
       <h1>
         <?php echo esc_attr(get_search_query()); ?>
