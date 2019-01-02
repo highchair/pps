@@ -38,16 +38,9 @@
   <meta name="theme-color" content="#d1dcf2">
 
 <?php if ( ! is_user_logged_in() ) { ?>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3259148-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-3259148-1');
-  </script>
+  <?php ppsri_GA_snippet( get_current_blog_id() ); ?>
 <?php } ?>
+
 </head>
 
 <body <?php body_class(); ?>>

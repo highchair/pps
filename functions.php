@@ -145,6 +145,28 @@ function ppsri_theme_support() {
     
 } /* end ppsri theme support */
 
+// Switching GA tracking codes based on the site
+function ppsri_GA_snippet($current_id) {
+  if ( $current_id == 1) {
+    // This is the main PPS site
+    $GA_UA = 'UA-3259148-1';
+  }
+  if ( $current_id == 2) {
+    // This is the PPS DB site
+    $GA_UA = 'UA-3259148-5';
+  }
+  return "<script async src=\"https://www.googletagmanager.com/gtag/js?id=".$GA_UA."\"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '".$GA_UA."');
+  </script>";
+}
+add_action( 'init', 'ppsri_GA_snippet' );
+add_action( 'wp', 'ppsri_GA_snippet' );
+
 
 /*********************
 MENUS & NAVIGATION
