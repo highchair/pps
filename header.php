@@ -36,10 +36,13 @@
   <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri() ?>/library/icons/mstile-144x144.png">
   <meta name="msapplication-config" content="<?php echo get_template_directory_uri() ?>/library/icons/browserconfig.xml">
   <meta name="theme-color" content="#d1dcf2">
-
-<?php if ( ! is_user_logged_in() ) { ?>
-  <?php ppsri_GA_snippet( get_current_blog_id() ); ?>
-<?php } ?>
+  <?php
+    if ( ! is_user_logged_in() ) {
+      echo ppsri_GA_snippet( get_current_blog_id() );
+    } else {
+      echo '<!-- GA code suppressed for logged in users -->';
+    }
+  ?>
 
 </head>
 
