@@ -36,18 +36,14 @@
   <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri() ?>/library/icons/mstile-144x144.png">
   <meta name="msapplication-config" content="<?php echo get_template_directory_uri() ?>/library/icons/browserconfig.xml">
   <meta name="theme-color" content="#d1dcf2">
+  <?php
+    if ( ! is_user_logged_in() ) {
+      echo ppsri_GA_snippet( get_current_blog_id() );
+    } else {
+      echo '<!-- GA code suppressed for logged in users -->';
+    }
+  ?>
 
-<?php if ( ! is_user_logged_in() ) { ?>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3259148-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-  
-    gtag('config', 'UA-3259148-1');
-  </script>
-<?php } ?>
 </head>
 
 <body <?php body_class(); ?>>
