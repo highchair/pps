@@ -148,7 +148,7 @@ body.single article, body.page:not(.home):not(.page-template-events-page) articl
 		font-weight: $font-weight-light;
 		line-height: 1.5em;
 	}
-	a:not(.button):not(.ngg-fancybox) {
+	a:not(.button):not(.ngg-fancybox):not(.transparent) {
 		background: lighten($blue-xlt,2);
 		border-bottom: 2px solid $blue;
 		color: $gray-dk;
