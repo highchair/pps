@@ -150,8 +150,7 @@ function ppsri_GA_snippet($current_id) {
   if ( $current_id == 1) {
     // This is the main PPS site
     $GA_UA = 'UA-3259148-1';
-  }
-  if ( $current_id == 2) {
+  } elseif ( $current_id == 2) {
     // This is the PPS DB site
     $GA_UA = 'UA-3259148-5';
   }
