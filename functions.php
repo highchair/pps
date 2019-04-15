@@ -154,7 +154,8 @@ function ppsri_GA_snippet($current_id) {
     // This is the PPS DB site
     $GA_UA = 'UA-3259148-5';
   }
-  return "<script async src=\"https://www.googletagmanager.com/gtag/js?id=" . $GA_UA . "\"></script>
+  if ( isset($GA_UA) ) {
+    return "<script async src=\"https://www.googletagmanager.com/gtag/js?id=" . $GA_UA . "\"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -162,6 +163,7 @@ function ppsri_GA_snippet($current_id) {
 
     gtag('config', '" . $GA_UA . "');
   </script>";
+  }
 }
 add_action( 'init', 'ppsri_GA_snippet' );
 add_action( 'wp', 'ppsri_GA_snippet' );
