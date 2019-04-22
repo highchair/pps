@@ -44,6 +44,22 @@
     }
   ?>
 
+  <!-- create template directory url variable to be used in our javascript -->
+  <script>
+  var stylesheetDir = "<?php bloginfo('stylesheet_directory') ?>";
+  </script>
+
+<?php if ( ! is_user_logged_in() ) { ?>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3259148-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-3259148-1');
+  </script>
+<?php } ?>
 </head>
 
 <body <?php body_class(); ?>>
