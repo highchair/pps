@@ -38,7 +38,8 @@
   <meta name="theme-color" content="#d1dcf2">
   <?php
     if ( ! is_user_logged_in() ) {
-      echo ppsri_GA_snippet( get_current_blog_id() );
+      $this_id = get_current_blog_id();
+      echo ppsri_GA_snippet( $this_id );
     } else {
       echo '<!-- GA code suppressed for logged in users -->';
     }
