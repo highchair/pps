@@ -52,7 +52,8 @@
   <div class="subfooter">
     <p>
       <span>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</span>
-      <span>All rights reserved.</span>
+      <span>All rights reserved.</span> 
+      <span>Design by J. Hogue at Highchair designhaus, with development & support by Kay Belardinelli.</span>
     </p>
   </div>
 
