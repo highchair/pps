@@ -20,25 +20,27 @@ SINGLE POST / ARTICLE PAGE
 
     </header>
 
+    <?php if (is_singular('post')) : ?>
+      <section class="meta">
+
+        <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppsri'), get_the_time('M d, Y')); ?></span>
+        in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
+
+      </section>
+    <?php endif; ?>
+
     <article>
     
       <?php the_content(); ?>
 
     </article>
 
-    <?php if (is_singular('post')) : ?>
+    <?php if ( is_singular('post') && has_tag() ) : ?>
       <section class="meta">
-
-        <span class="datetime">Published <?php printf(__('<time pubdate>%1$s</time>', 'ppsri'), get_the_time('M d, Y')); ?></span>
-        in <span class="category"><?php echo get_the_category_list(', '); ?>.</span>
-        
-        <?php if ( has_tag() ) : ?>
-          <div class="tags">
-            <span class="label">Tags: </span>
-            <?php the_tags('',''); ?>
-          </div>
-        <?php endif; ?>
-
+        <div class="tags">
+          <span class="label">Tags: </span>
+          <?php the_tags('',''); ?>
+        </div>
       </section>
     <?php endif; ?>
 
