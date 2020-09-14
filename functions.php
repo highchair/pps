@@ -114,6 +114,11 @@ function ppsri_scripts_and_styles() {
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
     wp_localize_script( 'ppsri-js', 'wpurl', $translation_array );
 
+    // Add GA tracking
+    $this_blog_id = get_current_blog_id();
+    if ( function_exists('ppsri_GA_snippet') ) {
+      echo ppsri_GA_snippet( $this_blog_id );
+    }    
   }
 }
 

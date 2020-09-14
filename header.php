@@ -36,16 +36,6 @@
   <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri() ?>/library/icons/mstile-144x144.png">
   <meta name="msapplication-config" content="<?php echo get_template_directory_uri() ?>/library/icons/browserconfig.xml">
   <meta name="theme-color" content="#d1dcf2">
-  <?php
-    $this_blog_id = get_current_blog_id();
-    if ( function_exists('ppsri_GA_snippet') ) {
-      if ( ! is_user_logged_in() ) {
-        echo ppsri_GA_snippet( $this_blog_id );
-      } else {
-        echo '<!-- GA code suppressed for logged in users -->';
-      }
-    }
-  ?>
 
   <!-- create template directory url variable to be used in our javascript -->
   <script>
