@@ -114,6 +114,11 @@ function ppsri_scripts_and_styles() {
     $translation_array = array( 'templateUrl' => get_stylesheet_directory_uri() );
     wp_localize_script( 'ppsri-js', 'wpurl', $translation_array );
 
+    // Add GA tracking
+    $this_blog_id = get_current_blog_id();
+    if ( function_exists('ppsri_GA_snippet') ) {
+      echo ppsri_GA_snippet( $this_blog_id );
+    }    
   }
 }
 
@@ -147,11 +152,8 @@ function ppsri_theme_support() {
 
 // Switching GA tracking codes based on the site
 function ppsri_GA_snippet($current_id) {
-  if ( $current_id == 1) {
-    // This is the main PPS site
-    $GA_UA = 'UA-3259148-1';
-  }
-  if ( $current_id == 2) {
+  $GA_UA = 'UA-3259148-1';
+  if ( $current_id == '2') {
     // This is the PPS DB site
     $GA_UA = 'UA-3259148-5';
   }
